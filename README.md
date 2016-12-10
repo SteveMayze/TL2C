@@ -1,5 +1,4 @@
-# TL2C
-Timed LED Lighting Control
+# TL2C - Timed LED Lighting Control
 
 ## Introduction
 This project is a I2C device to control up to three High Power LED drivers using three PIR13 motion controllers.
