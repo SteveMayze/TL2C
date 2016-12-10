@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:tl2c-symbols
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -28,6 +29,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:tl2c-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -42,4 +44,683 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L ATTINY20-X IC?
+U 1 1 584C1FC2
+P 3525 5725
+F 0 "IC?" H 2575 6475 50  0000 C CNN
+F 1 "ATTINY20-X" H 4325 4975 50  0000 C CNN
+F 2 "TSSOP14" H 3525 5825 50  0001 C CIN
+F 3 "" H 3525 5725 50  0000 C CNN
+	1    3525 5725
+	1    0    0    -1  
+$EndComp
+$Comp
+L LS2979M33TR U?
+U 1 1 584C246B
+P 2500 1200
+F 0 "U?" H 2750 850 60  0000 C CNN
+F 1 "LS2979M33TR" H 2500 1200 60  0000 C CNN
+F 2 "" H 2350 1200 60  0000 C CNN
+F 3 "" H 2350 1200 60  0000 C CNN
+	1    2500 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 584C2538
+P 1800 1350
+F 0 "R?" V 1880 1350 50  0000 C CNN
+F 1 "0Ω" V 1800 1350 50  0000 C CNN
+F 2 "" V 1730 1350 50  0000 C CNN
+F 3 "" H 1800 1350 50  0000 C CNN
+	1    1800 1350
+	0    1    1    0   
+$EndComp
+Text Label 900  1050 0    60   ~ 0
+U+
+$Comp
+L GND #PWR?
+U 1 1 584C268A
+P 2500 1950
+F 0 "#PWR?" H 2500 1700 50  0001 C CNN
+F 1 "GND" H 2500 1800 50  0000 C CNN
+F 2 "" H 2500 1950 50  0000 C CNN
+F 3 "" H 2500 1950 50  0000 C CNN
+	1    2500 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 584C26ED
+P 1200 1550
+F 0 "C?" H 1225 1650 50  0000 L CNN
+F 1 "1μF 25V" H 1225 1450 50  0000 L CNN
+F 2 "" H 1238 1400 50  0000 C CNN
+F 3 "" H 1200 1550 50  0000 C CNN
+	1    1200 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 584C2774
+P 3250 1550
+F 0 "C?" H 3275 1650 50  0000 L CNN
+F 1 "1μF 16V" H 3275 1450 50  0000 L CNN
+F 2 "" H 3288 1400 50  0000 C CNN
+F 3 "" H 3250 1550 50  0000 C CNN
+	1    3250 1550
+	1    0    0    -1  
+$EndComp
+Text Label 4450 1050 2    60   ~ 0
+Ub+
+$Comp
+L LED D?
+U 1 1 584C2A84
+P 3850 1550
+F 0 "D?" H 3850 1650 50  0000 C CNN
+F 1 "LED" H 3850 1450 50  0000 C CNN
+F 2 "" H 3850 1550 50  0000 C CNN
+F 3 "" H 3850 1550 50  0000 C CNN
+	1    3850 1550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R?
+U 1 1 584C2B3D
+P 3850 2050
+F 0 "R?" V 3930 2050 50  0000 C CNN
+F 1 "660Ω" V 3850 2050 50  0000 C CNN
+F 2 "" V 3780 2050 50  0000 C CNN
+F 3 "" H 3850 2050 50  0000 C CNN
+	1    3850 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 584C2C38
+P 3850 2400
+F 0 "#PWR?" H 3850 2150 50  0001 C CNN
+F 1 "GND" H 3850 2250 50  0000 C CNN
+F 2 "" H 3850 2400 50  0000 C CNN
+F 3 "" H 3850 2400 50  0000 C CNN
+	1    3850 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L TEST_1P W?
+U 1 1 584C2DE3
+P 4000 1000
+F 0 "W?" H 4000 1270 50  0000 C CNN
+F 1 "TEST_1P" H 4000 1200 50  0000 C CNN
+F 2 "" H 4200 1000 50  0000 C CNN
+F 3 "" H 4200 1000 50  0000 C CNN
+	1    4000 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L TEST_1P W?
+U 1 1 584C2EE8
+P 1100 1000
+F 0 "W?" H 1100 1270 50  0000 C CNN
+F 1 "TEST_1P" H 1100 1200 50  0000 C CNN
+F 2 "" H 1300 1000 50  0000 C CNN
+F 3 "" H 1300 1000 50  0000 C CNN
+	1    1100 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 584C320A
+P 2125 5375
+F 0 "C?" H 2150 5475 50  0000 L CNN
+F 1 "100n 10V" H 1725 5275 50  0000 L CNN
+F 2 "" H 2163 5225 50  0000 C CNN
+F 3 "" H 2125 5375 50  0000 C CNN
+	1    2125 5375
+	1    0    0    -1  
+$EndComp
+Text Label 1675 5125 0    60   ~ 0
+Ub+
+$Comp
+L GND #PWR?
+U 1 1 584C3309
+P 2975 6725
+F 0 "#PWR?" H 2975 6475 50  0001 C CNN
+F 1 "GND" H 2975 6575 50  0000 C CNN
+F 2 "" H 2975 6725 50  0000 C CNN
+F 3 "" H 2975 6725 50  0000 C CNN
+	1    2975 6725
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_02X03 P?
+U 1 1 584C357B
+P 1650 2550
+F 0 "P?" H 1650 2750 50  0000 C CNN
+F 1 "ISP Header" H 1650 2350 50  0000 C CNN
+F 2 "" H 1650 1350 50  0000 C CNN
+F 3 "" H 1650 1350 50  0000 C CNN
+	1    1650 2550
+	1    0    0    -1  
+$EndComp
+Text Label 1000 2450 0    60   ~ 0
+MISO
+Text Label 1000 2550 0    60   ~ 0
+SCK
+Text Label 1000 2650 0    60   ~ 0
+Reset
+Text Label 2150 2450 2    60   ~ 0
+Ub+
+Text Label 2150 2550 2    60   ~ 0
+MOSI
+$Comp
+L GND #PWR?
+U 1 1 584C39BE
+P 2000 2750
+F 0 "#PWR?" H 2000 2500 50  0001 C CNN
+F 1 "GND" H 2000 2600 50  0000 C CNN
+F 2 "" H 2000 2750 50  0000 C CNN
+F 3 "" H 2000 2750 50  0000 C CNN
+	1    2000 2750
+	1    0    0    -1  
+$EndComp
+Text Notes 1000 3400 0    50   ~ 0
+We have a 3V3 system \nand possibly a 5V programmer. \nInitial research suggests the AVRISP MkII\ncan drive ISP lines at the required voltage.\nhttps://forum.arduino.cc/index.php?topic=92544.0
+$Comp
+L R R?
+U 1 1 584C40A0
+P 2975 4575
+F 0 "R?" V 3055 4575 50  0000 C CNN
+F 1 "10kΩ" V 2975 4575 50  0000 C CNN
+F 2 "" V 2905 4575 50  0000 C CNN
+F 3 "" H 2975 4575 50  0000 C CNN
+	1    2975 4575
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 584C4458
+P 2125 5675
+F 0 "#PWR?" H 2125 5425 50  0001 C CNN
+F 1 "GND" H 2125 5525 50  0000 C CNN
+F 2 "" H 2125 5675 50  0000 C CNN
+F 3 "" H 2125 5675 50  0000 C CNN
+	1    2125 5675
+	1    0    0    -1  
+$EndComp
+Text Label 2975 4175 3    60   ~ 0
+Ub+
+Text Label 1675 4825 0    60   ~ 0
+Reset
+Text Label 5175 5825 2    60   ~ 0
+SCK
+Text Label 5175 6125 2    60   ~ 0
+MOSI
+Text Label 4925 6225 2    60   ~ 0
+MISO
+$Comp
+L R R?
+U 1 1 584C58EE
+P 5325 6125
+F 0 "R?" V 5405 6125 50  0000 C CNN
+F 1 "330Ω" V 5325 6125 50  0000 C CNN
+F 2 "" V 5255 6125 50  0000 C CNN
+F 3 "" H 5325 6125 50  0000 C CNN
+	1    5325 6125
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 584C5F14
+P 5325 5825
+F 0 "R?" V 5405 5825 50  0000 C CNN
+F 1 "330Ω" V 5325 5825 50  0000 C CNN
+F 2 "" V 5255 5825 50  0000 C CNN
+F 3 "" H 5325 5825 50  0000 C CNN
+	1    5325 5825
+	0    1    1    0   
+$EndComp
+Text Label 5775 5825 2    60   ~ 0
+SLC
+Text Label 5775 6125 2    60   ~ 0
+SDA
+$Comp
+L R R?
+U 1 1 584C6CF4
+P 5925 5725
+F 0 "R?" V 6005 5725 50  0000 C CNN
+F 1 "NOPOP" V 5925 5725 50  0000 C CNN
+F 2 "" V 5855 5725 50  0000 C CNN
+F 3 "" H 5925 5725 50  0000 C CNN
+	1    5925 5725
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 584C6E58
+P 5925 6025
+F 0 "R?" V 6005 6025 50  0000 C CNN
+F 1 "NOPOP" V 5925 6025 50  0000 C CNN
+F 2 "" V 5855 6025 50  0000 C CNN
+F 3 "" H 5925 6025 50  0000 C CNN
+	1    5925 6025
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 584C7124
+P 6275 6425
+F 0 "#PWR?" H 6275 6175 50  0001 C CNN
+F 1 "GND" H 6275 6275 50  0000 C CNN
+F 2 "" H 6275 6425 50  0000 C CNN
+F 3 "" H 6275 6425 50  0000 C CNN
+	1    6275 6425
+	1    0    0    -1  
+$EndComp
+Text Label 5775 5125 2    60   ~ 0
+RelayUG
+Text Label 5775 5225 2    60   ~ 0
+RelayEG
+Text Label 5775 5325 2    60   ~ 0
+RelayOG
+Text Label 5775 5425 2    60   ~ 0
+PIR_UG
+Text Label 5775 5525 2    60   ~ 0
+PIR_EG
+Text Label 5775 5625 2    60   ~ 0
+PIR_OG
+Text Label 5675 5725 2    60   ~ 0
+Spare1
+Text Label 5675 6025 2    60   ~ 0
+Spare2
+$Comp
+L CONN_01X03 P?
+U 1 1 584C77B2
+P 1600 3900
+F 0 "P?" H 1600 4100 50  0000 C CNN
+F 1 "I2C Master" V 1700 3900 50  0000 C CNN
+F 2 "" H 1600 3900 50  0000 C CNN
+F 3 "" H 1600 3900 50  0000 C CNN
+	1    1600 3900
+	1    0    0    -1  
+$EndComp
+Text Label 1000 3800 0    60   ~ 0
+SDA
+Text Label 1000 3900 0    60   ~ 0
+SCL
+$Comp
+L GND #PWR?
+U 1 1 584C7C99
+P 1250 4100
+F 0 "#PWR?" H 1250 3850 50  0001 C CNN
+F 1 "GND" H 1250 3950 50  0000 C CNN
+F 2 "" H 1250 4100 50  0000 C CNN
+F 3 "" H 1250 4100 50  0000 C CNN
+	1    1250 4100
+	1    0    0    -1  
+$EndComp
+Text Notes 3450 800  2    60   ~ 0
+TODO - Verify if the Maximum voltage is \na safe limit for this usage of 12V Vin
+$Comp
+L Relay_JW1AFSN12F REL?
+U 1 1 584C85D5
+P 9125 2875
+F 0 "REL?" H 9145 2735 60  0000 C CNN
+F 1 "Relay_UG" H 9125 3025 60  0000 C CNN
+F 2 "" H 8995 2865 60  0000 C CNN
+F 3 "" H 8995 2865 60  0000 C CNN
+	1    9125 2875
+	1    0    0    -1  
+$EndComp
+$Comp
+L Relay_JW1AFSN12F REL?
+U 1 1 584C890C
+P 9125 3625
+F 0 "REL?" H 9145 3485 60  0000 C CNN
+F 1 "Relay_EG" H 9125 3775 60  0000 C CNN
+F 2 "" H 8995 3615 60  0000 C CNN
+F 3 "" H 8995 3615 60  0000 C CNN
+	1    9125 3625
+	1    0    0    -1  
+$EndComp
+$Comp
+L Relay_JW1AFSN12F REL?
+U 1 1 584C8E52
+P 9125 4475
+F 0 "REL?" H 9145 4335 60  0000 C CNN
+F 1 "Relay_OG" H 9125 4625 60  0000 C CNN
+F 2 "" H 8995 4465 60  0000 C CNN
+F 3 "" H 8995 4465 60  0000 C CNN
+	1    9125 4475
+	1    0    0    -1  
+$EndComp
+$Comp
+L Relay_JW1AFSN12F REL?
+U 2 1 584C8F2D
+P 8500 1100
+F 0 "REL?" H 8520 960 60  0000 C CNN
+F 1 "Relay_UG" H 8510 1230 60  0000 C CNN
+F 2 "" H 8370 1090 60  0000 C CNN
+F 3 "" H 8370 1090 60  0000 C CNN
+	2    8500 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Relay_JW1AFSN12F REL?
+U 2 1 584C93FA
+P 8500 1500
+F 0 "REL?" H 8520 1360 60  0000 C CNN
+F 1 "Relay_EG" H 8510 1630 60  0000 C CNN
+F 2 "" H 8370 1490 60  0000 C CNN
+F 3 "" H 8370 1490 60  0000 C CNN
+	2    8500 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Relay_JW1AFSN12F REL?
+U 2 1 584C945E
+P 8500 1950
+F 0 "REL?" H 8520 1810 60  0000 C CNN
+F 1 "Relay_OG" H 8510 2080 60  0000 C CNN
+F 2 "" H 8370 1940 60  0000 C CNN
+F 3 "" H 8370 1940 60  0000 C CNN
+	2    8500 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 584C97FA
+P 9675 4975
+F 0 "#PWR?" H 9675 4725 50  0001 C CNN
+F 1 "GND" H 9675 4825 50  0000 C CNN
+F 2 "" H 9675 4975 50  0000 C CNN
+F 3 "" H 9675 4975 50  0000 C CNN
+	1    9675 4975
+	1    0    0    -1  
+$EndComp
+$Comp
+L D D?
+U 1 1 584C98E1
+P 9125 3225
+F 0 "D?" H 9125 3325 50  0000 C CNN
+F 1 "D" H 9125 3125 50  0000 C CNN
+F 2 "" H 9125 3225 50  0000 C CNN
+F 3 "" H 9125 3225 50  0000 C CNN
+	1    9125 3225
+	1    0    0    -1  
+$EndComp
+$Comp
+L D D?
+U 1 1 584C9FCE
+P 9125 3975
+F 0 "D?" H 9125 4075 50  0000 C CNN
+F 1 "D" H 9125 3875 50  0000 C CNN
+F 2 "" H 9125 3975 50  0000 C CNN
+F 3 "" H 9125 3975 50  0000 C CNN
+	1    9125 3975
+	1    0    0    -1  
+$EndComp
+$Comp
+L D D?
+U 1 1 584CA043
+P 9125 4825
+F 0 "D?" H 9125 4925 50  0000 C CNN
+F 1 "D" H 9125 4725 50  0000 C CNN
+F 2 "" H 9125 4825 50  0000 C CNN
+F 3 "" H 9125 4825 50  0000 C CNN
+	1    9125 4825
+	1    0    0    -1  
+$EndComp
+Text Label 8250 2875 0    60   ~ 0
+RelayUG
+Text Label 8250 3625 0    60   ~ 0
+RelayEG
+Text Label 8250 4475 0    60   ~ 0
+RelayOG
+$Comp
+L CONN_01X04 P?
+U 1 1 584CC6CA
+P 10225 1250
+F 0 "P?" H 10225 1500 50  0000 C CNN
+F 1 "CONN_01X04" V 10325 1250 50  0000 C CNN
+F 2 "" H 10225 1250 50  0000 C CNN
+F 3 "" H 10225 1250 50  0000 C CNN
+	1    10225 1250
+	1    0    0    -1  
+$EndComp
+Text Label 9725 1400 0    60   ~ 0
+Neutral
+Text Label 9100 1100 0    60   ~ 0
+LineUG
+Text Label 9100 1500 0    60   ~ 0
+LineEG
+Text Label 9100 1950 0    60   ~ 0
+LineOG
+Text Label 7600 1100 0    60   ~ 0
+Lin
+Wire Wire Line
+	1950 1350 1950 1350
+Wire Wire Line
+	900  1050 1950 1050
+Wire Wire Line
+	1650 1350 1550 1350
+Wire Wire Line
+	1550 1350 1550 1050
+Connection ~ 1550 1050
+Wire Wire Line
+	2500 1700 2500 1950
+Wire Wire Line
+	1200 1050 1200 1400
+Connection ~ 1200 1050
+Wire Wire Line
+	3050 1050 4450 1050
+Wire Wire Line
+	3250 1050 3250 1400
+Connection ~ 3250 1050
+Wire Wire Line
+	3250 1700 3250 1800
+Wire Wire Line
+	3250 1800 2500 1800
+Connection ~ 2500 1800
+Wire Wire Line
+	1200 1700 1200 1900
+Wire Wire Line
+	1200 1900 2500 1900
+Connection ~ 2500 1900
+Wire Wire Line
+	3850 1050 3850 1350
+Connection ~ 3850 1050
+Wire Wire Line
+	3850 1750 3850 1900
+Wire Wire Line
+	3850 2200 3850 2400
+Wire Wire Line
+	4000 1000 4000 1050
+Connection ~ 4000 1050
+Wire Wire Line
+	1100 1000 1100 1050
+Connection ~ 1100 1050
+Wire Wire Line
+	1675 5125 2375 5125
+Wire Wire Line
+	2125 5125 2125 5225
+Connection ~ 2125 5125
+Wire Wire Line
+	1900 2450 2150 2450
+Wire Wire Line
+	1900 2550 2150 2550
+Wire Wire Line
+	1900 2650 2000 2650
+Wire Wire Line
+	1400 2450 1000 2450
+Wire Wire Line
+	1400 2550 1000 2550
+Wire Wire Line
+	1400 2650 1000 2650
+Wire Wire Line
+	2000 2650 2000 2750
+Wire Wire Line
+	2125 5525 2125 5675
+Wire Wire Line
+	2975 4725 2975 4875
+Wire Wire Line
+	2975 4425 2975 4175
+Wire Wire Line
+	2975 4825 1675 4825
+Connection ~ 2975 4825
+Wire Wire Line
+	2975 6575 2975 6725
+Wire Wire Line
+	4675 6125 5175 6125
+Wire Wire Line
+	4675 6225 4925 6225
+Wire Wire Line
+	4675 5825 5175 5825
+Wire Wire Line
+	5475 5825 5775 5825
+Wire Wire Line
+	5475 6125 5775 6125
+Wire Wire Line
+	4675 5125 5775 5125
+Wire Wire Line
+	4675 5225 5775 5225
+Wire Wire Line
+	4675 5325 5775 5325
+Wire Wire Line
+	4675 5425 5775 5425
+Wire Wire Line
+	4675 5525 5775 5525
+Wire Wire Line
+	4675 5625 5775 5625
+Wire Wire Line
+	4675 5725 5775 5725
+Wire Wire Line
+	4675 6025 5775 6025
+Wire Wire Line
+	6075 5725 6275 5725
+Wire Wire Line
+	6275 5725 6275 6425
+Wire Wire Line
+	6075 6025 6275 6025
+Connection ~ 6275 6025
+Wire Wire Line
+	1400 3800 1000 3800
+Wire Wire Line
+	1400 3900 1000 3900
+Wire Wire Line
+	1400 4000 1250 4000
+Wire Wire Line
+	1250 4000 1250 4100
+Wire Wire Line
+	9675 2875 9675 4975
+Connection ~ 9675 3225
+Connection ~ 9675 3625
+Wire Wire Line
+	9275 3975 9675 3975
+Connection ~ 9675 3975
+Connection ~ 9675 4475
+Wire Wire Line
+	9675 4825 9275 4825
+Connection ~ 9675 4825
+Wire Wire Line
+	8975 4825 8675 4825
+Wire Wire Line
+	8975 3975 8675 3975
+Wire Wire Line
+	8975 3225 8675 3225
+Wire Wire Line
+	9275 3225 9675 3225
+Wire Wire Line
+	8250 2875 8775 2875
+Wire Wire Line
+	8250 3625 8775 3625
+Wire Wire Line
+	9475 3625 9675 3625
+Wire Wire Line
+	9475 4475 9675 4475
+Wire Wire Line
+	8250 4475 8775 4475
+Wire Wire Line
+	8675 4825 8675 4475
+Connection ~ 8675 4475
+Wire Wire Line
+	8675 3975 8675 3625
+Connection ~ 8675 3625
+Wire Wire Line
+	8675 3225 8675 2875
+Connection ~ 8675 2875
+Wire Wire Line
+	9475 2875 9675 2875
+Wire Wire Line
+	8950 1100 10025 1100
+Wire Wire Line
+	8950 1500 9500 1500
+Wire Wire Line
+	9500 1500 9500 1200
+Wire Wire Line
+	9500 1200 10025 1200
+Wire Wire Line
+	8950 1950 9600 1950
+Wire Wire Line
+	9600 1950 9600 1300
+Wire Wire Line
+	9600 1300 10025 1300
+Wire Wire Line
+	10025 1400 9725 1400
+Wire Wire Line
+	7600 1100 8100 1100
+Wire Wire Line
+	8100 1500 7800 1500
+Wire Wire Line
+	7800 1950 8100 1950
+Wire Wire Line
+	7800 1100 7800 1950
+Connection ~ 7800 1500
+Connection ~ 7800 1100
+$Comp
+L CONN_01X02 P?
+U 1 1 584CF5D0
+P 7400 1150
+F 0 "P?" H 7400 1300 50  0000 C CNN
+F 1 "240VAC" V 7500 1150 50  0000 C CNN
+F 2 "" H 7400 1150 50  0000 C CNN
+F 3 "" H 7400 1150 50  0000 C CNN
+	1    7400 1150
+	-1   0    0    -1  
+$EndComp
+Text Label 7600 1800 1    60   ~ 0
+Neutral
+$Comp
+L CONN_01X02 P?
+U 1 1 584CFEEE
+P 5500 1700
+F 0 "P?" H 5500 1850 50  0000 C CNN
+F 1 "12VDC" V 5600 1700 50  0000 C CNN
+F 2 "" H 5500 1700 50  0000 C CNN
+F 3 "" H 5500 1700 50  0000 C CNN
+	1    5500 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 1650 4950 1650
+Text Label 4950 1650 0    60   ~ 0
+U+
+$Comp
+L GND #PWR?
+U 1 1 584D0E26
+P 5150 1950
+F 0 "#PWR?" H 5150 1700 50  0001 C CNN
+F 1 "GND" H 5150 1800 50  0000 C CNN
+F 2 "" H 5150 1950 50  0000 C CNN
+F 3 "" H 5150 1950 50  0000 C CNN
+	1    5150 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 1950 5150 1750
+Wire Wire Line
+	5150 1750 5300 1750
+Wire Wire Line
+	7600 1200 7600 1800
 $EndSCHEMATC
