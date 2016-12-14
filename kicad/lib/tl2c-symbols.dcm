@@ -10,4 +10,13 @@ $CMP Relay_JW1AFSN12F
 D JW1AFSN-12-F, Relay 12 Coil, 250V 10A
 $ENDCMP
 #
+$CMP TEST_1P
+D point
+K point tp
+$ENDCMP
+#
+$CMP TPS70933
+D 150-mA, 30-V, 1-μA IQ Voltage Regulators with Enable
+$ENDCMP
+#
 #End Doc Library
