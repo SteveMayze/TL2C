@@ -311,7 +311,7 @@ U 1 1 584CF5D0
 P 6950 1200
 F 0 "P106" H 6950 1350 50  0000 C CNN
 F 1 "240VAC" V 7050 1200 50  0000 C CNN
-F 2 "" H 6950 1200 50  0001 C CNN
+F 2 "tl2c-footprint:Pin_Header_1_x_2_5mmPitch" H 6950 1200 50  0001 C CNN
 F 3 "" H 6950 1200 50  0000 C CNN
 F 4 "Value" H 6950 1200 60  0001 C CNN "MFP"
 F 5 "Value" H 6950 1200 60  0001 C CNN "Conrad-PN"
@@ -338,7 +338,7 @@ U 1 1 584CBB71
 P 9950 1400
 F 0 "P108" H 9950 1750 50  0000 C CNN
 F 1 "LED_OUT" V 10050 1400 50  0000 C CNN
-F 2 "" H 9950 1400 50  0001 C CNN
+F 2 "tl2c-footprint:Pin_Header_1_x_6_54mmPitch" H 9950 1400 50  0001 C CNN
 F 3 "" H 9950 1400 50  0000 C CNN
 	1    9950 1400
 	1    0    0    -1  
@@ -486,12 +486,6 @@ F5 "U+" I L 8750 2650 60
 $EndSheet
 Text Label 8050 2650 0    60   ~ 0
 U+
-Text Label 8050 3000 0    60   ~ 0
-RelayUG
-Text Label 8050 3200 0    60   ~ 0
-RelayEG
-Text Label 8050 3400 0    60   ~ 0
-RelayOG
 Wire Wire Line
 	2600 4600 3100 4600
 Wire Wire Line
