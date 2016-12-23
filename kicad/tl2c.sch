@@ -262,7 +262,7 @@ F 1 "Relay_UG" H 8060 1280 60  0000 C CNN
 F 2 "tl2c-footprint:JW1AFSN-12-F" H 7920 1140 60  0001 C CNN
 F 3 "" H 7920 1140 60  0000 C CNN
 F 4 "JW1AFSN-12-F" H 8050 1150 60  0001 C CNN "MFP"
-F 5 "Value" H 8050 1150 60  0001 C CNN "Conrad-PN"
+F 5 "504961 - 62" H 8050 1150 60  0001 C CNN "Conrad-PN"
 F 6 "Value" H 8050 1150 60  0001 C CNN "Digikey-PN"
 	2    8050 1150
 	1    0    0    -1  
@@ -276,7 +276,7 @@ F 1 "Relay_EG" H 8060 1680 60  0000 C CNN
 F 2 "tl2c-footprint:JW1AFSN-12-F" H 7920 1540 60  0001 C CNN
 F 3 "" H 7920 1540 60  0000 C CNN
 F 4 "JW1AFSN-12-F" H 8050 1550 60  0001 C CNN "MFP"
-F 5 "Value" H 8050 1550 60  0001 C CNN "Conrad-PN"
+F 5 "504961 - 62" H 8050 1550 60  0001 C CNN "Conrad-PN"
 F 6 "Value" H 8050 1550 60  0001 C CNN "Digikey-PN"
 	2    8050 1550
 	1    0    0    -1  
@@ -290,7 +290,7 @@ F 1 "Relay_OG" H 8060 2130 60  0000 C CNN
 F 2 "tl2c-footprint:JW1AFSN-12-F" H 7920 1990 60  0001 C CNN
 F 3 "" H 7920 1990 60  0000 C CNN
 F 4 "JW1AFSN-12-F" H 8050 2000 60  0001 C CNN "MFP"
-F 5 "Value" H 8050 2000 60  0001 C CNN "Conrad-PN"
+F 5 "504961 - 62" H 8050 2000 60  0001 C CNN "Conrad-PN"
 F 6 "Value" H 8050 2000 60  0001 C CNN "Digikey-PN"
 	2    8050 2000
 	1    0    0    -1  
@@ -917,4 +917,6 @@ Connection ~ 5450 2850
 Wire Wire Line
 	5800 2900 5800 2950
 Connection ~ 5800 2950
+Text Notes 6850 4150 0    60   ~ 0
+TODO - Change the relay to  AZ7705T-1A-12DEF - Conrad.\nor FIN 43.41.7 12V - Reichelt
 $EndSCHEMATC

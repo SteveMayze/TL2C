@@ -330,4 +330,6 @@ Wire Wire Line
 	5250 2100 5250 1950
 Wire Wire Line
 	5250 4150 5250 4300
+Text Notes 3300 1100 0    60   ~ 0
+Change the 2.2uF to a Electrolitic?
 $EndSCHEMATC
