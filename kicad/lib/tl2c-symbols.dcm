@@ -6,6 +6,10 @@ K AVR 8bit Microcontroller tinyAVR
 F http://www.atmel.com/images/atmel-8235-8-bit-avr-microcontroller-attiny20_datasheet.pdf
 $ENDCMP
 #
+$CMP Relay_FIN_43.41.7_12V
+D JW1AFSN-12-F, Relay 12 Coil, 250V 10A
+$ENDCMP
+#
 $CMP Relay_JW1AFSN12F
 D JW1AFSN-12-F, Relay 12 Coil, 250V 10A
 $ENDCMP
