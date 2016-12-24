@@ -50,11 +50,12 @@ U 1 1 585206A2
 P 6250 1850
 F 0 "P301" H 6250 2350 50  0000 C CNN
 F 1 "PIR13" V 6350 1850 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x09" H 6250 1850 50  0001 C CNN
+F 2 "tl2c-footprint:Spring_Terminal_Block_1_x_9" H 6250 1850 50  0001 C CNN
 F 3 "" H 6250 1850 50  0000 C CNN
 F 4 "Value" H 6250 1850 60  0001 C CNN "MFP"
 F 5 "Value" H 6250 1850 60  0001 C CNN "Conrad-PN"
 F 6 "Value" H 6250 1850 60  0001 C CNN "Digikey-PN"
+F 7 "AST 041" H 6250 1850 60  0001 C CNN "Reichelt-PN"
 	1    6250 1850
 	1    0    0    -1  
 $EndComp

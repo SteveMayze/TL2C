@@ -230,7 +230,7 @@ U 1 1 584C77B2
 P 2100 3050
 F 0 "P102" H 2100 3250 50  0000 C CNN
 F 1 "I2C Master" V 2200 3050 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 2100 3050 50  0001 C CNN
+F 2 "tl2c-footprint:Spring_Terminal_Block_1_x_3" H 2100 3050 50  0001 C CNN
 F 3 "" H 2100 3050 50  0000 C CNN
 F 4 "Value" H 2100 3050 60  0001 C CNN "MFP"
 F 5 "Value" H 2100 3050 60  0001 C CNN "Conrad-PN"
@@ -311,7 +311,7 @@ U 1 1 584CF5D0
 P 6950 1200
 F 0 "P106" H 6950 1350 50  0000 C CNN
 F 1 "240VAC" V 7050 1200 50  0000 C CNN
-F 2 "tl2c-footprint:Pin_Header_1_x_2_5mmPitch" H 6950 1200 50  0001 C CNN
+F 2 "tl2c-footprint:Spring_Terminal_Block_1_x_2_5mm" H 6950 1200 50  0001 C CNN
 F 3 "" H 6950 1200 50  0000 C CNN
 F 4 "Value" H 6950 1200 60  0001 C CNN "MFP"
 F 5 "Value" H 6950 1200 60  0001 C CNN "Conrad-PN"
@@ -338,8 +338,11 @@ U 1 1 584CBB71
 P 9950 1400
 F 0 "P108" H 9950 1750 50  0000 C CNN
 F 1 "LED_OUT" V 10050 1400 50  0000 C CNN
-F 2 "tl2c-footprint:Pin_Header_1_x_6_54mmPitch" H 9950 1400 50  0001 C CNN
+F 2 "tl2c-footprint:Spring_Terminal_Block_1_x_6_5mm" H 9950 1400 50  0001 C CNN
 F 3 "" H 9950 1400 50  0000 C CNN
+F 4 "Value" H 9950 1400 60  0001 C CNN "MFP"
+F 5 "Value" H 9950 1400 60  0001 C CNN "Conrad-PN"
+F 6 "Value" H 9950 1400 60  0001 C CNN "Digikey-PN"
 	1    9950 1400
 	1    0    0    -1  
 $EndComp
@@ -919,4 +922,6 @@ Wire Wire Line
 Connection ~ 5800 2950
 Text Notes 6850 4150 0    60   ~ 0
 TODO - Change the relay to  AZ7705T-1A-12DEF - Conrad.\nor FIN 43.41.7 12V - Reichelt
+Text Notes 6950 2450 0    60   ~ 0
+Should a PTC be considered?
 $EndSCHEMATC
