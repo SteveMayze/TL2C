@@ -645,8 +645,6 @@ Wire Wire Line
 	6150 2650 5950 2650
 Wire Wire Line
 	5950 2650 5950 2500
-Text Label 5950 2500 2    60   ~ 0
-Ub+
 $Comp
 L CONN_01X05 P105
 U 1 1 58541643
@@ -927,4 +925,6 @@ Connection ~ 3700 4150
 Wire Wire Line
 	3900 4250 3700 4250
 Connection ~ 3700 4250
+Text Label 5950 2500 2    60   ~ 0
+U+
 $EndSCHEMATC
