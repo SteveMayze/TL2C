@@ -740,10 +740,7 @@ F 6 "Value" H 4150 4150 60  0001 C CNN "Digikey-PN"
 $EndComp
 Wire Wire Line
 	3700 4050 3700 4350
-Wire Wire Line
-	3250 4250 3900 4250
-Connection ~ 3700 4250
-Text Label 3250 4250 0    60   ~ 0
+Text Label 3300 4150 0    60   ~ 0
 Reset
 NoConn ~ 3900 4050
 NoConn ~ 4400 4050
@@ -924,4 +921,10 @@ Text Notes 6850 4150 0    60   ~ 0
 TODO - Change the relay to  AZ7705T-1A-12DEF - Conrad.\nor FIN 43.41.7 12V - Reichelt
 Text Notes 6950 2450 0    60   ~ 0
 Should a PTC be considered?
+Wire Wire Line
+	3300 4150 3700 4150
+Connection ~ 3700 4150
+Wire Wire Line
+	3900 4250 3700 4250
+Connection ~ 3700 4250
 $EndSCHEMATC
