@@ -44,26 +44,11 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L CONN_01X09 P301
-U 1 1 585206A2
-P 6250 1850
-F 0 "P301" H 6250 2350 50  0000 C CNN
-F 1 "PIR13" V 6350 1850 50  0000 C CNN
-F 2 "tl2c-footprint:Spring_Terminal_Block_1_x_9" H 6250 1850 50  0001 C CNN
-F 3 "" H 6250 1850 50  0000 C CNN
-F 4 "Value" H 6250 1850 60  0001 C CNN "MFP"
-F 5 "Value" H 6250 1850 60  0001 C CNN "Conrad-PN"
-F 6 "Value" H 6250 1850 60  0001 C CNN "Digikey-PN"
-F 7 "AST 041" H 6250 1850 60  0001 C CNN "Reichelt-PN"
-	1    6250 1850
-	1    0    0    -1  
-$EndComp
-Text Label 5725 1650 0    60   ~ 0
+Text Label 5725 2250 0    60   ~ 0
 PIR_UG
 Text Label 5725 1950 0    60   ~ 0
 PIR_EG
-Text Label 5725 2250 0    60   ~ 0
+Text Label 5725 1650 0    60   ~ 0
 PIR_OG
 $Comp
 L GND #PWR019
@@ -578,4 +563,46 @@ Wire Wire Line
 	2800 4450 2800 4500
 Wire Wire Line
 	2800 6350 2800 6400
+$Comp
+L CONN_01X03 P301
+U 1 1 5867BA07
+P 6250 1550
+F 0 "P301" H 6425 1575 50  0000 C CNN
+F 1 "CONN_PIR_OG" H 6575 1500 50  0000 C CNN
+F 2 "tl2c-footprint:Spring_Terminal_Block_1_x_3" H 6250 1550 50  0001 C CNN
+F 3 "" H 6250 1550 50  0000 C CNN
+F 4 "Value" H 6250 1550 60  0001 C CNN "MFP"
+F 5 "Value" H 6250 1550 60  0001 C CNN "Conrad-PN"
+F 6 "Value" H 6250 1550 60  0001 C CNN "Digikey-PN"
+	1    6250 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X03 P302
+U 1 1 5867BAEB
+P 6250 1850
+F 0 "P302" H 6425 1925 50  0000 C CNN
+F 1 "CONN_PIR_EG" H 6575 1850 50  0000 C CNN
+F 2 "tl2c-footprint:Spring_Terminal_Block_1_x_3" H 6250 1850 50  0001 C CNN
+F 3 "" H 6250 1850 50  0000 C CNN
+F 4 "Value" H 6250 1850 60  0001 C CNN "MFP"
+F 5 "Value" H 6250 1850 60  0001 C CNN "Conrad-PN"
+F 6 "Value" H 6250 1850 60  0001 C CNN "Digikey-PN"
+	1    6250 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X03 P303
+U 1 1 5867BB77
+P 6250 2150
+F 0 "P303" H 6425 2225 50  0000 C CNN
+F 1 "CONN_PIR_UG" H 6575 2150 50  0000 C CNN
+F 2 "tl2c-footprint:Spring_Terminal_Block_1_x_3" H 6250 2150 50  0001 C CNN
+F 3 "" H 6250 2150 50  0000 C CNN
+F 4 "Value" H 6250 2150 60  0001 C CNN "MFP"
+F 5 "Value" H 6250 2150 60  0001 C CNN "Conrad-PN"
+F 6 "Value" H 6250 2150 60  0001 C CNN "Digikey-PN"
+	1    6250 2150
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
