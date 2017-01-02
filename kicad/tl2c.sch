@@ -1009,6 +1009,7 @@ F 3 "" H 7400 1150 50  0000 C CNN
 F 4 "Value" H 7400 1150 60  0001 C CNN "MFP"
 F 5 "Value" H 7400 1150 60  0001 C CNN "Conrad-PN"
 F 6 "Value" H 7400 1150 60  0001 C CNN "Digikey-PN"
+F 7 "MIK-FLINK 0,5A" H 7400 1150 60  0001 C CNN "Reichelt-PN"
 	1    7400 1150
 	1    0    0    -1  
 $EndComp
