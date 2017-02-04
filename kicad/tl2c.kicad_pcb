@@ -1,4 +1,4 @@
-(kicad_pcb (version 4) (host pcbnew 4.0.2-4+6225~38~ubuntu14.04.1-stable)
+(kicad_pcb (version 4) (host pcbnew 4.0.0-rc1-stable)
 
   (general
     (links 161)
@@ -72,7 +72,7 @@
     (pad_drill 0.762)
     (pad_to_mask_clearance 0.2)
     (aux_axis_origin 0 0)
-    (visible_elements FFFEEFFF)
+    (visible_elements 7FFFFFFF)
     (pcbplotparams
       (layerselection 0x010fc_80000007)
       (usegerberextensions false)
@@ -4120,20 +4120,20 @@
       (net 18 /LineUG))
   )
 
-  (module tl2c-footprint:Fuse_TE5_Littlefuse-ESKA_887_O14 (layer F.Cu) (tedit 588B6A11) (tstamp 586A9BCB)
+  (module tl2c-footprint:Fuse_TE5_Littlefuse-ESKA_887_O14 (layer F.Cu) (tedit 5895ACAA) (tstamp 586A9BCB)
     (at 55.88 94.869)
     (tags "Fuse, ESKA")
     (path /586AB129)
-    (fp_text reference F101 (at 0 -5.1) (layer F.SilkS)
+    (fp_text reference F101 (at -0.02 -5.31) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value 500mA (at 0 5.3) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_circle (center 0 0) (end 4.175 0) (layer F.SilkS) (width 0.15))
-    (pad 1 thru_hole circle (at -2.54 0) (size 2.032 2.032) (drill 1.016) (layers *.Cu *.Mask)
+    (fp_circle (center 0 0) (end 4.5 0) (layer F.SilkS) (width 0.15))
+    (pad 1 thru_hole circle (at -2.54 0) (size 2.54 2.54) (drill 1.524) (layers *.Cu *.Mask)
       (net 17 /Lin))
-    (pad 2 thru_hole circle (at 2.54 0.01016) (size 2.032 2.032) (drill 1.016) (layers *.Cu *.Mask)
+    (pad 2 thru_hole circle (at 2.54 0.01016) (size 2.54 2.54) (drill 1.524) (layers *.Cu *.Mask)
       (net 50 "Net-(F101-Pad2)"))
   )
 
