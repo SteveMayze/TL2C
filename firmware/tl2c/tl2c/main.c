@@ -1,117 +1,89 @@
-// This file has been prepared for Doxygen automatic documentation generation.
-/*! \file ********************************************************************
-*
-* Atmel Corporation
-*
-* - File              : main.c
-* - Compiler          : IAR EWAAVR 4.10b
-*
-* - Support mail      : avr@atmel.com
-*
-* - Supported devices : All devices with a TWI module can be used.
-*                       The example is written for ATmega32
-*
-* - AppNote           : AVR316 - SMBus slave
-*
-* - Description       : Initialization and LED display code.
-*
-* $Revision: 1.5 $
-* $Date: Thursday, September 29, 2005 12:10:38 UTC $
-*****************************************************************************/
-
-/*! \mainpage
-\section Intro Introduction
-This documents data structures, functions, variables, defines, enums, and
-typedefs in the software for application note AVR316: SMBus slave using the
-TWI module. This is an example on how to use the TWI module of an AVR to
-implement an SMBus slave.\n\n
-
-\section CI Compilation Info
-The source code is written for the IAR C/C++ compiler.
-Follow these steps to compile the project with IAR Embedded workbench:
-- Unzip all source code files into the same directory.
-- Create a new project and add main.c, SMBslave.c and SMBExample.c.
-- Under 'Project -> Options' select the device you are compiling for. Select
-'Enable bit definitions in I/O include files'. For AVRStudio compatible output
-format use ubrof8 for Debug and intel_extended for Release.
-- Open the file SMBSlave.h and edit the section marked 'Configuration
-parameters'. The usage of each parameter is described in detail in the file.
-- Select 'Project -> Build' to build the project.
-- For Release target add the following to Linker 'Extra Options':\n
-'-y(CODE)'\n
-'-Ointel-extended,(XDATA)=$TARGET_DIR$\\$PROJ_FNAME$_eeprom.hex' \n
-This generates a separate hex-file for EEPROM data, and thus circumvent
-limitations in the intel extended file format.\n\n
-
-\section DI Device Info
-All devices with a TWI module can be used. See appnote for details on how
-to add support for new devices.\n
-The LEDs in the demo example doesn't work correctly with all devices.\n\n
-
-\section CSZ Code Size
-1532 bytes of code for the complete application with PEC lookup.\n
-
-
-*
-*/
-
+/*
+ * tl2c.c
+ *
+ * Created: 18/02/2017 15:26:52
+ * Author : Steve
+ */ 
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
-#include "device_specific.h"
-#include "SMBExample.h"
-#include "SMBSlave.h"
 
-unsigned volatile char leds[3];         //!< Array of values to display on LEDs
-unsigned volatile char ledLength = 0;    //!< Number of values to display on LEDs
-unsigned volatile char ledIndex = 0;     //!< Index of the currently displayed LED value
 
-/*! \brief Program entry point
- *
- *  Initializes peripherals, then goes into an infinite loop.
- */
-void main(void)
+#ifndef F_CPU
+#define F_CPU 1000000UL
+#endif
+
+volatile unsigned int led_flag = 0;
+unsigned int startValue = 0xFF;
+
+
+int main(void)
 {
-    // Set data direction of PORTB as output and turn off LEDs.
-    DDRB = 0xff;
-    PORTB = 0xff;
+    /* Replace with your application code */
 
-    // Initialize timer1
-    TCCR1B = (1 << CS11) | (1 << CS10);
-    TIMSK1 |= (1 << TOIE1);
+	// Outputs
+	// PA0 - UG Untergesschoss relay
+	// PA1 - EG	Erdgeschoss relay
+	// PA2 - OG	Obergeschoss relay
 
-    // Initialize SMBus
-    SMBusInit();
-    SMBEnable();
+	// Inputs 
+	// PA3 - UG Untergeschoss PIR signal
+	// PA4 - EG Erdgeschoss PIR signal
+	// PA5 - OG Obergeschoss PIR signal
 
-    // Enable interrupts globally
-    sei();
-    for (;;)
+
+#define CTC_MODE	// Testing the timers and interrupts
+
+
+// The the data direction for the relay outputs
+DDRA |= ( 1 << PORTA0 ) | ( 1 << PORTA1 ) | ( 1 << PORTA2 );
+DDRA &= ~( 7 << PORTA3 );
+
+#ifdef CTC_MODE
+// This is the CTC mode whereby the counter registers are are set and a
+// Wave Generator is created. In this example only the OCR0A is used, It
+// is possible also to configure the OCR0B as well.
+TCCR0A  = 0;										// Reset the operation
+TCCR0A  |=  ( 1 << WGM01 );							// CTC operation
+TCCR0B  |=  ( 5 << CS00  );							// 1024 Pre-scaler
+OCR0A = startValue;									// Set the start value
+TIMSK |= ( 1 << OCIE0A );							// Enable the interrupt on OCR0A
+#define LED PORTA0
+#endif
+
+#ifdef NORMAL_MODE
+// In normal mode, only the TCNT0 needs to be set ( as well as the pre-scaler).
+TCCR0A  = 0;										// Reset the operation
+TCCR0B  |=  ( 5 << CS00  );							// 1024 Pre-scaler
+TCNT0  = startValue;								// Set the start value
+TIMSK |= ( 1 << TOIE0 );							// Enable the over flow interrupt
+#define LED  PORTA1
+#endif
+
+
+	PORTA &= ~( 7 << PORTA0 );
+	sei();
+
+    while (1) 
     {
-
+		if( led_flag){
+			led_flag = 0;
+			PORTA ^= (1 << LED);
+		}
     }
 }
 
-
-/*! \brief Timer/Counter1 overflow interrupt, controls the LEDs.
- *
- *  The Timer/Counter1 overflow interrupt routine is used to
- *  output data received, to the LEDs of the STK500 starter kit/
- *  development board at a rate that is visible to the human eye.
- */
-ISR(TIMER1_OVF_VECT)
-{
-    unsigned char tempLength; // Only used to specify volatile access order
-
-    tempLength = ledLength;
-    // Output next LED value in LED buffer
-    ledIndex++;
-    if (ledIndex >= tempLength)
-    {
-        ledIndex = 0;
-    }
-
-    PORTA  &= ~(leds[ledIndex] && 0x07);
+#ifdef CTC_MODE
+ISR(TIM0_COMPA_vect) {
+	// OCR0A = startValue;	// This value does not have to be reset like in Normal Mode.
+	led_flag = 1;
 }
+#endif
 
+#ifdef NORMAL_MODE
+ISR(TIM0_OVF_vect) {
+	TCNT0  = startValue;	// This value must be reset each time to keep the frequency
+	led_flag = 1;
+}
+#endif
 
