@@ -38,10 +38,9 @@
         </dependencies>
       </framework-data>
     </AsfFrameworkConfig>
-    <avrtool>com.atmel.avrdbg.tool.simulator</avrtool>
+    <avrtool>com.atmel.avrdbg.tool.ispmk2</avrtool>
     <avrtoolinterface>TPI</avrtoolinterface>
-    <avrtoolserialnumber>
-    </avrtoolserialnumber>
+    <avrtoolserialnumber>000200144478</avrtoolserialnumber>
     <avrdeviceexpectedsignature>0x1E910F</avrdeviceexpectedsignature>
     <com_atmel_avrdbg_tool_ispmk2>
       <ToolOptions>
@@ -57,7 +56,8 @@
       <ToolOptions>
         <InterfaceProperties>
         </InterfaceProperties>
-        <InterfaceName>TPI</InterfaceName>
+        <InterfaceName>
+        </InterfaceName>
       </ToolOptions>
       <ToolType>com.atmel.avrdbg.tool.simulator</ToolType>
       <ToolNumber>

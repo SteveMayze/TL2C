@@ -104,7 +104,8 @@ warm_boot:
 ; Initialise the Two Wire Slave Module
 	ldi r16, 0x00								; We are not using the Addressing Mask
 	out TWSAM, r16
-	ldi r16, TL2C_ADDRESS	| 1<<TWSA0			; Set the slave address - also set the General call address flg
+	lds r16, TL2C_ADDRESS
+	ori r16, 1<<TWSA0							; Set the slave address - also set the General call address flg
 	out TWSA, r16
 
 	ldi r16, 1<<TWEN							; Enable the Two Wire module - but not the interrupts just yet.
@@ -194,6 +195,7 @@ toggle_GREEN:
 // ===========================================================================
 // Interrupt service routine for handingling the CTC0 overflow
 isr_tov:
+	; Save off any registeres that could be used elsewhere here.
 	push r18
 	push r19
 
@@ -207,84 +209,93 @@ isr_tov:
 	reti
 
 
+// ===========================================================================
+// Interrupt service routine for handling the TWI interrupt
 isr_TWI_Handler:
+	; The interrupt will be one of either ADRESS, STOP or DATA.
+	; The intial state will be waiting for a START i.e. ADRESS. This is not
+	; a good assumption, but it is a place to start.
+
+	; Save off any registeres that could be used elsewhere here.
 	push r18
 	push r19
 	push r20
 
+	; What was the cause of the interupt? Is this ADDRESS, STOP or DATA?
+	in r18, TWSSRA
+	sbrs r18, TWASIF						; 1 = ADDRESS or STOP
+	rjmp data_received
+	sbrs r18, TWAS 							; 1 = Address Interrupt
+	rjmp stop_detected						; Just reset the flags and wait for the next.
+
+address_detected:
+	; send back the ACK and prepare to send or receive
+	ldi r19, 0<<TWAA | 1<<TWCMD1 | 1<<TWCMD0	; 0=TWAA: ACK, 11=TWCMD
+	out TWSCRB, r19
+	sbrc r18, TWDIR							; Test the READ/WRITE bit
+	rjmp master_read
+
+master_write:
+	; First thing, let the outside world know that we made it to the ISR
 	ldi r19, yellow_LED		; Set the YELLOW LED, but don't destroy any other possible flags.
 	lds r18, led_flag
 	or r18, r19
 	sts led_flag, r18
-
-	in r18, TWSSRA
-	; sbrc r18, TWASIF
-	sbrc r18, TWAS
-	rjmp address_detected 						; 1 = Address/Stop Interrupt
-	sbrc r18, TWDIF
-	rjmp data_interrupt						; 1 = Data Interrupt
-
-address_stop:
-	sbrc r18, TWAS
-	rjmp address_detected					; 1 = Address or STOP
-	; Stop detected
-	ldi r20, 1<<TWASIE | 1<<TWEN | 1<<TWSIE
-	out TWSCRA, r20
-	ldi r20,  1<<TWCMD1 | 0<<TWCMD0	
-	out TWSCRB, r20
+	in r20, TWSD
+	; Here we will eventually write this to a buffer
+	; and test the buffer size.
+	; If too big, then send a NACK
+	ldi r19, 0<<TWAA | 1<<TWCMD1 | 1<<TWCMD0	; 0=TWAA: ACK, 11=TWCMD
+	out TWSCRB, r19
+	; Reset the flags
+	ldi r19, 1<<TWDIF | 1<<TWASIF				; Writing a 1 to the TWDIF and or TWASIF will release the SLC
+	out TWSSRA, r19
+	ldi r19, 1<<TWDIE |1<<TWASIE | 1<<TWEN | 1<<TWSIE 	; Enable the TWI Address/Stop Interrupt, TWI Interface, TWI Stop Interrupt
+	out TWSCRA, r19
 	rjmp done
-
-data_interrupt:
-	sbrc r18, TWDIR							; 1 = Master Read
-	rjmp master_read
-	; master write
-	in r19, TWSD
-	; sts tl2c_register_addr, r19
-
-	ldi r18, 1<<TWDIF | 1<<TWASIF	; Reset the flags
-	out TWSSRA, r20
-
-	ldi r20,  1<<TWAA| 1<<TWCMD1 | 0<<TWCMD0	; Send NACK
-	out TWSCRB, r20
-	ldi r20, 1<<TWASIE | 1<<TWEN | 1<<TWSIE
-	out TWSCRA, r20
-	rjmp done
-
-
-address_detected:
-	ldi r20, TWI_ADDRESS_RECEIVED
-	sts TWI_State, r20
-
-	ldi r18, 1<<TWDIF | 1<<TWASIF	; Reset the flags
-	out TWSSRA, r20
-
-	ldi r20,  1<<TWCMD1 | 1<<TWCMD0	; Send ACK, then receive next byte (Register address)
-	out TWSCRB, r20
-
-	ldi r20, 1<<TWDIE | 1<<TWASIE | 1<<TWEN | 1<<TWSIE 		; Enable
-	out TWSCRA, r20
-	rjmp done
-
 
 master_read:
-	ldi r19, green_LED						; Set the GREEN LED, but don't destroy any other possible flags.
-	lds r20, led_flag
-	or r20, r19
-	sts led_flag, r20
+	ldi r19, green_LED					; Set the YELLOW LED, but don't destroy any other possible flags.
+	lds r18, led_flag
+	or r18, r19
+	sts led_flag, r18
 
-wait:
-	ldi r20, 0xA9
-	out TWSD, r20
+	; Here we will eventually pull the data from the buffer
+	; and test the size and send a NACK when there is no more?
+	ldi r19, 1<<TWDIF | 1<<TWASIF				; Writing a 1 to the TWDIF and or TWASIF will release the SLC
+	out TWSSRA, r19
 
-	ldi r18, 1<<TWDIF | 1<<TWASIF	; Reset the flags
-	out TWSSRA, r20
-	ldi r20, 1<<TWAA |  1<<TWCMD1 | 0<<TWCMD0	; Send NACK
-	out TWSCRB, r20
+	ldi r19, 0x5c
+	out TWSD, r19		; Just a dummy message for now.
+	; in r18, TWSSRA
+	; sbrs r18, TWRA
 
-	ldi r20, 1<<TWDIE |1<<TWSIE |1<<TWASIE | 1<<TWEN | 1<<TWSIE 		; Enable
-	out TWSCRA, r20
-	; rjmp done
+	; ldi r19, 1<<TWDIF | 1<<TWASIF				; Writing a 1 to the TWDIF and or TWASIF will release the SLC
+	; out TWSSRA, r19
+	in r18, TWSSRA
+	sbrc r18, TWRA								; 0 = ACK, 1 = NACK
+	rjmp stop_detected
+	; This is supposed to be in some type of buffer test ... when there is no data.
+	; We are only sending one byte for now.
+	; ldi r19, 1<<TWAA | 1<<TWCMD1 | 0<<TWCMD0	; 1=TWAA: NACK, 10=TWCMD
+	; out TWSCRB, r19
+	ldi r19, 1<<TWDIF | 1<<TWASIF				; Writing a 1 to the TWDIF and or TWASIF will release the SLC
+	out TWSSRA, r19
+	ldi r19, 1<<TWDIE |1<<TWASIE | 1<<TWEN | 1<<TWSIE 	; Enable the TWI Address/Stop Interrupt, TWI Interface, TWI Stop Interrupt
+	out TWSCRA, r19
+	rjmp done			; Recevied ACK from the master - This does not seem right. There could be a timing issue here.
 
+data_received:
+	rjmp master_read
+	rjmp master_write
+
+
+stop_detected:
+	; A stop is detected, so this is the end of the transaction.
+	ldi r19, 1<<TWDIF | 1<<TWASIF				; Writing a 1 to the TWDIF and or TWASIF will release the SLC
+	out TWSSRA, r19
+	ldi r19, 1<<TWASIE | 1<<TWEN | 1<<TWSIE 	; Enable the TWI Address/Stop Interrupt, TWI Interface, TWI Stop Interrupt
+	out TWSCRA, r19
 
 done:
 	pop r20
