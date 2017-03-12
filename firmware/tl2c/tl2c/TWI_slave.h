@@ -9,11 +9,16 @@
  #define __twi_slave_h__
 
  #define TWI_BUFFER_SIZE 5
+ #define red_LED 0x00
+ #define yellow_LED 0x01
+ #define green_LED 0x02
+
+
 
  /**
-	
+	The structure that models the TWI status register.
   */
- union TIM0_statusReg_A_t {
+ union TWI_statusReg_A_t {
 	 unsigned char all;
 	 struct {
 		 unsigned char TWI_TWAS:1;		// TWI Address or Stop 
@@ -27,11 +32,17 @@
 	 };
  };
 
-volatile union TIM0_statusReg_A_t TIM0_statusReg_A;
+volatile union TWI_statusReg_A_t TWI_statusReg_A;
+volatile unsigned char TWI_Buffer[TWI_BUFFER_SIZE];
+volatile unsigned char twi_buffer_idx;
+
+volatile unsigned int led_flag;
+
+
 
 unsigned char TWI_Slave_Initialise( unsigned char TWI_ownAddress );
 unsigned char TWI_Start(void);
- unsigned char TWI_isBusy(void);
+unsigned char TWI_isBusy(void);
 
 #define TWI_NO_STATE               0xF8  // No relevant state information available;
 

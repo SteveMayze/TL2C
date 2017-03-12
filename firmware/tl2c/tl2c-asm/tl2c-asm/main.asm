@@ -90,7 +90,7 @@ reset:
 	ldi r16, 0x00								; Set the status register to all OFF
 	sts TL2C_STATUS, r16
 	ldi r16, 1<<TL2C_PIR1E | 1<<TL2C_PIR2E		; Enable zones 1 and 2 as a default
-	sts TL2C_CONFIG, r16	
+	sts TL2C_CONFIG, r16
 	ldi r16, TL2C_default_delay					; Set the default delay for each of the zones.
 	sts TL2C_Z1ON, r16
 	sts TL2C_Z2ON, r16
@@ -193,9 +193,9 @@ toggle_GREEN:
 	ret
 
 // ===========================================================================
-// Interrupt service routine for handingling the CTC0 overflow
+// Interrupt service routine for handling the CTC0 overflow
 isr_tov:
-	; Save off any registeres that could be used elsewhere here.
+	; Save off any registers that could be used elsewhere here.
 	push r18
 	push r19
 
@@ -216,12 +216,12 @@ isr_TWI_Handler:
 	; The intial state will be waiting for a START i.e. ADRESS. This is not
 	; a good assumption, but it is a place to start.
 
-	; Save off any registeres that could be used elsewhere here.
+	; Save off any registers that could be used elsewhere here.
 	push r18
 	push r19
 	push r20
 
-	; What was the cause of the interupt? Is this ADDRESS, STOP or DATA?
+	; What was the cause of the interrupt? Is this ADDRESS, STOP or DATA?
 	in r18, TWSSRA
 	sbrs r18, TWASIF						; 1 = ADDRESS or STOP
 	rjmp data_received
@@ -287,7 +287,7 @@ master_read:
 
 data_received:
 	rjmp master_read
-	rjmp master_write
+	; rjmp master_write
 
 
 stop_detected:
@@ -302,4 +302,3 @@ done:
 	pop r19
 	pop r18
 	reti
-	

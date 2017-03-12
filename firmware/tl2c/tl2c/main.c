@@ -7,14 +7,8 @@
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
+#include "main.h"
 #include "TWI_slave.h"
-
-
-#ifndef F_CPU
-#define F_CPU 1000000UL
-#endif
-
-volatile unsigned int led_flag = 0;
 
 
 
@@ -34,8 +28,6 @@ int main(void)
 
 
 #define CTC_MODE	// Testing the timers and interrupts
-#define LED PORTA0
-
 
 // The the data direction for the relay outputs
 DDRA |= ( 1 << PORTA0 ) | ( 1 << PORTA1 ) | ( 1 << PORTA2 );
@@ -49,12 +41,9 @@ unsigned int startValue = 0x01FF;
 TCCR1A  = 0;										// Reset the operation
 TCCR1A  |=  ( 1 << WGM12 );							// CTC operation
 TCCR1B  |=  ( 2 << CS10  );							// 1024 Pre-scaler
-OCR1AL = 0xAF;									// Set the start value
+OCR1AL = startValue;									// Set the start value
 OCR1AH = 0xFF;
 TIMSK |= ( 1 << OCIE1A );							// Enable the interrupt on OCR0A
-#	ifndef LED
-#		define LED PORTA0
-#	endif
 #endif
 
 
@@ -62,15 +51,12 @@ TIMSK |= ( 1 << OCIE1A );							// Enable the interrupt on OCR0A
 // This is the CTC mode whereby the counter registers are are set and a
 // Wave Generator is created. In this example only the OCR0A is used, It
 // is possible also to configure the OCR0B as well.
-unsigned int startValue = 0x7F;
+unsigned int startValue = 0xAF;
 TCCR0A  = 0;										// Reset the operation
 TCCR0A  |=  ( 1 << WGM01 );							// CTC operation
 TCCR0B  |=  ( 5 << CS00  );							// 1024 Pre-scaler
 OCR0A = startValue;									// Set the start value
 TIMSK |= ( 1 << OCIE0A );							// Enable the interrupt on OCR0A
-#	ifndef LED
-#		define LED PORTA0
-#	endif
 #endif
 
 #ifdef NORMAL_MODE
@@ -80,24 +66,28 @@ TCCR0A  = 0;										// Reset the operation
 TCCR0B  |=  ( 5 << CS00  );							// 1024 Pre-scaler
 TCNT0  = startValue;								// Set the start value
 TIMSK |= ( 1 << TOIE0 );							// Enable the over flow interrupt
-#	ifndef LED
-#		define LED PORTA1
-#	endif
 #endif
 
 
 	PORTA &= ~( 7 << PORTA0 );	// Turn off ALL indicator LEDs.
-
+	led_flag = 0;
 	TWI_Slave_Initialise(0x40);
 	sei();
 
     TWI_Start();
-
     while (1) 
     {
-		if( led_flag){
+		if( led_flag){			
+			if( (led_flag >> red_LED)&1 ){
+			   PORTA ^= (1 << PORTA0);
+			}
+			if( (led_flag >> yellow_LED)&1 ){
+			   PORTA ^= (1 << PORTA1);
+			}
+			if( (led_flag >> green_LED)&1 ){
+			   PORTA ^= (1 << PORTA2);
+			}
 			led_flag = 0;
-			PORTA ^= (1 << LED);
 		}
 	//	if( !TWI_isBusy()) {
 		//	TWI_Start();
@@ -108,21 +98,21 @@ TIMSK |= ( 1 << TOIE0 );							// Enable the over flow interrupt
 #ifdef CTC1_MODE
 ISR(TIM1_COMPA_vect) {
 	// OCR0A = startValue;	// This value does not have to be reset like in Normal Mode.
-	led_flag = 1;
+	led_flag |= (1 << red_LED);
 }
 #endif
 
 #ifdef CTC_MODE
 ISR(TIM0_COMPA_vect) {
 	// OCR0A = startValue;	// This value does not have to be reset like in Normal Mode.
-	led_flag = 1;
+	led_flag |= (1 << red_LED);
 }
 #endif
 
 #ifdef NORMAL_MODE
 ISR(TIM0_OVF_vect) {
 	TCNT0  = startValue;	// This value must be reset each time to keep the frequency
-	led_flag = 1;
+	led_flag |= (1 << red_LED);
 }
 #endif
 
