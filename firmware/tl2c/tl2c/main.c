@@ -7,7 +7,7 @@
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
-#include "main.h"
+#include "common.h"
 #include "TWI_slave.h"
 
 
@@ -71,7 +71,7 @@ TIMSK |= ( 1 << TOIE0 );							// Enable the over flow interrupt
 
 	PORTA &= ~( 7 << PORTA0 );	// Turn off ALL indicator LEDs.
 	led_flag = 0;
-	TWI_Slave_Initialise(0x40);
+	TWI_Slave_Initialise( 0x40 );
 	sei();
 
     TWI_Start();
@@ -89,9 +89,6 @@ TIMSK |= ( 1 << TOIE0 );							// Enable the over flow interrupt
 			}
 			led_flag = 0;
 		}
-	//	if( !TWI_isBusy()) {
-		//	TWI_Start();
-	//	}
     }
 }
 
