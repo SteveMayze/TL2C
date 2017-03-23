@@ -11,7 +11,7 @@
 	#include <avr/interrupt.h>
 
 	#ifndef F_CPU
-	#define F_CPU 8000000UL
+	#define F_CPU 1000000UL
 	#endif
 
 	#define red_LED 0x00
@@ -103,10 +103,14 @@
 	union TL2C_config_reg_t {
 		unsigned char all;
 		struct{
-			unsigned char TL2C_Z1A:1;	// Zone 1 Status Flag
-			unsigned char TL2C_Z2A:1;	// Zone 2 Status Flag
-			unsigned char TL2C_Z3A:1;	// Zone 3 Status Flag
-			unsigned char TL2C_NA:5;	// Not Used
+			unsigned char TL2C_Z1A:1;	// Zone 1 Activate Flag
+			unsigned char TL2C_Z2A:1;	// Zone 2 Activate Flag
+			unsigned char TL2C_Z3A:1;	// Zone 3 Activate Flag
+			unsigned char TL2C_NA1:1;	// Not Used
+			unsigned char TL2C_PIR1E:1;	// Zone 1 Enable Flag
+			unsigned char TL2C_PIR2E:1;	// Zone 2 Enable Flag
+			unsigned char TL2C_PIR3E:1;	// Zone 3 Enable Flag
+			unsigned char TL2C_NA2:1;	// Not Used
 		};
 	};
 	
@@ -122,5 +126,45 @@
 
 	volatile TL2C_Registers_struct TL2C_Registers;
 	volatile unsigned char TL2C_RegisterAddress;
+
+
+
+
+union TL2C_RLY_t {
+	unsigned char all;
+	struct{
+		unsigned char TL2C_RLY_UG:1;	// Zone 1 - UG Relay
+		unsigned char TL2C_RLY_EG:1;	// Zone 2 - EG Relay
+		unsigned char TL2C_RLY_OG:1;	// Zone 3 - OG Relay
+		unsigned char TL2C_NA:5;		// Not Used
+	};
+};
+
+union TL2C_PIR_t {
+	unsigned char all;
+	struct{
+		unsigned char TL2C_PIR_UG:1;	// Zone 1 - UG PIR13
+		unsigned char TL2C_PIR_EG:1;	// Zone 2 - EG PIR13
+		unsigned char TL2C_PIR_OG:1;	// Zone 3 - OG PIR13
+		unsigned char TL2C_NA2:5;		// Not Used
+	};
+};
+
+
+// union TL2C_RLY_t TL2C_RLY_state;
+typedef struct {
+	union TL2C_RLY_t relay_state;
+	unsigned char relay1_counter;
+	unsigned char relay2_counter;
+	unsigned char relay3_counter;
+} TL2C_Relay_ctl_t;
+
+volatile union TL2C_PIR_t TL2C_PIR_state;
+volatile TL2C_Relay_ctl_t TL2C_Relay_ctl;
+
+volatile unsigned char TL2C_pir_interrupt;
+
+
+
 
 #endif

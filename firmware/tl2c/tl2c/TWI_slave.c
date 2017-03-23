@@ -18,9 +18,12 @@ volatile unsigned char TWI_addr_mode = 0;
 	  TL2C_RegisterAddress = 0;
 	  TWI_addr_mode = 1;
 	  TL2C_Registers.TL2C_status_reg.all = 0;
-	  TL2C_Registers.TL2C_config_reg.TL2C_Z1A = 1;
-	  TL2C_Registers.TL2C_config_reg.TL2C_Z2A = 1;
+	  TL2C_Registers.TL2C_config_reg.TL2C_Z1A = 0;
+	  TL2C_Registers.TL2C_config_reg.TL2C_Z2A = 0;
 	  TL2C_Registers.TL2C_config_reg.TL2C_Z3A = 0;
+	  TL2C_Registers.TL2C_config_reg.TL2C_PIR1E = 1;
+	  TL2C_Registers.TL2C_config_reg.TL2C_PIR2E = 1;
+	  TL2C_Registers.TL2C_config_reg.TL2C_PIR3E = 0;
 	  TL2C_Registers.TL2C_Zone1_On_Delay = 20;
 	  TL2C_Registers.TL2C_Zone2_On_Delay = 10;
 	  TL2C_Registers.TL2C_Zone3_On_Delay = 10;
@@ -47,8 +50,7 @@ volatile unsigned char TWI_addr_mode = 0;
 
 
 
-unsigned char masterRead(unsigned char registerAddress, unsigned char *data){
-	unsigned char result = 0;
+void masterRead(unsigned char registerAddress, unsigned char *data){
 	switch( registerAddress) {
 		case TL2C_STATUS_REG:
 		*data = TL2C_Registers.TL2C_status_reg.all;
@@ -69,21 +71,21 @@ unsigned char masterRead(unsigned char registerAddress, unsigned char *data){
 		*data = TL2C_Registers.TL2C_I2C_Address;
 		break;
 		default:
-		result = 1;
 		*data = 0;
 		break;
 	}
-	return result;
 }
 
-unsigned char masterWrite(unsigned char registerAddress, unsigned char twsd){
-	unsigned char result = 0;
+void masterWrite(unsigned char registerAddress, unsigned char twsd){
 	switch( registerAddress ){
 		case TL2C_STATUS_REG:
-		TL2C_Registers.TL2C_status_reg.all = twsd;
+		// READ ONLY
+		// TL2C_Registers.TL2C_status_reg.all = twsd;
 		break;
 		case TL2C_CONFIG_REG:
 		TL2C_Registers.TL2C_config_reg.all = twsd;
+		TL2C_Registers.TL2C_status_reg.all = ((TL2C_Registers.TL2C_config_reg.all & 0b00000111)<<4);
+		TL2C_pir_interrupt = 1;
 		break;
 		case TL2C_ZONE1_ON_DELAY:
 		TL2C_Registers.TL2C_Zone1_On_Delay = twsd;
@@ -98,10 +100,8 @@ unsigned char masterWrite(unsigned char registerAddress, unsigned char twsd){
 		TL2C_Registers.TL2C_I2C_Address = twsd;
 		break;
 		default:
-		result = 1;
 		break;
 	}
-	return result;
 }
 
 
@@ -111,7 +111,6 @@ unsigned char masterWrite(unsigned char registerAddress, unsigned char twsd){
 /************************************************************************/
  ISR(TWI_SLAVE_vect) {
 
-	unsigned char result;
 	TWI_statusReg_A.all = TWSSRA;
 	unsigned char data = TWSD;
 
@@ -120,8 +119,7 @@ unsigned char masterWrite(unsigned char registerAddress, unsigned char twsd){
 			// Send back the ACK and prepare to send or receive
 			TWSCRB = 0b00000011;	// 0<<TWAA 1<<TWCMD1 1<<TWCMD0: ACK, 11=TWCMD
 			if(TWI_statusReg_A.TWI_TWDIR){	// master READ
-				led_flag |= (1 << green_LED);
-				result = masterRead(TL2C_RegisterAddress++, &data);
+				masterRead(TL2C_RegisterAddress++, &data);
 				TWSD = data;
 				TWSSRA = (1<<TWDIF)|(1<<TWASIF);	// Release the SLC
 				TWI_statusReg_A.all = TWSSRA;
@@ -134,11 +132,10 @@ unsigned char masterWrite(unsigned char registerAddress, unsigned char twsd){
 					TWSCRA |= ( 1 << TWDIE ) | ( 1 << TWASIE ) | ( 1 << TWEN ) | ( 1 << TWSIE ) ;
 				}
 			} else {	// master WRITE
-				led_flag |= (1 << yellow_LED);
 				if( TWI_addr_mode ) {
 					TL2C_RegisterAddress = 0x00;
 				} else {
-					result = masterWrite(TL2C_RegisterAddress++, data);
+					masterWrite(TL2C_RegisterAddress++, data);
 				}
 				TWSCRB = 0b00000011;
 				TWSSRA = (1<<TWDIF)|(1<<TWASIF);	// Release the SLC
@@ -154,9 +151,8 @@ unsigned char masterWrite(unsigned char registerAddress, unsigned char twsd){
 		}
 	} else {	// DATA
 		if( TWI_statusReg_A.TWI_TWDIR){	// master READ
-			led_flag |= (1 << green_LED);
 			// TWSD = TWI_Buffer[twi_buffer_ptr];
-			result = masterRead(TL2C_RegisterAddress++, &data);
+			masterRead(TL2C_RegisterAddress++, &data);
 			TWSD = data;
 			if( TL2C_RegisterAddress > 5 ){
 				TL2C_RegisterAddress = 0x00;
@@ -169,12 +165,11 @@ unsigned char masterWrite(unsigned char registerAddress, unsigned char twsd){
 				TWSCRA |= ( 1 << TWDIE ) | ( 1 << TWASIE ) | ( 1 << TWEN ) | ( 1 << TWSIE ) ;
 			}
 		} else { // master WRITE
-			led_flag |= (1 << yellow_LED);
 			if( TWI_addr_mode ) {
 				TL2C_RegisterAddress = data;
 				TWI_addr_mode = 0;
 			} else {
-				result = masterWrite(TL2C_RegisterAddress++, data);
+				masterWrite(TL2C_RegisterAddress++, data);
 			}
 			if( TL2C_RegisterAddress > 6 ){
 				TL2C_RegisterAddress = 0x00;
