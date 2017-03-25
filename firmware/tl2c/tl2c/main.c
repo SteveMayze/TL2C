@@ -30,12 +30,11 @@ int main(void)
 	// PA5 - OG Obergeschoss PIR signal
 
 
-#define CTC_MODE	// Testing the timers and interrupts
+#define CTC1_MODE	// Testing the timers and interrupts
 
 // The the data direction for the relay outputs
 DDRA = 0;
 DDRA |= ( 1 << PORTA0 ) | ( 1 << PORTA1 ) | ( 1 << PORTA2 );
-// DDRA &= ~( 7 << PORTA3 );
 PUEA = 0;
 PUEA |= ( 1 << PUEA5) | ( 1 << PUEA4) | ( 1 << PUEA3);
 // Set the Pin Change interrupts for
@@ -48,10 +47,10 @@ GIMSK |= ( 1<<PCIE0 );
 	// is possible also to configure the OCR0B as well.
 	// unsigned int startValue = 0x03D0;
 	TCCR1A  = 0;										// Reset the operation
-	TCCR1A  |=  ( 1 << WGM12 );							// CTC operation
-	TCCR1B  |=  ( 2 << CS10  );							// 1024 Pre-scaler
-	OCR1AL = 0xD0;										// Set the start value
-	OCR1AH = 0x03;
+	TCCR1B  |=  ( 1 << WGM12 );							// CTC operation
+	TCCR1B  |=  ( 5 << CS10  );							// 1024 Pre-scaler
+	OCR1AH = 0x03;										// Set the start value - ~0.5Hz
+	OCR1AL = 0xD0;										// 16 bit register ... write the high byte first!
 	TIMSK |= ( 1 << OCIE1A );							// Enable the interrupt on OCR0A
 #endif
 
@@ -60,11 +59,10 @@ GIMSK |= ( 1<<PCIE0 );
 	// This is the CTC mode whereby the counter registers are are set and a
 	// Wave Generator is created. In this example only the OCR0A is used, It
 	// is possible also to configure the OCR0B as well.
-	unsigned int startValue = 0xF4;
 	TCCR0A  = 0;										// Reset the operation
 	TCCR0A  |=  ( 1 << WGM01 );							// CTC operation
 	TCCR0B  |=  ( 5 << CS00  );							// 1024 Pre-scaler
-	OCR0A = startValue;									// Set the start value
+	OCR0A = 0xF4;									// Set the start value
 	TIMSK |= ( 1 << OCIE0A );							// Enable the interrupt on OCR0A
 #endif
 
@@ -173,16 +171,18 @@ ISR(PCINT0_vect){
 ISR(TIM1_COMPA_vect) {
 	// OCR0A = startValue;	// This value does not have to be reset like in Normal Mode.
 	led_flag |= (1 << red_LED);
+	
 }
 #endif
 
 #ifdef CTC_MODE
 ISR(TIM0_COMPA_vect) {
 	// OCR0A = startValue;	// This value does not have to be reset like in Normal Mode.
+	// led_flag |= (1 << green_LED);
 	// led_flag |= (1 << red_LED);
 	timer_delay++;
-	if(timer_delay > 3){
-		led_flag = 1;
+	if(timer_delay > 3 ){
+		led_flag |= (1 << red_LED);
 		timer_delay = 0;
 	}
 	

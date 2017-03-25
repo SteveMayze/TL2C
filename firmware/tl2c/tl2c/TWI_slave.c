@@ -154,7 +154,7 @@ void masterWrite(unsigned char registerAddress, unsigned char twsd){
 			// TWSD = TWI_Buffer[twi_buffer_ptr];
 			masterRead(TL2C_RegisterAddress++, &data);
 			TWSD = data;
-			if( TL2C_RegisterAddress > 5 ){
+			if( TL2C_RegisterAddress > 6 ){
 				TL2C_RegisterAddress = 0x00;
 				TWI_addr_mode = 1;
 				TWSCRB = 0b00000110;
