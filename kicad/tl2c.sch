@@ -36,8 +36,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 4
 Title "TL2C - Timed LED Lighting Controller"
-Date "2016-12-14"
-Rev "2L.1"
+Date "2017-03-30"
+Rev "2L.2"
 Comp ""
 Comment1 ""
 Comment2 ""

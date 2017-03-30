@@ -36,8 +36,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 4
 Title "TL2C - Timed LED Lighting Controller"
-Date "2016-12-14"
-Rev "2L.1"
+Date "2017-03-30"
+Rev "2L.2"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -192,7 +192,7 @@ Wire Wire Line
 Wire Wire Line
 	5400 3950 5400 3900
 Connection ~ 5400 3950
-Text HLabel 8400 3950 2    60   Input ~ 0
+Text HLabel 6100 3850 0    60   Input ~ 0
 UbOut
 Wire Wire Line
 	4450 1400 6150 1400
@@ -328,28 +328,69 @@ Wire Wire Line
 	5250 2100 5250 1950
 Wire Wire Line
 	5250 4550 5250 4700
-$Comp
-L D_Schottky D203
-U 1 1 589A3CBF
-P 6200 3950
-F 0 "D203" H 6200 4050 50  0000 C CNN
-F 1 "D_Schottky" H 6200 3850 50  0000 C CNN
-F 2 "Diodes_SMD:D_SMA_Standard" H 6200 3950 60  0001 C CNN
-F 3 "" H 6200 3950 60  0000 C CNN
-	1    6200 3950
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	4450 3950 6050 3950
-Wire Wire Line
-	6350 3950 8400 3950
-Wire Wire Line
-	6400 3460 7350 3460
-Wire Wire Line
-	7350 3460 7350 3950
-Connection ~ 7350 3950
-Text HLabel 6400 3460 0    60   Input ~ 0
+Text HLabel 6075 3400 0    60   Input ~ 0
 5V
 Text Notes 5765 4440 0    60   ~ 0
 Double check the output of the 3.3V\nand watch out for the voltage drop \non the Schottky.
+$Comp
+L CONN_01X03 P201
+U 1 1 58DCB84B
+P 6475 3850
+F 0 "P201" H 6475 4050 50  0000 C CNN
+F 1 "Mode_Bridge" V 6575 3850 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 6475 3850 50  0001 C CNN
+F 3 "" H 6475 3850 50  0000 C CNN
+	1    6475 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 3850 6275 3850
+Wire Wire Line
+	4450 3950 6275 3950
+$Comp
+L LED D203
+U 1 1 58DCC141
+P 6900 3400
+F 0 "D203" H 6900 3500 50  0000 C CNN
+F 1 "5VDC" H 6900 3300 50  0000 C CNN
+F 2 "LEDs:LED_0805" H 6900 3400 50  0001 C CNN
+F 3 "" H 6900 3400 50  0000 C CNN
+	1    6900 3400
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR020
+U 1 1 58DCC147
+P 7250 3575
+F 0 "#PWR020" H 7250 3325 50  0001 C CNN
+F 1 "GND" H 7250 3425 50  0000 C CNN
+F 2 "" H 7250 3575 50  0000 C CNN
+F 3 "" H 7250 3575 50  0000 C CNN
+	1    7250 3575
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R201
+U 1 1 58DCC526
+P 6450 3400
+F 0 "R201" V 6530 3400 50  0000 C CNN
+F 1 "660Ω" V 6450 3400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 6380 3400 50  0001 C CNN
+F 3 "" H 6450 3400 50  0000 C CNN
+	1    6450 3400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6075 3400 6300 3400
+Wire Wire Line
+	6600 3400 6700 3400
+Wire Wire Line
+	7100 3400 7250 3400
+Wire Wire Line
+	7250 3400 7250 3575
+Wire Wire Line
+	6275 3750 6150 3750
+Wire Wire Line
+	6150 3750 6150 3400
+Connection ~ 6150 3400
 $EndSCHEMATC
