@@ -13,7 +13,7 @@
 
 volatile unsigned char TL2C_pir_interrupt;
 volatile unsigned char timer_delay = 0;
-
+volatile union TL2C_status_reg_t TL2C_pir_state;
 
 int main(void)
 {
@@ -95,15 +95,21 @@ GIMSK |= ( 1<<PCIE0 );
 
 			// If the Zone activate bit is set OR the associated bit in the 
 			// status register, then consider this as ON.
-			if( TL2C_Registers.TL2C_config_reg.TL2C_Z1A || TL2C_Registers.TL2C_status_reg.TL2C_Z1F ){	// UG - Zone 1
+			if( TL2C_Registers.TL2C_config_reg.TL2C_Z1A || TL2C_pir_state.TL2C_Z1F ){	// UG - Zone 1
+			    TL2C_pir_state.TL2C_Z1F = 0;
+			    TL2C_Registers.TL2C_status_reg.TL2C_Z1F = 1;
 				TL2C_Relay_ctl.relay_state.TL2C_RLY_UG = 1;
 				TL2C_Relay_ctl.relay1_counter = TL2C_Registers.TL2C_Zone1_On_Delay;
 			}
-			if( TL2C_Registers.TL2C_config_reg.TL2C_Z2A || TL2C_Registers.TL2C_status_reg.TL2C_Z2F){	// EG - Zone 2
+			if( TL2C_Registers.TL2C_config_reg.TL2C_Z2A || TL2C_pir_state.TL2C_Z2F){	// EG - Zone 2
+			    TL2C_pir_state.TL2C_Z2F = 0;
+			    TL2C_Registers.TL2C_status_reg.TL2C_Z2F = 1;
 				TL2C_Relay_ctl.relay_state.TL2C_RLY_EG = 1;
 				TL2C_Relay_ctl.relay2_counter = TL2C_Registers.TL2C_Zone2_On_Delay;
 			}
-			if(TL2C_Registers.TL2C_config_reg.TL2C_Z3A || TL2C_Registers.TL2C_status_reg.TL2C_Z3F){	// OG - Zone 3
+			if(TL2C_Registers.TL2C_config_reg.TL2C_Z3A || TL2C_pir_state.TL2C_Z3F){	// OG - Zone 3
+			    TL2C_pir_state.TL2C_Z3F = 0;
+			    TL2C_Registers.TL2C_status_reg.TL2C_Z3F = 1;
 				TL2C_Relay_ctl.relay_state.TL2C_RLY_OG = 1;
 				TL2C_Relay_ctl.relay3_counter = TL2C_Registers.TL2C_Zone3_On_Delay;
 			}
@@ -118,6 +124,7 @@ GIMSK |= ( 1<<PCIE0 );
 				TL2C_Relay_ctl.relay1_counter--;
 				if( !TL2C_Relay_ctl.relay1_counter ){
 					TL2C_Relay_ctl.relay_state.TL2C_RLY_UG =  0;
+					TL2C_Registers.TL2C_status_reg.TL2C_Z1F = 0;
 					TL2C_Relay_ctl.relay1_counter = TL2C_Registers.TL2C_Zone1_On_Delay;
 				}
 			}
@@ -126,6 +133,7 @@ GIMSK |= ( 1<<PCIE0 );
 				TL2C_Relay_ctl.relay2_counter--;
 				if( !TL2C_Relay_ctl.relay2_counter ){
 					TL2C_Relay_ctl.relay_state.TL2C_RLY_EG = 0;
+					TL2C_Registers.TL2C_status_reg.TL2C_Z2F = 0;
 					TL2C_Relay_ctl.relay2_counter = TL2C_Registers.TL2C_Zone2_On_Delay;
 				}
 			}
@@ -134,6 +142,7 @@ GIMSK |= ( 1<<PCIE0 );
 				TL2C_Relay_ctl.relay3_counter--;
 				if( !TL2C_Relay_ctl.relay3_counter ){
 					TL2C_Relay_ctl.relay_state.TL2C_RLY_OG = 0;
+					TL2C_Registers.TL2C_status_reg.TL2C_Z3F = 0;
 					TL2C_Relay_ctl.relay3_counter = TL2C_Registers.TL2C_Zone3_On_Delay;
 				}
 			}
@@ -163,7 +172,8 @@ ISR(PCINT0_vect){
 	// Shift the three input pins three bits to the right
 	// Shift the three enable bits four bits to the right
 	// AND the result to ensure that all enabled bits are allowed to be registered.
-	TL2C_Registers.TL2C_status_reg.all = ((PINA >> 3) & (TL2C_Registers.TL2C_config_reg.all >> 4));
+	// TL2C_Registers.TL2C_status_reg.all = (((PINA >> 3) ^ 0xFF) & (TL2C_Registers.TL2C_config_reg.all >> 4));
+	TL2C_pir_state.all = (((PINA >> 3) ^ 0xFF) & (TL2C_Registers.TL2C_config_reg.all >> 4));
 	TL2C_pir_interrupt = 1;
 }
 

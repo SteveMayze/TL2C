@@ -23,11 +23,11 @@ volatile unsigned char TWI_addr_mode = 0;
 	  TL2C_Registers.TL2C_config_reg.TL2C_Z3A = 0;
 	  TL2C_Registers.TL2C_config_reg.TL2C_PIR1E = 1;
 	  TL2C_Registers.TL2C_config_reg.TL2C_PIR2E = 1;
-	  TL2C_Registers.TL2C_config_reg.TL2C_PIR3E = 0;
+	  TL2C_Registers.TL2C_config_reg.TL2C_PIR3E = 1;
 	  TL2C_Registers.TL2C_Zone1_On_Delay = 20;
 	  TL2C_Registers.TL2C_Zone2_On_Delay = 10;
 	  TL2C_Registers.TL2C_Zone3_On_Delay = 10;
-	  TL2C_Registers.TL2C_I2C_Address = TWI_chipAddress;
+	  TL2C_Registers.TL2C_HW_Version = 0x01;
 
 	  TWSCRA = 0;	// Reset the status register
 	  TWSCRA |= ( 1 << TWEN );
@@ -68,7 +68,7 @@ void masterRead(unsigned char registerAddress, unsigned char *data){
 		*data = TL2C_Registers.TL2C_Zone3_On_Delay;
 		break;
 		case TL2C_I2C_ADDRESS:
-		*data = TL2C_Registers.TL2C_I2C_Address;
+		*data = TL2C_Registers.TL2C_HW_Version;
 		break;
 		default:
 		*data = 0;
@@ -97,7 +97,8 @@ void masterWrite(unsigned char registerAddress, unsigned char twsd){
 		TL2C_Registers.TL2C_Zone3_On_Delay = twsd;
 		break;
 		case TL2C_I2C_ADDRESS:
-		TL2C_Registers.TL2C_I2C_Address = twsd;
+		// READ ONLY
+		// TL2C_Registers.TL2C_HW_Version = twsd;
 		break;
 		default:
 		break;

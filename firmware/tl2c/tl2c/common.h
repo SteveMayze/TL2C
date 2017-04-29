@@ -121,7 +121,7 @@
 		unsigned char TL2C_Zone1_On_Delay;
 		unsigned char TL2C_Zone2_On_Delay;
 		unsigned char TL2C_Zone3_On_Delay;
-		unsigned char TL2C_I2C_Address;
+		unsigned char TL2C_HW_Version;
 	} TL2C_Registers_struct;
 
 	volatile TL2C_Registers_struct TL2C_Registers;
