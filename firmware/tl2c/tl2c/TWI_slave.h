@@ -38,8 +38,6 @@ volatile unsigned char twi_buffer_idx;
 
 volatile unsigned int led_flag;
 
-
-
 unsigned char TWI_Slave_Initialise( unsigned char TWI_ownAddress );
 unsigned char TWI_Start(void);
 unsigned char TWI_isBusy(void);

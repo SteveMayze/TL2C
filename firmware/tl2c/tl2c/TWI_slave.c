@@ -67,7 +67,7 @@ void masterRead(unsigned char registerAddress, unsigned char *data){
 		case TL2C_ZONE3_ON_DELAY:
 		*data = TL2C_Registers.TL2C_Zone3_On_Delay;
 		break;
-		case TL2C_I2C_ADDRESS:
+		case TL2C_FIRMWARE_VERSION:
 		*data = TL2C_Registers.TL2C_HW_Version;
 		break;
 		default:
@@ -96,7 +96,7 @@ void masterWrite(unsigned char registerAddress, unsigned char twsd){
 		case TL2C_ZONE3_ON_DELAY:
 		TL2C_Registers.TL2C_Zone3_On_Delay = twsd;
 		break;
-		case TL2C_I2C_ADDRESS:
+		case TL2C_FIRMWARE_VERSION:
 		// READ ONLY
 		// TL2C_Registers.TL2C_HW_Version = twsd;
 		break;

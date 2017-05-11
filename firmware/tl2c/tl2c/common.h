@@ -36,38 +36,6 @@
 	/////////////////////////////////////////////////////////////////////////
 	#define ERROR 	-2
 
-	/////////////////////////////////////////////////////////////////////////
-	///	\brief	Defines the error for invalid pointers
-	/////////////////////////////////////////////////////////////////////////
-	#define INVALID_POINTER_ERROR 	-3
-
-
-
-///////////////////////////////////////////////////////////////////////////////
-    /// \brief Firmware version
-    /// D = development version of the firmware. Should only be used for testing purposes
-    /// C = concession version. This version of the firmware is usual custom for a customer. see CONCESSION_NUMBER
-    /// P = production version
-    ///
-    /// \sa CONCESSION_NUMBER
-    ///////////////////////////////////////////////////////////////////////////////
-    #define FIRMWARE_VERSION "00.0001D"
-
-    ///////////////////////////////////////////////////////////////////////////////
-    /// \brief Hardware version
-    ///////////////////////////////////////////////////////////////////////////////
-    #define HARDWARE_VERSION "00"
-
-    ///////////////////////////////////////////////////////////////////////////////
-    /// \brief Hardware version
-    ///////////////////////////////////////////////////////////////////////////////
-    #define COMPILED_DATA_TIME "[" __DATE__ " " __TIME__ "]"
-
-    ///////////////////////////////////////////////////////////////////////////////
-    /// \brief Enables the debug interface and all debug message associated
-    ///////////////////////////////////////////////////////////////////////////////
-    #define EN_DEBUG_INTERFACE
-
     ///////////////////////////////////////////////////////////////////////////////
     /// \brief define the union type used to convert between types.
     ///////////////////////////////////////////////////////////////////////////////
@@ -88,8 +56,12 @@
 #define TL2C_ZONE1_ON_DELAY 2
 #define TL2C_ZONE2_ON_DELAY 3
 #define TL2C_ZONE3_ON_DELAY 4
-#define TL2C_I2C_ADDRESS 5
+#define TL2C_FIRMWARE_VERSION 5
 
+
+    ///////////////////////////////////////////////////////////////////////////////
+    /// \brief Define the status register fields.
+    ///////////////////////////////////////////////////////////////////////////////
 	union TL2C_status_reg_t {
 		unsigned char all;
 		struct{
@@ -100,6 +72,9 @@
 		};
 	};
 	
+    ///////////////////////////////////////////////////////////////////////////////
+    /// \brief Define the configuration register fields
+    ///////////////////////////////////////////////////////////////////////////////
 	union TL2C_config_reg_t {
 		unsigned char all;
 		struct{
@@ -114,7 +89,9 @@
 		};
 	};
 	
-
+    ///////////////////////////////////////////////////////////////////////////////
+    /// \brief Define the complete register structure with all 6 registers
+    ///////////////////////////////////////////////////////////////////////////////
 	typedef struct {
 		union TL2C_status_reg_t TL2C_status_reg;
 		union TL2C_config_reg_t TL2C_config_reg;
@@ -124,47 +101,56 @@
 		unsigned char TL2C_HW_Version;
 	} TL2C_Registers_struct;
 
+
 	volatile TL2C_Registers_struct TL2C_Registers;
 	volatile unsigned char TL2C_RegisterAddress;
 
 
 
 
-union TL2C_RLY_t {
-	unsigned char all;
-	struct{
-		unsigned char TL2C_RLY_UG:1;	// Zone 1 - UG Relay
-		unsigned char TL2C_RLY_EG:1;	// Zone 2 - EG Relay
-		unsigned char TL2C_RLY_OG:1;	// Zone 3 - OG Relay
-		unsigned char TL2C_NA:5;		// Not Used
+    ///////////////////////////////////////////////////////////////////////////////
+    /// \brief Define Relay control register
+    ///////////////////////////////////////////////////////////////////////////////
+	union TL2C_RLY_t {
+		unsigned char all;
+		struct{
+			unsigned char TL2C_RLY_UG:1;	// Zone 1 - UG Relay
+			unsigned char TL2C_RLY_EG:1;	// Zone 2 - EG Relay
+			unsigned char TL2C_RLY_OG:1;	// Zone 3 - OG Relay
+			unsigned char TL2C_NA:5;		// Not Used
+		};
 	};
-};
 
-union TL2C_PIR_t {
-	unsigned char all;
-	struct{
-		unsigned char TL2C_PIR_UG:1;	// Zone 1 - UG PIR13
-		unsigned char TL2C_PIR_EG:1;	// Zone 2 - EG PIR13
-		unsigned char TL2C_PIR_OG:1;	// Zone 3 - OG PIR13
-		unsigned char TL2C_NA2:5;		// Not Used
+    ///////////////////////////////////////////////////////////////////////////////
+    /// \brief Define the PIR enable control register
+    ///////////////////////////////////////////////////////////////////////////////
+	union TL2C_PIR_t {
+		unsigned char all;
+		struct{
+			unsigned char TL2C_PIR_UG:1;	// Zone 1 - UG PIR13
+			unsigned char TL2C_PIR_EG:1;	// Zone 2 - EG PIR13
+			unsigned char TL2C_PIR_OG:1;	// Zone 3 - OG PIR13
+			unsigned char TL2C_NA2:5;		// Not Used
+		};
 	};
-};
 
 
-// union TL2C_RLY_t TL2C_RLY_state;
-typedef struct {
-	union TL2C_RLY_t relay_state;
-	unsigned char relay1_counter;
-	unsigned char relay2_counter;
-	unsigned char relay3_counter;
-} TL2C_Relay_ctl_t;
+    ///////////////////////////////////////////////////////////////////////////////
+    /// \brief Define the relay counter control register which contains the state
+	///		and the counters
+    ///////////////////////////////////////////////////////////////////////////////
+	// union TL2C_RLY_t TL2C_RLY_state;
+	typedef struct {
+		union TL2C_RLY_t relay_state;
+		unsigned char relay1_counter;
+		unsigned char relay2_counter;
+		unsigned char relay3_counter;
+	} TL2C_Relay_ctl_t;
 
-volatile union TL2C_PIR_t TL2C_PIR_state;
-volatile TL2C_Relay_ctl_t TL2C_Relay_ctl;
+	volatile union TL2C_PIR_t TL2C_PIR_state;
+	volatile TL2C_Relay_ctl_t TL2C_Relay_ctl;
 
-volatile unsigned char TL2C_pir_interrupt;
-
-
+	volatile unsigned char TL2C_pir_interrupt;
 
 
 #endif
