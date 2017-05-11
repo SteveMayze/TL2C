@@ -68,7 +68,11 @@
 			unsigned char TL2C_Z1F:1;	// Zone 1 Status Flag
 			unsigned char TL2C_Z2F:1;	// Zone 2 Status Flag
 			unsigned char TL2C_Z3F:1;	// Zone 3 Status Flag
-			unsigned char TL2C_NA:5;	// Not Used
+			unsigned char TL2C_RINT:1;	// Relay Interrupt fired
+			unsigned char TL2C_ZT1:1;	// Zone 1 Test mode enabled
+			unsigned char TL2C_ZT2:1;	// Zone 2 Test mode enabled
+			unsigned char TL2C_ZT3:1;	// Zone 3 Test mode enabled
+			unsigned char TL2C_PINT:1;	// Interrupt fired
 		};
 	};
 	
@@ -117,7 +121,9 @@
 			unsigned char TL2C_RLY_UG:1;	// Zone 1 - UG Relay
 			unsigned char TL2C_RLY_EG:1;	// Zone 2 - EG Relay
 			unsigned char TL2C_RLY_OG:1;	// Zone 3 - OG Relay
-			unsigned char TL2C_NA:5;		// Not Used
+			unsigned char TL2C_NA1:3;		// Not Used
+			unsigned char TL2C_INT:1;		// General Interrupt pin
+			unsigned char TL2C_NA2:1;		// Not Used
 		};
 	};
 
@@ -130,7 +136,7 @@
 			unsigned char TL2C_PIR_UG:1;	// Zone 1 - UG PIR13
 			unsigned char TL2C_PIR_EG:1;	// Zone 2 - EG PIR13
 			unsigned char TL2C_PIR_OG:1;	// Zone 3 - OG PIR13
-			unsigned char TL2C_NA2:5;		// Not Used
+			unsigned char TL2C_NA1:5;		// Not Used
 		};
 	};
 
@@ -150,7 +156,7 @@
 	volatile union TL2C_PIR_t TL2C_PIR_state;
 	volatile TL2C_Relay_ctl_t TL2C_Relay_ctl;
 
-	volatile unsigned char TL2C_pir_interrupt;
+	// volatile unsigned char TL2C_pir_interrupt;
 
 
 #endif

@@ -85,7 +85,9 @@ void masterWrite(unsigned char registerAddress, unsigned char twsd){
 		case TL2C_CONFIG_REG:
 		TL2C_Registers.TL2C_config_reg.all = twsd;
 		TL2C_Registers.TL2C_status_reg.all = ((TL2C_Registers.TL2C_config_reg.all & 0b00000111)<<4);
-		TL2C_pir_interrupt = 1;
+		TL2C_Registers.TL2C_status_reg.TL2C_RINT = 0;
+		TL2C_Registers.TL2C_status_reg.TL2C_PINT = 1;
+		// TL2C_pir_interrupt = 1;
 		break;
 		case TL2C_ZONE1_ON_DELAY:
 		TL2C_Registers.TL2C_Zone1_On_Delay = twsd;

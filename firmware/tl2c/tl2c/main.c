@@ -11,7 +11,7 @@
 #include "TWI_slave.h"
 
 
-volatile unsigned char TL2C_pir_interrupt;
+// volatile unsigned char TL2C_pir_interrupt;
 volatile unsigned char timer_delay = 0;
 volatile union TL2C_status_reg_t TL2C_pir_state;
 
@@ -29,12 +29,15 @@ int main(void)
 	// PA4 - EG Erdgeschoss PIR signal
 	// PA5 - OG Obergeschoss PIR signal
 
+	// Interrupt (Driver)
+	// PA6 - General purpose interrupt output
+
 
 #define CTC1_MODE	// Testing the timers and interrupts
 
 // The the data direction for the relay outputs
 DDRA = 0;
-DDRA |= ( 1 << PORTA0 ) | ( 1 << PORTA1 ) | ( 1 << PORTA2 );
+DDRA |= ( 1 << PORTA0 ) | ( 1 << PORTA1 ) | ( 1 << PORTA2 ) | (1 << PORTA6);
 PUEA = 0;
 PUEA |= ( 1 << PUEA5) | ( 1 << PUEA4) | ( 1 << PUEA3);
 // Set the Pin Change interrupts for
@@ -77,7 +80,9 @@ GIMSK |= ( 1<<PCIE0 );
 
 	PORTA &= ~( 7 << PORTA0 );	// Turn off ALL indicator LEDs.
 	led_flag = 0;
-	TL2C_pir_interrupt = 0;
+	TL2C_Relay_ctl.relay_state.TL2C_INT = 0;
+	// TL2C_pir_interrupt = 0;
+	TL2C_Registers.TL2C_status_reg.TL2C_PINT = 0;
 	TWI_Slave_Initialise( 0x40 );
 
 	TL2C_Relay_ctl.relay1_counter = TL2C_Registers.TL2C_Zone1_On_Delay;
@@ -89,7 +94,8 @@ GIMSK |= ( 1<<PCIE0 );
     TWI_Start();
     while (1) 
     {
-		if( TL2C_pir_interrupt ){
+		// if( TL2C_pir_interrupt ){
+		if( TL2C_Registers.TL2C_status_reg.TL2C_PINT ){
 			// Here we are confident that there has been a pin change. We have not
 			// clarified exactly which pin has changed.
 
@@ -113,7 +119,14 @@ GIMSK |= ( 1<<PCIE0 );
 				TL2C_Relay_ctl.relay_state.TL2C_RLY_OG = 1;
 				TL2C_Relay_ctl.relay3_counter = TL2C_Registers.TL2C_Zone3_On_Delay;
 			}
-			TL2C_pir_interrupt = 0;
+			// TL2C_pir_interrupt = 0;
+			TL2C_Registers.TL2C_status_reg.TL2C_PINT = 0;
+
+			// Raise the Interrupt back to the Master
+			if( (TL2C_Relay_ctl.relay_state.all & 0b00000111)){
+				TL2C_Registers.TL2C_status_reg.TL2C_RINT = 1;
+				TL2C_Relay_ctl.relay_state.TL2C_INT = 1;
+			}
 		}
 
 		// Every pulse cycle...
@@ -146,7 +159,7 @@ GIMSK |= ( 1<<PCIE0 );
 					TL2C_Relay_ctl.relay3_counter = TL2C_Registers.TL2C_Zone3_On_Delay;
 				}
 			}
-			unsigned char state = PORTA & 0b11111000;
+			unsigned char state = PORTA & 0b10111000;
 			PORTA = state | TL2C_Relay_ctl.relay_state.all;
 
 // 			if( (led_flag >> red_LED)&1 ){
@@ -174,7 +187,8 @@ ISR(PCINT0_vect){
 	// AND the result to ensure that all enabled bits are allowed to be registered.
 	// TL2C_Registers.TL2C_status_reg.all = (((PINA >> 3) ^ 0xFF) & (TL2C_Registers.TL2C_config_reg.all >> 4));
 	TL2C_pir_state.all = (((PINA >> 3) ^ 0xFF) & (TL2C_Registers.TL2C_config_reg.all >> 4));
-	TL2C_pir_interrupt = 1;
+	TL2C_Registers.TL2C_status_reg.TL2C_PINT = 1;
+	// TL2C_pir_interrupt = 1;
 }
 
 #ifdef CTC1_MODE
