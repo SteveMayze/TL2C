@@ -125,7 +125,7 @@ GIMSK |= ( 1<<PCIE0 );
 			// Raise the Interrupt back to the Master
 			if( (TL2C_Relay_ctl.relay_state.all & 0b00000111)){
 				TL2C_Registers.TL2C_status_reg.TL2C_RINT = 1;
-				TL2C_Relay_ctl.relay_state.TL2C_INT = 1;
+				// TL2C_Relay_ctl.relay_state.TL2C_INT = 1;
 			}
 		}
 
@@ -138,6 +138,7 @@ GIMSK |= ( 1<<PCIE0 );
 				if( !TL2C_Relay_ctl.relay1_counter ){
 					TL2C_Relay_ctl.relay_state.TL2C_RLY_UG =  0;
 					TL2C_Registers.TL2C_status_reg.TL2C_Z1F = 0;
+					TL2C_Registers.TL2C_status_reg.TL2C_RINT = 1;
 					TL2C_Relay_ctl.relay1_counter = TL2C_Registers.TL2C_Zone1_On_Delay;
 				}
 			}
@@ -147,6 +148,7 @@ GIMSK |= ( 1<<PCIE0 );
 				if( !TL2C_Relay_ctl.relay2_counter ){
 					TL2C_Relay_ctl.relay_state.TL2C_RLY_EG = 0;
 					TL2C_Registers.TL2C_status_reg.TL2C_Z2F = 0;
+					TL2C_Registers.TL2C_status_reg.TL2C_RINT = 1;
 					TL2C_Relay_ctl.relay2_counter = TL2C_Registers.TL2C_Zone2_On_Delay;
 				}
 			}
@@ -156,9 +158,11 @@ GIMSK |= ( 1<<PCIE0 );
 				if( !TL2C_Relay_ctl.relay3_counter ){
 					TL2C_Relay_ctl.relay_state.TL2C_RLY_OG = 0;
 					TL2C_Registers.TL2C_status_reg.TL2C_Z3F = 0;
+					TL2C_Registers.TL2C_status_reg.TL2C_RINT = 1;
 					TL2C_Relay_ctl.relay3_counter = TL2C_Registers.TL2C_Zone3_On_Delay;
 				}
 			}
+			TL2C_Relay_ctl.relay_state.TL2C_INT = TL2C_Registers.TL2C_status_reg.TL2C_RINT;
 			unsigned char state = PORTA & 0b10111000;
 			PORTA = state | TL2C_Relay_ctl.relay_state.all;
 

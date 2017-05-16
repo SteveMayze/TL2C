@@ -54,6 +54,7 @@ void masterRead(unsigned char registerAddress, unsigned char *data){
 	switch( registerAddress) {
 		case TL2C_STATUS_REG:
 		*data = TL2C_Registers.TL2C_status_reg.all;
+		TL2C_Registers.TL2C_status_reg.TL2C_RINT = 0; // Reset the relay interrupt flag.
 		break;
 		case TL2C_CONFIG_REG:
 		*data = TL2C_Registers.TL2C_config_reg.all;
@@ -84,9 +85,11 @@ void masterWrite(unsigned char registerAddress, unsigned char twsd){
 		break;
 		case TL2C_CONFIG_REG:
 		TL2C_Registers.TL2C_config_reg.all = twsd;
+		// Set the Test enabled flags to their respective flags in the high set of bits.
 		TL2C_Registers.TL2C_status_reg.all = ((TL2C_Registers.TL2C_config_reg.all & 0b00000111)<<4);
-		TL2C_Registers.TL2C_status_reg.TL2C_RINT = 0;
+		TL2C_Registers.TL2C_status_reg.TL2C_RINT = 0; // Reset the Relay Interrupt flag
 		TL2C_Registers.TL2C_status_reg.TL2C_PINT = 1;
+
 		// TL2C_pir_interrupt = 1;
 		break;
 		case TL2C_ZONE1_ON_DELAY:
