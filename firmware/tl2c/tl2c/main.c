@@ -14,6 +14,7 @@
 // volatile unsigned char TL2C_pir_interrupt;
 volatile unsigned char timer_delay = 0;
 volatile union TL2C_status_reg_t TL2C_pir_state;
+unsigned char interrupt_flag;
 
 int main(void)
 {
@@ -101,32 +102,36 @@ GIMSK |= ( 1<<PCIE0 );
 
 			// If the Zone activate bit is set OR the associated bit in the 
 			// status register, then consider this as ON.
-			if( TL2C_Registers.TL2C_config_reg.TL2C_Z1A || TL2C_pir_state.TL2C_Z1F ){	// UG - Zone 1
+			if(TL2C_Registers.TL2C_config_reg.TL2C_Z1A || TL2C_pir_state.TL2C_Z1F ){	// UG - Zone 1
 			    TL2C_pir_state.TL2C_Z1F = 0;
 			    TL2C_Registers.TL2C_status_reg.TL2C_Z1F = 1;
 				TL2C_Relay_ctl.relay_state.TL2C_RLY_UG = 1;
+				TL2C_Registers.TL2C_status_reg.TL2C_RINT = 1;
 				TL2C_Relay_ctl.relay1_counter = TL2C_Registers.TL2C_Zone1_On_Delay;
 			}
-			if( TL2C_Registers.TL2C_config_reg.TL2C_Z2A || TL2C_pir_state.TL2C_Z2F){	// EG - Zone 2
+			if(TL2C_Registers.TL2C_config_reg.TL2C_Z2A || TL2C_pir_state.TL2C_Z2F){	// EG - Zone 2
 			    TL2C_pir_state.TL2C_Z2F = 0;
 			    TL2C_Registers.TL2C_status_reg.TL2C_Z2F = 1;
 				TL2C_Relay_ctl.relay_state.TL2C_RLY_EG = 1;
+				TL2C_Registers.TL2C_status_reg.TL2C_RINT = 1;
 				TL2C_Relay_ctl.relay2_counter = TL2C_Registers.TL2C_Zone2_On_Delay;
 			}
 			if(TL2C_Registers.TL2C_config_reg.TL2C_Z3A || TL2C_pir_state.TL2C_Z3F){	// OG - Zone 3
 			    TL2C_pir_state.TL2C_Z3F = 0;
 			    TL2C_Registers.TL2C_status_reg.TL2C_Z3F = 1;
 				TL2C_Relay_ctl.relay_state.TL2C_RLY_OG = 1;
+				TL2C_Registers.TL2C_status_reg.TL2C_RINT = 1;
 				TL2C_Relay_ctl.relay3_counter = TL2C_Registers.TL2C_Zone3_On_Delay;
 			}
 			// TL2C_pir_interrupt = 0;
 			TL2C_Registers.TL2C_status_reg.TL2C_PINT = 0;
 
 			// Raise the Interrupt back to the Master
-			if( (TL2C_Relay_ctl.relay_state.all & 0b00000111)){
-				TL2C_Registers.TL2C_status_reg.TL2C_RINT = 1;
-				// TL2C_Relay_ctl.relay_state.TL2C_INT = 1;
-			}
+			// TL2C_Registers.TL2C_status_reg.TL2C_RINT = ((TL2C_Relay_ctl.relay_state.TL2C_INT == 0) && (TL2C_Relay_ctl.relay_state.all & 0b00000111));
+// 			if (TL2C_Relay_ctl.relay_state.all & 0b00000111) {
+// 				TL2C_Registers.TL2C_status_reg.TL2C_RINT = 1;
+// 				// TL2C_Relay_ctl.relay_state.TL2C_INT = 1;
+// 			}
 		}
 
 		// Every pulse cycle...
@@ -162,8 +167,16 @@ GIMSK |= ( 1<<PCIE0 );
 					TL2C_Relay_ctl.relay3_counter = TL2C_Registers.TL2C_Zone3_On_Delay;
 				}
 			}
-			TL2C_Relay_ctl.relay_state.TL2C_INT = TL2C_Registers.TL2C_status_reg.TL2C_RINT;
+			
 			unsigned char state = PORTA & 0b10111000;
+			if( interrupt_flag == 0 && TL2C_Registers.TL2C_status_reg.TL2C_RINT) {
+				// Reset the interrupt on the next cycle.
+				interrupt_flag = 1;
+			} else {
+				TL2C_Registers.TL2C_status_reg.TL2C_RINT = 0;
+				interrupt_flag = 0;
+			}
+			TL2C_Relay_ctl.relay_state.TL2C_INT = TL2C_Registers.TL2C_status_reg.TL2C_RINT;
 			PORTA = state | TL2C_Relay_ctl.relay_state.all;
 
 // 			if( (led_flag >> red_LED)&1 ){
