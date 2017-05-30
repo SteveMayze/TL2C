@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<header>
+
+  <meta charset="UTF-8">
+  <title>Test image</title>
+
+  <script>
+    document.createElement("header");
+    document.createElement("nav");
+    document.createElement("section");
+    document.createElement("aside");
+    document.createElement("footer");
+  </script>
+</header>
+<body>
+  <div width="100px" padding="0px" margin="0px">
+    <div><img src="image/gabel.png"/></div>
+    <div><img src="image/Level-Disabled.png"/></div>
+    <div><img src="image/Level-Enabled.png"/></div>
+    <div><img src="image/Level-Illuminated.png"/></div>
+  </div>
+  <div id="show-data"></div>
+  <div><a href="#" id="get-data">Get Details</a></div>
+
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function () {
+    $('#get-data').click(function () {
+      var showData = $('#show-data');
+
+      $.getJSON('http://home-pi:8000/i2c/api/1.0/lighting/32/', function (data) {
+        console.log(data);
+
+        var items = data.items.map(function (item) {
+          return item.key + ': ' + item.value;
+        });
+
+        showData.empty();
+
+        if (items.length) {
+          var content = '<li>' + items.join('</li><li>') + '</li>';
+          var list = $('<ul />').html(content);
+          showData.append(list);
+        }
+      });
+
+      showData.text('Loading the JSON file.');
+    });
+  });
+  </script>
+
+
+</body>
+</html>
