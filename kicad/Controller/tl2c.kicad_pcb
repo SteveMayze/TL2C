@@ -5,7 +5,7 @@
     (no_connects 0)
     (area 11.304001 32.456 173.659715 192.505001)
     (thickness 1.6)
-    (drawings 116)
+    (drawings 117)
     (tracks 396)
     (zones 0)
     (modules 95)
@@ -4256,6 +4256,9 @@
       (net 46 "Net-(F101-Pad2)"))
   )
 
+  (gr_text "Rly\nInt" (at 145.3 131.7) (layer F.SilkS)
+    (effects (font (size 0.762 0.762) (thickness 0.127)))
+  )
   (gr_text "ISP \nPWR" (at 94.869 142.875 90) (layer F.SilkS)
     (effects (font (size 0.762 0.762) (thickness 0.127)))
   )

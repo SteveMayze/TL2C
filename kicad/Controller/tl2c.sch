@@ -286,15 +286,15 @@ Neutral
 $Comp
 L CONN_01X02 P103
 U 1 1 584CC850
-P 1950 4000
-F 0 "P103" H 1950 4150 50  0000 C CNN
-F 1 "Spare" V 2050 4000 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 1950 4000 50  0001 C CNN
-F 3 "" H 1950 4000 50  0000 C CNN
-F 4 "Value" H 1950 4000 60  0001 C CNN "MFP"
-F 5 "Value" H 1950 4000 60  0001 C CNN "Conrad-PN"
-F 6 "Value" H 1950 4000 60  0001 C CNN "Digikey-PN"
-	1    1950 4000
+P 2200 4050
+F 0 "P103" H 2200 4200 50  0000 C CNN
+F 1 "Spare" V 2300 4050 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 2200 4050 50  0001 C CNN
+F 3 "" H 2200 4050 50  0000 C CNN
+F 4 "Value" H 2200 4050 60  0001 C CNN "MFP"
+F 5 "Value" H 2200 4050 60  0001 C CNN "Conrad-PN"
+F 6 "Value" H 2200 4050 60  0001 C CNN "Digikey-PN"
+	1    2200 4050
 	1    0    0    -1  
 $EndComp
 Text Notes 6100 6050 0    60   ~ 0
@@ -719,9 +719,9 @@ Text Label 5400 3050 0    60   ~ 0
 GPIO_PA6
 Text Label 5400 3150 0    60   ~ 0
 GPIO_PB2
-Text Label 750  3950 0    60   ~ 0
+Text Label 1000 4000 0    60   ~ 0
 GPIO_PA6
-Text Label 750  4050 0    60   ~ 0
+Text Label 1000 4100 0    60   ~ 0
 GPIO_PB2
 $Comp
 L CONN_01X08 P107
@@ -743,23 +743,23 @@ NoConn ~ 7475 3250
 $Comp
 L TEST_1P TP107
 U 1 1 586D80EA
-P 1275 3850
-F 0 "TP107" H 1275 4120 50  0000 C CNN
-F 1 "PA6" H 1275 4050 50  0000 C CNN
-F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 1475 3850 50  0001 C CNN
-F 3 "" H 1475 3850 50  0000 C CNN
-	1    1275 3850
+P 1525 3900
+F 0 "TP107" H 1525 4170 50  0000 C CNN
+F 1 "PA6" H 1525 4100 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 1725 3900 50  0001 C CNN
+F 3 "" H 1725 3900 50  0000 C CNN
+	1    1525 3900
 	1    0    0    -1  
 $EndComp
 $Comp
 L TEST_1P TP108
 U 1 1 586D81E0
-P 1600 3850
-F 0 "TP108" H 1600 4120 50  0000 C CNN
-F 1 "PB0" H 1600 4050 50  0000 C CNN
-F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 1800 3850 50  0001 C CNN
-F 3 "" H 1800 3850 50  0000 C CNN
-	1    1600 3850
+P 1850 3900
+F 0 "TP108" H 1850 4170 50  0000 C CNN
+F 1 "PB0" H 1850 4100 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 2050 3900 50  0001 C CNN
+F 3 "" H 2050 3900 50  0000 C CNN
+	1    1850 3900
 	1    0    0    -1  
 $EndComp
 NoConn ~ 4750 1200
@@ -842,9 +842,9 @@ Wire Wire Line
 Wire Wire Line
 	10000 1250 9625 1250
 Wire Wire Line
-	750  3950 1750 3950
+	1000 4000 2000 4000
 Wire Wire Line
-	750  4050 1750 4050
+	1000 4100 2000 4100
 Wire Wire Line
 	3650 3050 3850 3050
 Wire Wire Line
@@ -1014,11 +1014,11 @@ Wire Wire Line
 Wire Wire Line
 	7575 3350 7575 3600
 Wire Wire Line
-	1275 3850 1275 3950
-Connection ~ 1275 3950
+	1525 3900 1525 4000
+Connection ~ 1525 4000
 Wire Wire Line
-	1600 3850 1600 4050
-Connection ~ 1600 4050
+	1850 3900 1850 4100
+Connection ~ 1850 4100
 Wire Wire Line
 	7475 2650 9000 2650
 Wire Wire Line
@@ -1072,4 +1072,6 @@ Text Notes 550  2200 0    60   ~ 0
 Ub+ for \nprogramming
 Text Label 3850 1200 0    60   ~ 0
 TPICLK
+Text Notes 550  3850 0    60   ~ 0
+GPIO_PA6 -\nRelay Interrupt
 $EndSCHEMATC
