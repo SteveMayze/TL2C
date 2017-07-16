@@ -1,0 +1,38 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ATTINY20-X
+D TSS0P14, 2k Flash, 128B SRAM, No EEPROM
+K AVR 8bit Microcontroller tinyAVR
+F http://www.atmel.com/images/atmel-8235-8-bit-avr-microcontroller-attiny20_datasheet.pdf
+$ENDCMP
+#
+$CMP Relay_FIN_43.41.7_12V
+D JW1AFSN-12-F, Relay 12 Coil, 250V 10A
+$ENDCMP
+#
+$CMP Relay_JW1AFSN12F
+D JW1AFSN-12-F, Relay 12 Coil, 250V 10A
+$ENDCMP
+#
+$CMP TERM_01X02
+D Connector 01x02
+$ENDCMP
+#
+$CMP TEST_1P
+D point
+K point tp
+$ENDCMP
+#
+$CMP TPS70933
+D 150-mA, 30-V, 1-μA IQ Voltage Regulators with Enable
+$ENDCMP
+#
+$CMP Term_01X02
+D Terminal Block 01x02
+$ENDCMP
+#
+$CMP TerminalBlock_1x6
+D Connector 01x06
+$ENDCMP
+#
+#End Doc Library

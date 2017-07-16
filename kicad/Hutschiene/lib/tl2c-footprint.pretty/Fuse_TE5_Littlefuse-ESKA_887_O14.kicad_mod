@@ -1,0 +1,12 @@
+(module Fuse_TE5_Littlefuse-ESKA_887_O14 (layer F.Cu) (tedit 58FF8762)
+  (tags "Fuse, ESKA")
+  (fp_text reference REF** (at -0.02 -5.31) (layer F.SilkS)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value Fuse_TE5_Littlefuse-ESKA_887_014 (at 0 5.3) (layer F.Fab) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_circle (center 0 0) (end 4.5 0) (layer F.SilkS) (width 0.15))
+  (pad 1 thru_hole circle (at -2.54 0) (size 2.032 2.032) (drill 0.889) (layers *.Cu *.Mask))
+  (pad 2 thru_hole circle (at 2.54 0.01016) (size 2.032 2.032) (drill 0.889) (layers *.Cu *.Mask))
+)
