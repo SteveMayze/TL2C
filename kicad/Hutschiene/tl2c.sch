@@ -356,7 +356,7 @@ F6 "LED_DRIVER_GND" I L 8050 3670 60
 $EndSheet
 Text Label 3490 2910 0    60   ~ 0
 RelayUG
-Text Label 3490 3010 0    60   ~ 0
+Text Label 3495 2810 0    60   ~ 0
 RelayEG
 Text Label 3490 3110 0    60   ~ 0
 RelayOG
@@ -478,50 +478,17 @@ $EndComp
 $Comp
 L GNDA #PWR011
 U 1 1 5856E00B
-P 6250 3790
-F 0 "#PWR011" H 6250 3540 50  0001 C CNN
-F 1 "GNDA" H 6250 3640 50  0000 C CNN
-F 2 "" H 6250 3790 50  0000 C CNN
-F 3 "" H 6250 3790 50  0000 C CNN
-	1    6250 3790
+P 6770 3730
+F 0 "#PWR011" H 6770 3480 50  0001 C CNN
+F 1 "GNDA" H 6770 3580 50  0000 C CNN
+F 2 "" H 6770 3730 50  0000 C CNN
+F 3 "" H 6770 3730 50  0000 C CNN
+	1    6770 3730
 	-1   0    0    -1  
-$EndComp
-$Comp
-L TEST_1P TP104
-U 1 1 58571150
-P 4040 2860
-F 0 "TP104" H 4040 3130 50  0000 C CNN
-F 1 "TP_RLY_UG" H 4040 3060 50  0000 C CNN
-F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 4240 2860 50  0001 C CNN
-F 3 "" H 4240 2860 50  0000 C CNN
-	1    4040 2860
-	1    0    0    -1  
-$EndComp
-$Comp
-L TEST_1P TP105
-U 1 1 5857134A
-P 4390 2960
-F 0 "TP105" H 4390 3230 50  0000 C CNN
-F 1 "TP_RLY_EG" H 4390 3160 50  0000 C CNN
-F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 4590 2960 50  0001 C CNN
-F 3 "" H 4590 2960 50  0000 C CNN
-	1    4390 2960
-	1    0    0    -1  
-$EndComp
-$Comp
-L TEST_1P TP106
-U 1 1 585714D0
-P 4740 3060
-F 0 "TP106" H 4740 3330 50  0000 C CNN
-F 1 "TP_RLY_OG" H 4740 3260 50  0000 C CNN
-F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 4940 3060 50  0001 C CNN
-F 3 "" H 4940 3060 50  0000 C CNN
-	1    4740 3060
-	1    0    0    -1  
 $EndComp
 Text Notes 9200 3880 0    40   ~ 0
 TODO - Change the relay to  AZ7705T-1A-12DEF - Conrad.\nor FIN 43.41.7 12V - Reichelt
-Text Label 5175 2810 2    60   ~ 0
+Text Label 5175 3010 2    60   ~ 0
 U+
 Text Label 6390 1590 0    60   ~ 0
 Neutral
@@ -584,7 +551,7 @@ F 7 "MIK-FLINK 0,5A" H 6590 1140 60  0001 C CNN "Reichelt-PN"
 $EndComp
 Text Label 5175 3210 2    60   ~ 0
 Ub+
-Text Label 5175 3310 2    60   ~ 0
+Text Label 5175 3410 2    60   ~ 0
 GPIO_PB2
 NoConn ~ 4750 1200
 Text Label 5910 6810 2    60   ~ 0
@@ -815,29 +782,14 @@ Wire Wire Line
 Wire Wire Line
 	4710 6120 5360 6120
 Wire Wire Line
-	3490 2910 5175 2910
-Wire Wire Line
-	3490 3010 5175 3010
-Wire Wire Line
 	3490 3110 5175 3110
 Wire Wire Line
 	3940 3310 3940 2910
-Connection ~ 3940 2910
 Wire Wire Line
-	4240 3310 4240 3010
-Connection ~ 4240 3010
+	4240 2810 4240 3310
 Wire Wire Line
 	4540 3310 4540 3110
 Connection ~ 4540 3110
-Wire Wire Line
-	4040 2860 4040 2910
-Connection ~ 4040 2910
-Wire Wire Line
-	4390 2960 4390 3010
-Connection ~ 4390 3010
-Wire Wire Line
-	4740 3060 4740 3110
-Connection ~ 4740 3110
 Wire Wire Line
 	915  3600 1865 3600
 Wire Wire Line
@@ -906,7 +858,7 @@ Text Label 6100 2910 0    60   ~ 0
 DRV_UG_RLY
 Text Label 8050 3150 2    60   ~ 0
 DRV_UG_RLY
-Text Label 6100 3010 0    60   ~ 0
+Text Label 6100 2810 0    60   ~ 0
 DRV_EG_RLY
 Text Label 6100 3110 0    60   ~ 0
 DRV_OG_RLY
@@ -936,17 +888,17 @@ F3 "PIR_EG" I L 9640 2870 60
 F4 "PIR_UG" I L 9640 3020 60 
 F5 "U+" I L 9640 2370 60 
 $EndSheet
-Text Label 6100 3410 0    60   ~ 0
+Text Label 6100 3710 0    60   ~ 0
 DRV_PIR_OG
 Text Label 6100 3510 0    60   ~ 0
 DRV_PIR_EG
-Text Label 6100 3610 0    60   ~ 0
+Text Label 6100 3310 0    60   ~ 0
 DRV_PIR_UG
-Text Label 5175 3410 2    60   ~ 0
+Text Label 5175 3710 2    60   ~ 0
 PIR_OG
 Text Label 5175 3510 2    60   ~ 0
 PIR_EG
-Text Label 5175 3610 2    60   ~ 0
+Text Label 5175 3310 2    60   ~ 0
 PIR_UG
 Text Label 9640 2730 2    60   ~ 0
 DRV_PIR_OG
@@ -979,18 +931,14 @@ $EndComp
 $Comp
 L GND #PWR016
 U 1 1 596DB6E6
-P 5045 3815
-F 0 "#PWR016" H 5045 3565 50  0001 C CNN
-F 1 "GND" H 5045 3665 50  0000 C CNN
-F 2 "" H 5045 3815 50  0000 C CNN
-F 3 "" H 5045 3815 50  0000 C CNN
-	1    5045 3815
+P 4775 3715
+F 0 "#PWR016" H 4775 3465 50  0001 C CNN
+F 1 "GND" H 4775 3565 50  0000 C CNN
+F 2 "" H 4775 3715 50  0000 C CNN
+F 3 "" H 4775 3715 50  0000 C CNN
+	1    4775 3715
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5175 3710 5045 3710
-Wire Wire Line
-	5045 3710 5045 3815
 $Comp
 L CONN_01X10 P105
 U 1 1 596DC417
@@ -1004,13 +952,9 @@ F 3 "" H 5900 3260 50  0000 C CNN
 $EndComp
 Text Label 6100 3210 0    60   ~ 0
 Ub+
+NoConn ~ 6100 3410
 Wire Wire Line
-	6100 3710 6250 3710
-Wire Wire Line
-	6250 3710 6250 3790
-NoConn ~ 6100 3310
-Wire Wire Line
-	6100 2810 8050 2810
+	7230 2810 8050 2810
 Wire Notes Line
 	5620 720  10950 720 
 Wire Notes Line
@@ -1019,7 +963,6 @@ Wire Wire Line
 	9640 2370 7620 2370
 Wire Wire Line
 	7620 2370 7620 2810
-Connection ~ 7620 2810
 Wire Notes Line
 	10960 4060 10960 720 
 Wire Wire Line
@@ -1034,4 +977,23 @@ Wire Wire Line
 	7770 3670 8050 3670
 Wire Notes Line
 	5620 4060 5620 720 
+Wire Wire Line
+	4775 3715 4775 3610
+Wire Wire Line
+	4775 3610 5175 3610
+Wire Wire Line
+	6765 3735 6765 3610
+Wire Wire Line
+	6765 3610 6100 3610
+Connection ~ 3940 2910
+Wire Wire Line
+	3490 2910 5175 2910
+Wire Wire Line
+	3495 2810 5175 2810
+Connection ~ 4240 2810
+Wire Wire Line
+	7230 2810 7230 3010
+Wire Wire Line
+	7230 3010 6100 3010
+Connection ~ 7620 2810
 $EndSCHEMATC
