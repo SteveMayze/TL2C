@@ -347,7 +347,7 @@ Text Label 3490 2910 0    60   ~ 0
 RelayUG
 Text Label 3495 2810 0    60   ~ 0
 RelayEG
-Text Label 3490 3110 0    60   ~ 0
+Text Label 3485 3210 0    60   ~ 0
 RelayOG
 $Comp
 L TL3315NF160Q SW101
@@ -666,6 +666,118 @@ F 6 "Value" H 6090 1190 60  0001 C CNN "Digikey-PN"
 	1    6090 1190
 	-1   0    0    -1  
 $EndComp
+Text Label 6100 2910 0    60   ~ 0
+DRV_UG_RLY
+Text Label 8050 3150 2    60   ~ 0
+DRV_UG_RLY
+Text Label 6100 2810 0    60   ~ 0
+DRV_EG_RLY
+Text Label 6100 3210 0    60   ~ 0
+DRV_OG_RLY
+Text Label 8050 3350 2    60   ~ 0
+DRV_EG_RLY
+Text Label 8050 3550 2    60   ~ 0
+DRV_OG_RLY
+Text Label 9260 5060 2    60   ~ 0
+PIR_OG
+Text Label 9260 5200 2    60   ~ 0
+PIR_EG
+Text Label 9260 5350 2    60   ~ 0
+PIR_UG
+$Sheet
+S 9640 2210 710  1100
+U 596CC2B1
+F0 "PIR_Connector" 60
+F1 "PIR_Connector.sch" 60
+F2 "PIR_OG" I L 9640 2730 60 
+F3 "PIR_EG" I L 9640 2870 60 
+F4 "PIR_UG" I L 9640 3020 60 
+F5 "U+" I L 9640 2370 60 
+$EndSheet
+Text Label 6100 3710 0    60   ~ 0
+DRV_PIR_OG
+Text Label 6100 3510 0    60   ~ 0
+DRV_PIR_EG
+Text Label 6100 3310 0    60   ~ 0
+DRV_PIR_UG
+Text Label 5175 3710 2    60   ~ 0
+PIR_OG
+Text Label 5175 3510 2    60   ~ 0
+PIR_EG
+Text Label 5175 3310 2    60   ~ 0
+PIR_UG
+Text Label 9640 2730 2    60   ~ 0
+DRV_PIR_OG
+Text Label 9640 2870 2    60   ~ 0
+DRV_PIR_EG
+Text Label 9640 3020 2    60   ~ 0
+DRV_PIR_UG
+$Comp
+L GNDA #PWR014
+U 1 1 596D914D
+P 7770 3810
+F 0 "#PWR014" H 7770 3560 50  0001 C CNN
+F 1 "GNDA" H 7770 3660 50  0000 C CNN
+F 2 "" H 7770 3810 50  0000 C CNN
+F 3 "" H 7770 3810 50  0000 C CNN
+	1    7770 3810
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X10 P103
+U 1 1 596DB0DA
+P 5375 3260
+F 0 "P103" H 5375 3810 50  0000 C CNN
+F 1 "CTL CONN" H 5375 3910 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x05_Pitch2.54mm" H 5375 3260 50  0001 C CNN
+F 3 "" H 5375 3260 50  0000 C CNN
+	1    5375 3260
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR015
+U 1 1 596DB6E6
+P 4775 3715
+F 0 "#PWR015" H 4775 3465 50  0001 C CNN
+F 1 "GND" H 4775 3565 50  0000 C CNN
+F 2 "" H 4775 3715 50  0000 C CNN
+F 3 "" H 4775 3715 50  0000 C CNN
+	1    4775 3715
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X10 P105
+U 1 1 596DC417
+P 5900 3260
+F 0 "P105" H 5900 3810 50  0000 C CNN
+F 1 "DRV CONN" H 5900 3910 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x05_Pitch2.54mm" H 5900 3260 50  0001 C CNN
+F 3 "" H 5900 3260 50  0000 C CNN
+	1    5900 3260
+	-1   0    0    -1  
+$EndComp
+Text Label 6100 3110 0    60   ~ 0
+DRV_PWR_IN
+NoConn ~ 6100 3410
+$Comp
+L GNDA #PWR016
+U 1 1 596F996D
+P 6290 2245
+F 0 "#PWR016" H 6290 1995 50  0001 C CNN
+F 1 "GNDA" H 6290 2095 50  0000 C CNN
+F 2 "" H 6290 2245 50  0000 C CNN
+F 3 "" H 6290 2245 50  0000 C CNN
+	1    6290 2245
+	-1   0    0    -1  
+$EndComp
+Text Label 6170 3010 0    60   ~ 0
+DRV_U+
+Text Label 5175 3110 2    60   ~ 0
+PWR_IN
+Text Label 900  1350 0    60   ~ 0
+PWR_IN
+Text Label 6155 2030 0    60   ~ 0
+DRV_PWR_IN
 Wire Wire Line
 	1910 5920 2410 5920
 Wire Wire Line
@@ -765,14 +877,9 @@ Wire Wire Line
 Wire Wire Line
 	4710 6120 5360 6120
 Wire Wire Line
-	3490 3110 5175 3110
-Wire Wire Line
 	3940 3310 3940 2910
 Wire Wire Line
 	4240 2810 4240 3310
-Wire Wire Line
-	4540 3310 4540 3110
-Connection ~ 4540 3110
 Wire Wire Line
 	915  3600 1865 3600
 Wire Wire Line
@@ -837,105 +944,12 @@ Wire Wire Line
 	6290 1240 6390 1240
 Wire Wire Line
 	6390 1240 6390 1590
-Text Label 6100 2910 0    60   ~ 0
-DRV_UG_RLY
-Text Label 8050 3150 2    60   ~ 0
-DRV_UG_RLY
-Text Label 6100 2810 0    60   ~ 0
-DRV_EG_RLY
-Text Label 6100 3110 0    60   ~ 0
-DRV_OG_RLY
-Text Label 8050 3350 2    60   ~ 0
-DRV_EG_RLY
-Text Label 8050 3550 2    60   ~ 0
-DRV_OG_RLY
 Wire Wire Line
 	8560 5060 9260 5060
 Wire Wire Line
 	8560 5200 9260 5200
 Wire Wire Line
 	8560 5350 9260 5350
-Text Label 9260 5060 2    60   ~ 0
-PIR_OG
-Text Label 9260 5200 2    60   ~ 0
-PIR_EG
-Text Label 9260 5350 2    60   ~ 0
-PIR_UG
-$Sheet
-S 9640 2210 710  1100
-U 596CC2B1
-F0 "PIR_Connector" 60
-F1 "PIR_Connector.sch" 60
-F2 "PIR_OG" I L 9640 2730 60 
-F3 "PIR_EG" I L 9640 2870 60 
-F4 "PIR_UG" I L 9640 3020 60 
-F5 "U+" I L 9640 2370 60 
-$EndSheet
-Text Label 6100 3710 0    60   ~ 0
-DRV_PIR_OG
-Text Label 6100 3510 0    60   ~ 0
-DRV_PIR_EG
-Text Label 6100 3310 0    60   ~ 0
-DRV_PIR_UG
-Text Label 5175 3710 2    60   ~ 0
-PIR_OG
-Text Label 5175 3510 2    60   ~ 0
-PIR_EG
-Text Label 5175 3310 2    60   ~ 0
-PIR_UG
-Text Label 9640 2730 2    60   ~ 0
-DRV_PIR_OG
-Text Label 9640 2870 2    60   ~ 0
-DRV_PIR_EG
-Text Label 9640 3020 2    60   ~ 0
-DRV_PIR_UG
-$Comp
-L GNDA #PWR014
-U 1 1 596D914D
-P 7770 3810
-F 0 "#PWR014" H 7770 3560 50  0001 C CNN
-F 1 "GNDA" H 7770 3660 50  0000 C CNN
-F 2 "" H 7770 3810 50  0000 C CNN
-F 3 "" H 7770 3810 50  0000 C CNN
-	1    7770 3810
-	1    0    0    -1  
-$EndComp
-$Comp
-L CONN_01X10 P103
-U 1 1 596DB0DA
-P 5375 3260
-F 0 "P103" H 5375 3810 50  0000 C CNN
-F 1 "CTL CONN" H 5375 3910 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x05_Pitch2.54mm" H 5375 3260 50  0001 C CNN
-F 3 "" H 5375 3260 50  0000 C CNN
-	1    5375 3260
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR015
-U 1 1 596DB6E6
-P 4775 3715
-F 0 "#PWR015" H 4775 3465 50  0001 C CNN
-F 1 "GND" H 4775 3565 50  0000 C CNN
-F 2 "" H 4775 3715 50  0000 C CNN
-F 3 "" H 4775 3715 50  0000 C CNN
-	1    4775 3715
-	1    0    0    -1  
-$EndComp
-$Comp
-L CONN_01X10 P105
-U 1 1 596DC417
-P 5900 3260
-F 0 "P105" H 5900 3810 50  0000 C CNN
-F 1 "DRV CONN" H 5900 3910 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x05_Pitch2.54mm" H 5900 3260 50  0001 C CNN
-F 3 "" H 5900 3260 50  0000 C CNN
-	1    5900 3260
-	-1   0    0    -1  
-$EndComp
-Text Label 6100 3210 0    60   ~ 0
-DRV_PWR_IN
-NoConn ~ 6100 3410
 Wire Wire Line
 	7230 2810 8050 2810
 Wire Notes Line
@@ -979,27 +993,13 @@ Wire Wire Line
 Wire Wire Line
 	7230 3010 6100 3010
 Connection ~ 7620 2810
-$Comp
-L GNDA #PWR016
-U 1 1 596F996D
-P 6290 2245
-F 0 "#PWR016" H 6290 1995 50  0001 C CNN
-F 1 "GNDA" H 6290 2095 50  0000 C CNN
-F 2 "" H 6290 2245 50  0000 C CNN
-F 3 "" H 6290 2245 50  0000 C CNN
-	1    6290 2245
-	-1   0    0    -1  
-$EndComp
-Text Label 6170 3010 0    60   ~ 0
-DRV_U+
-Text Label 5175 3210 2    60   ~ 0
-PWR_IN
-Text Label 900  1350 0    60   ~ 0
-PWR_IN
-Text Label 6155 2030 0    60   ~ 0
-DRV_PWR_IN
 Wire Wire Line
 	6155 2130 6290 2130
 Wire Wire Line
 	6290 2130 6290 2245
+Wire Wire Line
+	5175 3210 3485 3210
+Wire Wire Line
+	4540 3310 4540 3210
+Connection ~ 4540 3210
 $EndSCHEMATC
