@@ -343,9 +343,9 @@ F4 "Relay_OG" I L 8050 3550 60
 F5 "LED_DRIVER_U+" I L 8050 2810 60 
 F6 "LED_DRIVER_GND" I L 8050 3670 60 
 $EndSheet
-Text Label 3490 2910 0    60   ~ 0
-RelayUG
 Text Label 3495 2810 0    60   ~ 0
+RelayUG
+Text Label 3490 2910 0    60   ~ 0
 RelayEG
 Text Label 3485 3210 0    60   ~ 0
 RelayOG
@@ -626,7 +626,7 @@ U 1 1 596B85DC
 P 715 5260
 F 0 "P102" H 715 5710 50  0000 C CNN
 F 1 "RJ45" V 815 5260 50  0000 C CNN
-F 2 "Connect:RJ45_8" H 715 5260 50  0001 C CNN
+F 2 "tl2c-footprint:RJ45_8P8C" H 715 5260 50  0001 C CNN
 F 3 "" H 715 5260 50  0000 C CNN
 	1    715  5260
 	-1   0    0    -1  
@@ -666,11 +666,11 @@ F 6 "Value" H 6090 1190 60  0001 C CNN "Digikey-PN"
 	1    6090 1190
 	-1   0    0    -1  
 $EndComp
-Text Label 6100 2910 0    60   ~ 0
+Text Label 6100 2810 0    60   ~ 0
 DRV_UG_RLY
 Text Label 8050 3150 2    60   ~ 0
 DRV_UG_RLY
-Text Label 6100 2810 0    60   ~ 0
+Text Label 6100 2910 0    60   ~ 0
 DRV_EG_RLY
 Text Label 6100 3210 0    60   ~ 0
 DRV_OG_RLY
@@ -877,10 +877,6 @@ Wire Wire Line
 Wire Wire Line
 	4710 6120 5360 6120
 Wire Wire Line
-	3940 3310 3940 2910
-Wire Wire Line
-	4240 2810 4240 3310
-Wire Wire Line
 	915  3600 1865 3600
 Wire Wire Line
 	3010 5670 3010 5595
@@ -982,12 +978,10 @@ Wire Wire Line
 	6765 3735 6765 3610
 Wire Wire Line
 	6765 3610 6100 3610
-Connection ~ 3940 2910
 Wire Wire Line
 	3490 2910 5175 2910
 Wire Wire Line
 	3495 2810 5175 2810
-Connection ~ 4240 2810
 Wire Wire Line
 	7230 2810 7230 3010
 Wire Wire Line
@@ -1002,4 +996,10 @@ Wire Wire Line
 Wire Wire Line
 	4540 3310 4540 3210
 Connection ~ 4540 3210
+Wire Wire Line
+	4240 3310 4240 2910
+Connection ~ 4240 2910
+Wire Wire Line
+	3940 3310 3940 2810
+Connection ~ 3940 2810
 $EndSCHEMATC
