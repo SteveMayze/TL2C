@@ -56,7 +56,7 @@ U 1 1 596CE34C
 P 3350 1470
 F 0 "P501" H 3350 1670 50  0000 C CNN
 F 1 "CONN_PIR_OG" V 3450 1470 50  0000 C CNN
-F 2 "tl2c-footprint:PCB_Screw_Terminal_Block_5mm_x_3" H 3350 1470 50  0001 C CNN
+F 2 "tl2c-footprint:PCB_Screw_Terminal_Block_5.8mm_x_3" H 3350 1470 50  0001 C CNN
 F 3 "" H 3350 1470 50  0000 C CNN
 	1    3350 1470
 	1    0    0    -1  
@@ -67,7 +67,7 @@ U 1 1 596CE37D
 P 3360 2870
 F 0 "P502" H 3360 3070 50  0000 C CNN
 F 1 "CONN_PIR_EG" V 3460 2870 50  0000 C CNN
-F 2 "tl2c-footprint:PCB_Screw_Terminal_Block_5mm_x_3" H 3360 2870 50  0001 C CNN
+F 2 "tl2c-footprint:PCB_Screw_Terminal_Block_5.8mm_x_3" H 3360 2870 50  0001 C CNN
 F 3 "" H 3360 2870 50  0000 C CNN
 	1    3360 2870
 	1    0    0    -1  
@@ -78,7 +78,7 @@ U 1 1 596CE3AC
 P 3360 4210
 F 0 "P503" H 3360 4410 50  0000 C CNN
 F 1 "CONN_PIR_UG" V 3460 4210 50  0000 C CNN
-F 2 "tl2c-footprint:PCB_Screw_Terminal_Block_5mm_x_3" H 3360 4210 50  0001 C CNN
+F 2 "tl2c-footprint:PCB_Screw_Terminal_Block_5.8mm_x_3" H 3360 4210 50  0001 C CNN
 F 3 "" H 3360 4210 50  0000 C CNN
 	1    3360 4210
 	1    0    0    -1  

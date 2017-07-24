@@ -270,7 +270,7 @@ U 1 1 584D9CD6
 P 5955 2080
 F 0 "P101" H 5955 2230 50  0000 C CNN
 F 1 "12VDC" V 6055 2080 50  0000 C CNN
-F 2 "tl2c-footprint:PCB_Screw_Terminal_Block_5mm_x_2" H 5955 2080 50  0001 C CNN
+F 2 "tl2c-footprint:PCB_Screw_Terminal_Block_5.08mm_x_2" H 5955 2080 50  0001 C CNN
 F 3 "" H 5955 2080 50  0000 C CNN
 F 4 "Value" H 5955 2080 60  0001 C CNN "MFP"
 F 5 "Value" H 5955 2080 60  0001 C CNN "Conrad-PN"
@@ -584,7 +584,7 @@ U 1 1 596A4CB7
 P 9390 1190
 F 0 "P108" H 9560 1225 50  0000 C CNN
 F 1 "UG" H 9490 1125 50  0000 C CNN
-F 2 "tl2c-footprint:PCB_Screw_Terminal_Block_5mm_x_2" H 9390 1190 50  0001 C CNN
+F 2 "tl2c-footprint:PCB_Screw_Terminal_Block_5.08mm_x_2" H 9390 1190 50  0001 C CNN
 F 3 "" H 9390 1190 50  0000 C CNN
 F 4 "Value" H 9390 1190 60  0001 C CNN "MFP"
 F 5 "Value" H 9390 1190 60  0001 C CNN "Conrad-PN"
@@ -598,7 +598,7 @@ U 1 1 596A6057
 P 9390 1390
 F 0 "P110" H 9555 1430 50  0000 C CNN
 F 1 "EG" H 9490 1345 50  0000 C CNN
-F 2 "tl2c-footprint:PCB_Screw_Terminal_Block_5mm_x_2" H 9390 1390 50  0001 C CNN
+F 2 "tl2c-footprint:PCB_Screw_Terminal_Block_5.08mm_x_2" H 9390 1390 50  0001 C CNN
 F 3 "" H 9390 1390 50  0000 C CNN
 F 4 "Value" H 9390 1390 60  0001 C CNN "MFP"
 F 5 "Value" H 9390 1390 60  0001 C CNN "Conrad-PN"
@@ -612,7 +612,7 @@ U 1 1 596A6134
 P 9390 1590
 F 0 "P111" H 9545 1635 50  0000 C CNN
 F 1 "OG" H 9505 1535 50  0000 C CNN
-F 2 "tl2c-footprint:PCB_Screw_Terminal_Block_5mm_x_2" H 9390 1590 50  0001 C CNN
+F 2 "tl2c-footprint:PCB_Screw_Terminal_Block_5.08mm_x_2" H 9390 1590 50  0001 C CNN
 F 3 "" H 9390 1590 50  0000 C CNN
 F 4 "Value" H 9390 1590 60  0001 C CNN "MFP"
 F 5 "Value" H 9390 1590 60  0001 C CNN "Conrad-PN"
@@ -658,7 +658,7 @@ U 1 1 596BD80E
 P 6090 1190
 F 0 "P106" H 6090 1340 50  0000 C CNN
 F 1 "240VAC" H 6090 1040 50  0000 C CNN
-F 2 "tl2c-footprint:PCB_Screw_Terminal_Block_5mm_x_2" H 6090 1190 50  0001 C CNN
+F 2 "tl2c-footprint:PCB_Screw_Terminal_Block_5.08mm_x_2" H 6090 1190 50  0001 C CNN
 F 3 "" H 6090 1190 50  0000 C CNN
 F 4 "Value" H 6090 1190 60  0001 C CNN "MFP"
 F 5 "Value" H 6090 1190 60  0001 C CNN "Conrad-PN"
