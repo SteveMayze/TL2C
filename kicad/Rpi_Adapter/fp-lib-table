@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name Rpi_Adapter_Footprints)(type KiCad)(uri "$(KIPRJMOD)\\lib\\Rpi_Adapter_Footprints.pretty")(options "")(descr ""))
+  (lib (name tl2c-footprint)(type KiCad)(uri D:\pcbs\TL2C\kicad\Hutschiene\lib\tl2c-footprint.pretty)(options "")(descr ""))
 )

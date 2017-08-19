@@ -51,20 +51,9 @@ U 1 1 59479884
 P 2650 2800
 F 0 "MCU1" H 3200 1350 60  0000 C CNN
 F 1 "RaspberryPi_3b" H 2600 3250 60  0000 C CNN
-F 2 "Socket_Strips:Socket_Strip_Straight_2x10_Pitch2.54mm_SMD" H 2250 3800 60  0001 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_2x20_Pitch2.54mm" H 2250 3800 60  0001 C CNN
 F 3 "" H 2250 3800 60  0000 C CNN
 	1    2650 2800
-	1    0    0    -1  
-$EndComp
-$Comp
-L CONN_02X03 P2
-U 1 1 594799AC
-P 5850 4600
-F 0 "P2" H 5850 4800 50  0000 C CNN
-F 1 "CONN_02X03" H 5850 4400 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x03_Pitch2.54mm" H 5850 3400 60  0001 C CNN
-F 3 "" H 5850 3400 60  0000 C CNN
-	1    5850 4600
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -76,7 +65,7 @@ F 1 "CONN_02X20" V 5850 2650 50  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_2x20_Pitch2.54mm" H 5850 1700 60  0001 C CNN
 F 3 "" H 5850 1700 60  0000 C CNN
 	1    5850 2650
-	-1   0    0    -1  
+	1    0    0    -1  
 $EndComp
 Text Label 5600 1700 2    60   ~ 0
 3V3
@@ -225,21 +214,17 @@ Text Label 3700 2700 0    60   ~ 0
 GPIO_20
 Text Label 3700 2800 0    60   ~ 0
 GPIO_21
-Text Label 5600 4500 2    60   ~ 0
+Text Label 6500 4600 2    60   ~ 0
 I2C1_SDA
-Text Label 5600 4600 2    60   ~ 0
-I2C1_SCL
-Text Label 5600 4700 2    60   ~ 0
+Text Label 6550 5300 3    60   ~ 0
 GND
-Text Label 6100 4500 0    60   ~ 0
+Text Label 6500 5000 2    60   ~ 0
 GPIO_4
-Text Label 6100 4600 0    60   ~ 0
+Text Label 6500 5200 2    60   ~ 0
 GPIO_5
-Text Label 6100 4700 0    60   ~ 0
-GPIO_6
 Text Notes 5650 1500 0    60   ~ 0
 Raspberry Pi\nExpansion
-Text Notes 5450 4350 0    60   ~ 0
+Text Notes 5850 4250 0    60   ~ 0
 TL2C I2C Expansion
 Text Notes 2400 1200 0    60   ~ 0
 Raspberry Pi\nConnection
@@ -282,4 +267,51 @@ Wire Wire Line
 	4050 1600 4050 1500
 Wire Wire Line
 	4050 1500 3700 1500
+Text Notes 5150 5600 0    60   ~ 0
+RJ45 - Connector as a \ngeneral  purpose  connector \nto the Raspberry Pi
+$Comp
+L GND #PWR02
+U 1 1 5997F2C0
+P 6550 5650
+F 0 "#PWR02" H 6550 5400 50  0001 C CNN
+F 1 "GND" H 6550 5500 50  0000 C CNN
+F 2 "" H 6550 5650 60  0000 C CNN
+F 3 "" H 6550 5650 60  0000 C CNN
+	1    6550 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X08 P2
+U 1 1 5997F300
+P 5850 4850
+F 0 "P2" H 5850 5300 50  0000 C CNN
+F 1 "CONN_01X08" V 5950 4850 50  0000 C CNN
+F 2 "tl2c-footprint:RJ45_8P8C" H 5850 4850 60  0001 C CNN
+F 3 "" H 5850 4850 60  0000 C CNN
+	1    5850 4850
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 4500 6550 4500
+Wire Wire Line
+	6550 4500 6550 5650
+Wire Wire Line
+	6050 4700 6550 4700
+Connection ~ 6550 4700
+Wire Wire Line
+	6050 4900 6550 4900
+Connection ~ 6550 4900
+Wire Wire Line
+	6050 5100 6550 5100
+Connection ~ 6550 5100
+Wire Wire Line
+	6050 4600 6500 4600
+Wire Wire Line
+	6050 4800 6500 4800
+Wire Wire Line
+	6050 5000 6500 5000
+Wire Wire Line
+	6050 5200 6500 5200
+Text Label 6500 4800 2    60   ~ 0
+I2C1_SCL
 $EndSCHEMATC
