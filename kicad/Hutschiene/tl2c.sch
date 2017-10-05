@@ -751,7 +751,7 @@ U 1 1 596DC417
 P 5900 3260
 F 0 "P105" H 5900 3810 50  0000 C CNN
 F 1 "DRV CONN" H 5900 3910 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x05_Pitch2.54mm" H 5900 3260 50  0001 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_2x05_Pitch2.54mm" H 5900 3260 50  0001 C CNN
 F 3 "" H 5900 3260 50  0000 C CNN
 	1    5900 3260
 	-1   0    0    -1  
