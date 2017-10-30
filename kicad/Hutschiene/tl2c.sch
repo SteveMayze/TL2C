@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:tl2c-rescue
 LIBS:tl2c-symbols
 LIBS:power
 LIBS:device
@@ -366,7 +367,7 @@ $EndComp
 NoConn ~ 1865 3400
 NoConn ~ 2365 3400
 $Comp
-L LED D101
+L LED-RESCUE-tl2c D101
 U 1 1 5856AA32
 P 3700 3910
 F 0 "D101" H 3700 4010 50  0000 C CNN
@@ -399,7 +400,7 @@ F 3 "" H 3700 4300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED D102
+L LED-RESCUE-tl2c D102
 U 1 1 5856B277
 P 4000 3910
 F 0 "D102" H 4000 4010 50  0000 C CNN
@@ -432,7 +433,7 @@ F 3 "" H 4000 4300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED D103
+L LED-RESCUE-tl2c D103
 U 1 1 5856B503
 P 4300 3910
 F 0 "D103" H 4300 4010 50  0000 C CNN

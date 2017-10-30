@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:tl2c-rescue
 LIBS:tl2c-symbols
 LIBS:power
 LIBS:device
@@ -97,9 +98,11 @@ F 6 "Value" H 4650 4450 60  0001 C CNN "Digikey-PN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED D202
+L LED-RESCUE-tl2c D202
 U 1 1 584DB076
 P 5250 4900
+AR Path="/584DB076" Ref="D202"  Part="1" 
+AR Path="/584D9013/584DB076" Ref="D202"  Part="1" 
 F 0 "D202" H 5250 5000 50  0000 C CNN
 F 1 "3V3DC" H 5250 4800 50  0000 C CNN
 F 2 "LEDs:LED_0805_HandSoldering" H 5250 4900 50  0001 C CNN

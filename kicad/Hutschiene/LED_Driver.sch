@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:tl2c-rescue
 LIBS:tl2c-symbols
 LIBS:power
 LIBS:device
