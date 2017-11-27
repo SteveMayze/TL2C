@@ -56,95 +56,6 @@ F 3 "" H 2250 3800 60  0000 C CNN
 	1    2650 2800
 	1    0    0    -1  
 $EndComp
-$Comp
-L CONN_02X20 P1
-U 1 1 59479B40
-P 5850 2650
-F 0 "P1" H 5850 3700 50  0000 C CNN
-F 1 "CONN_02X20" V 5850 2650 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x20_Pitch2.54mm" H 5850 1700 60  0001 C CNN
-F 3 "" H 5850 1700 60  0000 C CNN
-	1    5850 2650
-	1    0    0    -1  
-$EndComp
-Text Label 5600 1700 2    60   ~ 0
-3V3
-Text Label 6100 1700 0    60   ~ 0
-5V
-Text Label 6100 1800 0    60   ~ 0
-5V
-Text Label 5600 2500 2    60   ~ 0
-3V3
-Text Label 5600 2000 2    60   ~ 0
-GPIO_4
-Text Label 5600 3100 2    60   ~ 0
-GPIO_5
-Text Label 5600 3200 2    60   ~ 0
-GPIO_6
-Text Label 6100 3200 0    60   ~ 0
-GPIO_12
-Text Label 5600 3300 2    60   ~ 0
-GPIO_13
-Text Label 6100 3400 0    60   ~ 0
-GPIO_16
-Text Label 5600 2200 2    60   ~ 0
-GPIO_17
-Text Label 6100 2200 0    60   ~ 0
-GPIO_18
-Text Label 5600 3400 2    60   ~ 0
-GPIO_19
-Text Label 6100 3500 0    60   ~ 0
-GPIO_20
-Text Label 6100 3600 0    60   ~ 0
-GPIO_21
-Text Label 5600 2400 2    60   ~ 0
-GPIO_22
-Text Label 6100 2400 0    60   ~ 0
-GPIO_23
-Text Label 6100 2500 0    60   ~ 0
-GPIO_24
-Text Label 6100 2700 0    60   ~ 0
-GPIO_25
-Text Label 5600 3500 2    60   ~ 0
-GPIO_26
-Text Label 5600 2300 2    60   ~ 0
-GPIO_27
-Text Label 6100 2000 0    60   ~ 0
-UART0_Tx
-Text Label 6100 2100 0    60   ~ 0
-UART0_Rx
-Text Label 5600 2600 2    60   ~ 0
-SPI0_MOSI
-Text Label 5600 2700 2    60   ~ 0
-SPI0_MISO
-Text Label 5600 2800 2    60   ~ 0
-SPI0_SCLK
-Text Label 6100 2800 0    60   ~ 0
-SPI0_CS0
-Text Label 6100 2900 0    60   ~ 0
-SPI0_CS1
-Text Label 5600 1800 2    60   ~ 0
-I2C1_SDA
-Text Label 5600 1900 2    60   ~ 0
-I2C1_SCL
-Text Label 6100 1900 0    60   ~ 0
-GND
-Text Label 5600 2100 2    60   ~ 0
-GND
-Text Label 6100 2300 0    60   ~ 0
-GND
-Text Label 6100 2600 0    60   ~ 0
-GND
-Text Label 5600 2900 2    60   ~ 0
-GND
-Text Label 6100 3100 0    60   ~ 0
-GND
-Text Label 6100 3300 0    60   ~ 0
-GND
-Text Label 5600 3600 2    60   ~ 0
-GND
-NoConn ~ 5600 3000
-NoConn ~ 6100 3000
 Text Label 4050 1500 2    60   ~ 0
 3V3
 Text Label 1100 1500 0    60   ~ 0
@@ -222,8 +133,6 @@ Text Label 6500 5000 2    60   ~ 0
 GPIO_4
 Text Label 6500 5200 2    60   ~ 0
 GPIO_5
-Text Notes 5650 1500 0    60   ~ 0
-Raspberry Pi\nExpansion
 Text Notes 5850 4250 0    60   ~ 0
 TL2C I2C Expansion
 Text Notes 2400 1200 0    60   ~ 0
