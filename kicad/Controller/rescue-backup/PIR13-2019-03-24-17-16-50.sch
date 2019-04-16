@@ -1,6 +1,36 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:tl2c-symbols
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
 LIBS:tl2c-cache
-EELAYER 26 0
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -21,7 +51,7 @@ PIR_EG
 Text Label 5725 1650 0    60   ~ 0
 PIR_OG
 $Comp
-L tl2c-rescue:GND #PWR021
+L GND #PWR021
 U 1 1 585206AF
 P 5550 1150
 F 0 "#PWR021" H 5550 900 50  0001 C CNN
@@ -32,7 +62,7 @@ F 3 "" H 5550 1150 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:C C301
+L C C301
 U 1 1 585206CD
 P 4000 1650
 F 0 "C301" H 4050 1750 50  0000 L CNN
@@ -51,7 +81,7 @@ GND
 Text Label 5450 2150 0    60   ~ 0
 GND
 $Comp
-L tl2c-rescue:C C302
+L C C302
 U 1 1 5852087B
 P 4350 1950
 F 0 "C302" H 4150 2050 50  0000 L CNN
@@ -62,7 +92,7 @@ F 3 "" H 4350 1950 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L tl2c-rescue:C C303
+L C C303
 U 1 1 585208A4
 P 4850 2250
 F 0 "C303" H 4650 2350 50  0000 L CNN
@@ -75,7 +105,7 @@ $EndComp
 Text Label 5850 1050 2    60   ~ 0
 GND
 $Comp
-L tl2c-rescue:R R307
+L R R307
 U 1 1 58520DB2
 P 2900 1650
 F 0 "R307" V 2980 1650 50  0000 C CNN
@@ -86,7 +116,7 @@ F 3 "" H 2900 1650 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L tl2c-rescue:IRLML2502 Q301
+L IRLML2502 Q301
 U 1 1 58520DBC
 P 2500 1950
 F 0 "Q301" H 2500 1801 40  0000 R CNN
@@ -100,7 +130,7 @@ F 6 "IRLML2502GTRPBFCT-ND" H 2500 1950 60  0001 C CNN "Digikey-PN"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:R R301
+L R R301
 U 1 1 58520DC6
 P 2400 2450
 F 0 "R301" V 2480 2450 50  0000 C CNN
@@ -115,7 +145,7 @@ PIR_UG
 Text HLabel 2000 1400 0    60   Input ~ 0
 Ub+
 $Comp
-L tl2c-rescue:GND #PWR022
+L GND #PWR022
 U 1 1 585215A4
 P 2400 2650
 F 0 "#PWR022" H 2400 2400 50  0001 C CNN
@@ -126,7 +156,7 @@ F 3 "" H 2400 2650 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:R R308
+L R R308
 U 1 1 58521B00
 P 2900 3550
 F 0 "R308" V 2980 3550 50  0000 C CNN
@@ -137,7 +167,7 @@ F 3 "" H 2900 3550 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L tl2c-rescue:IRLML2502 Q302
+L IRLML2502 Q302
 U 1 1 58521B09
 P 2500 3850
 F 0 "Q302" H 2500 3701 40  0000 R CNN
@@ -153,7 +183,7 @@ $EndComp
 Text Label 2400 3350 0    60   ~ 0
 Ub+
 $Comp
-L tl2c-rescue:R R302
+L R R302
 U 1 1 58521B12
 P 2400 4350
 F 0 "R302" V 2480 4350 50  0000 C CNN
@@ -168,7 +198,7 @@ U+
 Text Label 3650 3900 2    60   ~ 0
 PIR_EG
 $Comp
-L tl2c-rescue:GND #PWR023
+L GND #PWR023
 U 1 1 58521B24
 P 2400 4550
 F 0 "#PWR023" H 2400 4300 50  0001 C CNN
@@ -179,7 +209,7 @@ F 3 "" H 2400 4550 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:R R309
+L R R309
 U 1 1 58521C51
 P 2900 5450
 F 0 "R309" V 2980 5450 50  0000 C CNN
@@ -190,7 +220,7 @@ F 3 "" H 2900 5450 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L tl2c-rescue:IRLML2502 Q303
+L IRLML2502 Q303
 U 1 1 58521C5A
 P 2500 5750
 F 0 "Q303" H 2500 5601 40  0000 R CNN
@@ -206,7 +236,7 @@ $EndComp
 Text Label 2400 5250 0    60   ~ 0
 Ub+
 $Comp
-L tl2c-rescue:R R303
+L R R303
 U 1 1 58521C63
 P 2400 6250
 F 0 "R303" V 2480 6250 50  0000 C CNN
@@ -221,7 +251,7 @@ U+
 Text Label 3650 5800 2    60   ~ 0
 PIR_OG
 $Comp
-L tl2c-rescue:GND #PWR024
+L GND #PWR024
 U 1 1 58521C75
 P 2400 6450
 F 0 "#PWR024" H 2400 6200 50  0001 C CNN
@@ -238,7 +268,7 @@ SIG_EG
 Text HLabel 2200 6050 0    60   Input ~ 0
 SIG_OG
 $Comp
-L tl2c-rescue:LED D301
+L LED D301
 U 1 1 5852C267
 P 2750 2800
 F 0 "D301" H 2750 2900 50  0000 C CNN
@@ -249,7 +279,7 @@ F 3 "" H 2750 2800 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L tl2c-rescue:R R304
+L R R304
 U 1 1 5852C57E
 P 2750 2400
 F 0 "R304" V 2830 2400 50  0000 C CNN
@@ -260,7 +290,7 @@ F 3 "" H 2750 2400 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L tl2c-rescue:LED D302
+L LED D302
 U 1 1 5852CAA2
 P 2800 4700
 F 0 "D302" H 2800 4800 50  0000 C CNN
@@ -271,7 +301,7 @@ F 3 "" H 2800 4700 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L tl2c-rescue:R R305
+L R R305
 U 1 1 5852CAA8
 P 2800 4300
 F 0 "R305" V 2880 4300 50  0000 C CNN
@@ -282,7 +312,7 @@ F 3 "" H 2800 4300 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L tl2c-rescue:GND #PWR025
+L GND #PWR025
 U 1 1 5852CAAF
 P 2800 4950
 F 0 "#PWR025" H 2800 4700 50  0001 C CNN
@@ -293,7 +323,7 @@ F 3 "" H 2800 4950 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:LED D303
+L LED D303
 U 1 1 5852D26A
 P 2800 6600
 F 0 "D303" H 2800 6700 50  0000 C CNN
@@ -304,7 +334,7 @@ F 3 "" H 2800 6600 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L tl2c-rescue:R R306
+L R R306
 U 1 1 5852D270
 P 2800 6200
 F 0 "R306" V 2880 6200 50  0000 C CNN
@@ -315,7 +345,7 @@ F 3 "" H 2800 6200 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L tl2c-rescue:GND #PWR026
+L GND #PWR026
 U 1 1 5852D277
 P 2800 6850
 F 0 "#PWR026" H 2800 6600 50  0001 C CNN
@@ -326,7 +356,7 @@ F 3 "" H 2800 6850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:GND #PWR027
+L GND #PWR027
 U 1 1 5852E037
 P 4000 1850
 F 0 "#PWR027" H 4000 1600 50  0001 C CNN
@@ -337,7 +367,7 @@ F 3 "" H 4000 1850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:GND #PWR028
+L GND #PWR028
 U 1 1 5852E38D
 P 4350 2150
 F 0 "#PWR028" H 4350 1900 50  0001 C CNN
@@ -348,7 +378,7 @@ F 3 "" H 4350 2150 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:GND #PWR029
+L GND #PWR029
 U 1 1 5852E6E2
 P 4850 2450
 F 0 "#PWR029" H 4850 2200 50  0001 C CNN
@@ -365,7 +395,7 @@ U+
 Text Label 4650 2050 0    60   ~ 0
 U+
 $Comp
-L tl2c-rescue:TEST_1P TP301
+L TEST_1P TP301
 U 1 1 58533CA9
 P 3250 1950
 F 0 "TP301" H 3250 2220 50  0000 C CNN
@@ -376,7 +406,7 @@ F 3 "" H 3450 1950 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:TEST_1P TP302
+L TEST_1P TP302
 U 1 1 58533E0F
 P 3250 3850
 F 0 "TP302" H 3250 4120 50  0000 C CNN
@@ -387,7 +417,7 @@ F 3 "" H 3450 3850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:TEST_1P TP303
+L TEST_1P TP303
 U 1 1 58534405
 P 3250 5750
 F 0 "TP303" H 3250 6020 50  0000 C CNN
@@ -513,7 +543,7 @@ Wire Wire Line
 	2750 2200 2400 2200
 Connection ~ 2400 2200
 $Comp
-L tl2c-rescue:GND #PWR030
+L GND #PWR030
 U 1 1 5852C6FF
 P 2750 3050
 F 0 "#PWR030" H 2750 2800 50  0001 C CNN
@@ -534,7 +564,7 @@ Wire Wire Line
 Wire Wire Line
 	2800 6350 2800 6400
 $Comp
-L tl2c-rescue:CONN_01X03 P301
+L CONN_01X03 P301
 U 1 1 5867BA07
 P 6250 1550
 F 0 "P301" H 6425 1575 50  0000 C CNN
@@ -548,7 +578,7 @@ F 6 "Value" H 6250 1550 60  0001 C CNN "Digikey-PN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:CONN_01X03 P302
+L CONN_01X03 P302
 U 1 1 5867BAEB
 P 6250 1850
 F 0 "P302" H 6425 1925 50  0000 C CNN
@@ -562,7 +592,7 @@ F 6 "Value" H 6250 1850 60  0001 C CNN "Digikey-PN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:CONN_01X03 P303
+L CONN_01X03 P303
 U 1 1 5867BB77
 P 6250 2150
 F 0 "P303" H 6425 2225 50  0000 C CNN

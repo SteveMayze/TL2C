@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name tl2c-rescue)(type Legacy)(uri ${KIPRJMOD}/tl2c-rescue.lib)(options "")(descr ""))
+)

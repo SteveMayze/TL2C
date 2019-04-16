@@ -65,6 +65,8 @@
       <ToolName>Simulator</ToolName>
     </com_atmel_avrdbg_tool_simulator>
     <StimuliFile>D:\pcbs\TL2C\firmware\tl2c\tl2c\stim1.stim</StimuliFile>
+    <ResetRule>0</ResetRule>
+    <EraseKey />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <ToolchainSettings>

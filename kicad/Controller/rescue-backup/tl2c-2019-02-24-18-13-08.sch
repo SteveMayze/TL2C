@@ -1,6 +1,36 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:tl2c-symbols
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
 LIBS:tl2c-cache
-EELAYER 26 0
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -15,7 +45,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L tl2c-rescue:ATTINY20-X IC101
+L ATTINY20-X IC101
 U 1 1 584C1FC2
 P 4250 5200
 F 0 "IC101" H 3300 5950 50  0000 C CNN
@@ -29,7 +59,7 @@ F 6 "ATTINY20-SSURCT-ND" H 4250 5200 60  0001 C CNN "Digikey-PN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:C C101
+L C C101
 U 1 1 584C320A
 P 2850 4850
 F 0 "C101" H 2875 4950 50  0000 L CNN
@@ -42,7 +72,7 @@ $EndComp
 Text Label 2600 4600 0    60   ~ 0
 Ub+
 $Comp
-L tl2c-rescue:GND #PWR01
+L GND #PWR01
 U 1 1 584C3309
 P 3700 6200
 F 0 "#PWR01" H 3700 5950 50  0001 C CNN
@@ -57,7 +87,7 @@ TPIDATA
 Text Label 5000 1100 2    60   ~ 0
 Ub+
 $Comp
-L tl2c-rescue:GND #PWR02
+L GND #PWR02
 U 1 1 584C39BE
 P 4850 1400
 F 0 "#PWR02" H 4850 1150 50  0001 C CNN
@@ -70,7 +100,7 @@ $EndComp
 Text Notes 3750 2100 0    50   ~ 0
 We have a 3V3 system \nand possibly a 5V programmer. \nInitial research suggests the AVRISP MkII\ncan drive ISP lines at the required voltage.\nhttps://forum.arduino.cc/index.php?topic=92544.0
 $Comp
-L tl2c-rescue:R R101
+L R R101
 U 1 1 584C40A0
 P 2750 2700
 F 0 "R101" V 2830 2700 50  0000 C CNN
@@ -81,7 +111,7 @@ F 3 "" H 2750 2700 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L tl2c-rescue:GND #PWR03
+L GND #PWR03
 U 1 1 584C4458
 P 2850 5100
 F 0 "#PWR03" H 2850 4850 50  0001 C CNN
@@ -94,7 +124,7 @@ $EndComp
 Text Label 2750 2375 2    60   ~ 0
 Ub+
 $Comp
-L tl2c-rescue:R R103
+L R R103
 U 1 1 584C58EE
 P 6500 5600
 F 0 "R103" V 6580 5600 50  0000 C CNN
@@ -107,7 +137,7 @@ $EndComp
 Text Label 6950 5600 2    60   ~ 0
 SDA
 $Comp
-L tl2c-rescue:R R104
+L R R104
 U 1 1 584C6CF4
 P 7100 5200
 F 0 "R104" V 7180 5200 50  0000 C CNN
@@ -118,7 +148,7 @@ F 3 "" H 7100 5200 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L tl2c-rescue:R R105
+L R R105
 U 1 1 584C6E58
 P 7100 5700
 F 0 "R105" V 7180 5700 50  0000 C CNN
@@ -129,7 +159,7 @@ F 3 "" H 7100 5700 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L tl2c-rescue:GND #PWR04
+L GND #PWR04
 U 1 1 584C7124
 P 7450 5900
 F 0 "#PWR04" H 7450 5650 50  0001 C CNN
@@ -156,7 +186,7 @@ GPIO_PA6
 Text Label 5800 5300 2    60   ~ 0
 SCL
 $Comp
-L tl2c-rescue:CONN_01X03 P102
+L CONN_01X03 P102
 U 1 1 584C77B2
 P 1750 3050
 F 0 "P102" H 1750 3250 50  0000 C CNN
@@ -174,7 +204,7 @@ SDA
 Text Label 600  3050 0    60   ~ 0
 SCL
 $Comp
-L tl2c-rescue:GND #PWR05
+L GND #PWR05
 U 1 1 584C7C99
 P 1400 3250
 F 0 "#PWR05" H 1400 3000 50  0001 C CNN
@@ -185,7 +215,7 @@ F 3 "" H 1400 3250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:Relay_JW1AFSN12F REL101
+L Relay_JW1AFSN12F REL101
 U 2 1 584C8F2D
 P 8450 1150
 F 0 "REL101" H 8450 1050 60  0000 C CNN
@@ -199,7 +229,7 @@ F 6 "Value" H 8450 1150 60  0001 C CNN "Digikey-PN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:Relay_JW1AFSN12F REL102
+L Relay_JW1AFSN12F REL102
 U 2 1 584C93FA
 P 8450 1550
 F 0 "REL102" H 8450 1450 60  0000 C CNN
@@ -213,7 +243,7 @@ F 6 "Value" H 8450 1550 60  0001 C CNN "Digikey-PN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:Relay_JW1AFSN12F REL103
+L Relay_JW1AFSN12F REL103
 U 2 1 584C945E
 P 8450 2000
 F 0 "REL103" H 8450 1900 60  0000 C CNN
@@ -239,7 +269,7 @@ Lin
 Text Label 7150 1575 2    60   ~ 0
 Neutral
 $Comp
-L tl2c-rescue:GND #PWR06
+L GND #PWR06
 U 1 1 584CB28B
 P 3850 3100
 F 0 "#PWR06" H 3850 2850 50  0001 C CNN
@@ -254,7 +284,7 @@ Neutral
 Text Label 9625 1250 0    60   ~ 0
 Neutral
 $Comp
-L tl2c-rescue:CONN_01X02 P103
+L CONN_01X02 P103
 U 1 1 584CC850
 P 2200 4050
 F 0 "P103" H 2200 4200 50  0000 C CNN
@@ -280,7 +310,7 @@ F4 "U+In" I L 1400 1350 60
 F5 "5V" I L 1400 1850 60 
 $EndSheet
 $Comp
-L tl2c-rescue:CONN_01X02 P101
+L CONN_01X02 P101
 U 1 1 584D9CD6
 P 900 1400
 F 0 "P101" H 900 1550 50  0000 C CNN
@@ -298,7 +328,7 @@ U+
 Text Label 3500 1850 2    60   ~ 0
 Ub+
 $Comp
-L tl2c-rescue:GND #PWR07
+L GND #PWR07
 U 1 1 584DF6BA
 P 1200 1600
 F 0 "#PWR07" H 1200 1350 50  0001 C CNN
@@ -309,7 +339,7 @@ F 3 "" H 1200 1600 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:TEST_1P TP103
+L TEST_1P TP103
 U 1 1 584E2848
 P 1400 2850
 F 0 "TP103" H 1400 3120 50  0000 C CNN
@@ -320,7 +350,7 @@ F 3 "" H 1600 2850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:TEST_1P TP102
+L TEST_1P TP102
 U 1 1 584E2A24
 P 900 2850
 F 0 "TP102" H 900 3120 50  0000 C CNN
@@ -331,7 +361,7 @@ F 3 "" H 1100 2850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:TEST_1P TP101
+L TEST_1P TP101
 U 1 1 584E3051
 P 1100 4600
 F 0 "TP101" H 1100 4870 50  0000 C CNN
@@ -342,7 +372,7 @@ F 3 "" H 1300 4600 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:GND #PWR08
+L GND #PWR08
 U 1 1 584E33BE
 P 1100 4700
 F 0 "#PWR08" H 1100 4450 50  0001 C CNN
@@ -389,7 +419,7 @@ F5 "LED_DRIVER_U+" I L 9000 2650 60
 F6 "LED_DRIVER_GND" I L 9000 3525 60 
 $EndSheet
 $Comp
-L tl2c-rescue:GND #PWR09
+L GND #PWR09
 U 1 1 58541B90
 P 5700 3425
 F 0 "#PWR09" H 5700 3175 50  0001 C CNN
@@ -406,7 +436,7 @@ RelayEG
 Text Label 4200 2950 0    60   ~ 0
 RelayOG
 $Comp
-L tl2c-rescue:TL3315NF160Q SW101
+L TL3315NF160Q SW101
 U 1 1 58559EF5
 P 3400 2950
 F 0 "SW101" V 3600 2950 60  0000 C CNN
@@ -422,7 +452,7 @@ $EndComp
 NoConn ~ 3150 2850
 NoConn ~ 3650 2850
 $Comp
-L tl2c-rescue:LED D101
+L LED D101
 U 1 1 5856AA32
 P 4650 3750
 F 0 "D101" H 4650 3850 50  0000 C CNN
@@ -433,7 +463,7 @@ F 3 "" H 4650 3750 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L tl2c-rescue:R R106
+L R R106
 U 1 1 5856AB2B
 P 4650 3300
 F 0 "R106" V 4730 3300 50  0000 C CNN
@@ -444,7 +474,7 @@ F 3 "" H 4650 3300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:GND #PWR010
+L GND #PWR010
 U 1 1 5856AF1B
 P 4650 4050
 F 0 "#PWR010" H 4650 3800 50  0001 C CNN
@@ -455,7 +485,7 @@ F 3 "" H 4650 4050 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:LED D102
+L LED D102
 U 1 1 5856B277
 P 4950 3750
 F 0 "D102" H 4950 3850 50  0000 C CNN
@@ -466,7 +496,7 @@ F 3 "" H 4950 3750 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L tl2c-rescue:R R107
+L R R107
 U 1 1 5856B27D
 P 4950 3300
 F 0 "R107" V 5030 3300 50  0000 C CNN
@@ -477,7 +507,7 @@ F 3 "" H 4950 3300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:GND #PWR011
+L GND #PWR011
 U 1 1 5856B284
 P 4950 4050
 F 0 "#PWR011" H 4950 3800 50  0001 C CNN
@@ -488,7 +518,7 @@ F 3 "" H 4950 4050 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:LED D103
+L LED D103
 U 1 1 5856B503
 P 5250 3750
 F 0 "D103" H 5250 3850 50  0000 C CNN
@@ -499,7 +529,7 @@ F 3 "" H 5250 3750 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L tl2c-rescue:R R108
+L R R108
 U 1 1 5856B509
 P 5250 3300
 F 0 "R108" V 5330 3300 50  0000 C CNN
@@ -510,7 +540,7 @@ F 3 "" H 5250 3300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:GND #PWR012
+L GND #PWR012
 U 1 1 5856B510
 P 5250 4050
 F 0 "#PWR012" H 5250 3800 50  0001 C CNN
@@ -521,7 +551,7 @@ F 3 "" H 5250 4050 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:GNDA #PWR013
+L GNDA #PWR013
 U 1 1 5856E00B
 P 7575 3600
 F 0 "#PWR013" H 7575 3350 50  0001 C CNN
@@ -532,7 +562,7 @@ F 3 "" H 7575 3600 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:TEST_1P TP104
+L TEST_1P TP104
 U 1 1 58571150
 P 4750 2700
 F 0 "TP104" H 4750 2970 50  0000 C CNN
@@ -543,7 +573,7 @@ F 3 "" H 4950 2700 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:TEST_1P TP105
+L TEST_1P TP105
 U 1 1 5857134A
 P 5100 2800
 F 0 "TP105" H 5100 3070 50  0000 C CNN
@@ -554,7 +584,7 @@ F 3 "" H 5300 2800 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:TEST_1P TP106
+L TEST_1P TP106
 U 1 1 585714D0
 P 5450 2900
 F 0 "TP106" H 5450 3170 50  0000 C CNN
@@ -569,7 +599,7 @@ TODO - Change the relay to  AZ7705T-1A-12DEF - Conrad.\nor FIN 43.41.7 12V - Rei
 Text Label 5600 2500 2    60   ~ 0
 U+
 $Comp
-L tl2c-rescue:TerminalBlock_1x6 P108
+L TerminalBlock_1x6 P108
 U 1 1 586699C9
 P 10200 1400
 F 0 "P108" H 10200 1750 50  0000 C CNN
@@ -599,7 +629,7 @@ Neutral
 Text Label 6375 1150 0    60   ~ 0
 Lin
 $Comp
-L tl2c-rescue:Term_01X02 P106
+L Term_01X02 P106
 U 1 1 58669AAE
 P 6850 1200
 F 0 "P106" H 6850 1350 50  0000 C CNN
@@ -613,7 +643,7 @@ F 6 "Value" H 6850 1200 60  0001 C CNN "Digikey-PN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:C C102
+L C C102
 U 1 1 58675769
 P 3050 3350
 F 0 "C102" H 3075 3450 50  0000 L CNN
@@ -626,7 +656,7 @@ $EndComp
 Text Label 3700 4275 0    60   ~ 0
 ~Reset
 $Comp
-L tl2c-rescue:CONN_02X03 P104
+L CONN_02X03 P104
 U 1 1 584C357B
 P 4500 1200
 F 0 "P104" H 4500 1400 50  0000 C CNN
@@ -640,7 +670,7 @@ F 6 "Value" H 4500 1200 60  0001 C CNN "Digikey-PN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:GND #PWR014
+L GND #PWR014
 U 1 1 5867873E
 P 3050 3600
 F 0 "#PWR014" H 3050 3350 50  0001 C CNN
@@ -655,7 +685,7 @@ Text Label 2200 3050 0    60   ~ 0
 Text Label 3850 1300 0    60   ~ 0
 ~Reset
 $Comp
-L tl2c-rescue:F_Small F101
+L F_Small F101
 U 1 1 586AB129
 P 7400 1150
 F 0 "F101" H 7360 1210 50  0000 L CNN
@@ -670,7 +700,7 @@ F 7 "MIK-FLINK 0,5A" H 7400 1150 60  0001 C CNN "Reichelt-PN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:CONN_01X08 P105
+L CONN_01X08 P105
 U 1 1 586D2545
 P 6000 3000
 F 0 "P105" H 6000 3450 50  0000 C CNN
@@ -694,7 +724,7 @@ GPIO_PA6
 Text Label 1000 4100 0    60   ~ 0
 GPIO_PB2
 $Comp
-L tl2c-rescue:CONN_01X08 P107
+L CONN_01X08 P107
 U 1 1 586D6350
 P 7275 3000
 F 0 "P107" H 7275 3450 50  0000 C CNN
@@ -711,7 +741,7 @@ NoConn ~ 7475 3050
 NoConn ~ 7475 3150
 NoConn ~ 7475 3250
 $Comp
-L tl2c-rescue:TEST_1P TP107
+L TEST_1P TP107
 U 1 1 586D80EA
 P 1525 3900
 F 0 "TP107" H 1525 4170 50  0000 C CNN
@@ -722,7 +752,7 @@ F 3 "" H 1725 3900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:TEST_1P TP108
+L TEST_1P TP108
 U 1 1 586D81E0
 P 1850 3900
 F 0 "TP108" H 1850 4170 50  0000 C CNN
@@ -740,7 +770,7 @@ TPICLK
 Text Label 5800 5700 2    60   ~ 0
 GPIO_PB2
 Wire Wire Line
-	2600 4600 2850 4600
+	2600 4600 3100 4600
 Wire Wire Line
 	2850 4600 2850 4700
 Connection ~ 2850 4600
@@ -763,7 +793,7 @@ Wire Wire Line
 Wire Wire Line
 	3700 6050 3700 6200
 Wire Wire Line
-	5400 5600 6000 5600
+	5400 5600 6350 5600
 Wire Wire Line
 	5400 5300 5800 5300
 Wire Wire Line
@@ -773,11 +803,11 @@ Wire Wire Line
 Wire Wire Line
 	7250 5200 7450 5200
 Wire Wire Line
-	7450 5200 7450 5700
+	7450 5200 7450 5900
 Wire Wire Line
-	1150 2950 1400 2950
+	1150 2950 1550 2950
 Wire Wire Line
-	600  3050 900  3050
+	600  3050 1550 3050
 Wire Wire Line
 	1550 3150 1400 3150
 Wire Wire Line
@@ -787,13 +817,13 @@ Wire Wire Line
 Wire Wire Line
 	8850 2000 9625 2000
 Wire Wire Line
-	7500 1150 7900 1150
+	7500 1150 8050 1150
 Wire Wire Line
 	8050 1550 7900 1550
 Wire Wire Line
 	7900 2000 8050 2000
 Wire Wire Line
-	7900 1150 7900 1550
+	7900 1150 7900 2000
 Connection ~ 7900 1550
 Wire Wire Line
 	8850 1150 10000 1150
@@ -812,9 +842,9 @@ Wire Wire Line
 Wire Wire Line
 	10000 1250 9625 1250
 Wire Wire Line
-	1000 4000 1525 4000
+	1000 4000 2000 4000
 Wire Wire Line
-	1000 4100 1850 4100
+	1000 4100 2000 4100
 Wire Wire Line
 	3650 3050 3850 3050
 Wire Wire Line
@@ -884,11 +914,11 @@ Wire Notes Line
 Wire Notes Line
 	6325 3900 6325 700 
 Wire Wire Line
-	4200 2750 4650 2750
+	4200 2750 5800 2750
 Wire Wire Line
-	4200 2850 4950 2850
+	4200 2850 5800 2850
 Wire Wire Line
-	4200 2950 5250 2950
+	4200 2950 5800 2950
 Wire Notes Line
 	6175 2850 7025 2850
 Wire Notes Line
@@ -924,7 +954,7 @@ Wire Wire Line
 	5450 2900 5450 2950
 Connection ~ 5450 2950
 Wire Wire Line
-	2200 3050 2750 3050
+	2200 3050 3150 3050
 Wire Wire Line
 	7100 1250 7150 1250
 Wire Wire Line
@@ -982,7 +1012,7 @@ Wire Wire Line
 Wire Wire Line
 	7475 3350 7575 3350
 Wire Wire Line
-	7575 3350 7575 3525
+	7575 3350 7575 3600
 Wire Wire Line
 	1525 3900 1525 4000
 Connection ~ 1525 4000
@@ -1008,7 +1038,7 @@ Connection ~ 7450 5700
 Wire Wire Line
 	5400 5500 5800 5500
 $Comp
-L tl2c-rescue:CONN_01X02 P109
+L CONN_01X02 P109
 U 1 1 589A46DF
 P 900 1900
 F 0 "P109" H 900 2050 50  0000 C CNN
@@ -1024,7 +1054,7 @@ $EndComp
 Wire Wire Line
 	1100 1850 1400 1850
 $Comp
-L tl2c-rescue:GND #PWR015
+L GND #PWR015
 U 1 1 589A5184
 P 1250 2100
 F 0 "#PWR015" H 1250 1850 50  0001 C CNN
@@ -1044,40 +1074,4 @@ Text Label 3850 1200 0    60   ~ 0
 TPICLK
 Text Notes 550  3850 0    60   ~ 0
 GPIO_PA6 -\nRelay Interrupt
-Wire Wire Line
-	2850 4600 3100 4600
-Wire Wire Line
-	7900 1550 7900 2000
-Wire Wire Line
-	900  3050 1550 3050
-Wire Wire Line
-	1400 2950 1550 2950
-Wire Wire Line
-	4650 2750 4750 2750
-Wire Wire Line
-	4950 2850 5100 2850
-Wire Wire Line
-	5250 2950 5450 2950
-Wire Wire Line
-	4750 2750 5800 2750
-Wire Wire Line
-	5100 2850 5800 2850
-Wire Wire Line
-	5450 2950 5800 2950
-Wire Wire Line
-	3050 3050 3150 3050
-Wire Wire Line
-	6000 5600 6350 5600
-Wire Wire Line
-	2750 3050 3050 3050
-Wire Wire Line
-	7900 1150 8050 1150
-Wire Wire Line
-	1525 4000 2000 4000
-Wire Wire Line
-	1850 4100 2000 4100
-Wire Wire Line
-	7575 3525 7575 3600
-Wire Wire Line
-	7450 5700 7450 5900
 $EndSCHEMATC

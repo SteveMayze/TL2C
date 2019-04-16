@@ -1,37 +1,6 @@
-EESchema Schematic File Version 2
-LIBS:tl2c-rescue
-LIBS:tl2c-symbols
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
+EESchema Schematic File Version 4
 LIBS:tl2c-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -46,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Relay_JW1AFSN12F REL?
+L tl2c-symbols:Relay_JW1AFSN12F REL?
 U 1 1 5852585A
 P 6450 1950
 AR Path="/5852585A" Ref="REL?"  Part="1" 
@@ -62,7 +31,7 @@ F 6 "N/A" H 6450 1950 60  0001 C CNN "Digikey-PN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Relay_JW1AFSN12F REL?
+L tl2c-symbols:Relay_JW1AFSN12F REL?
 U 1 1 58525862
 P 6450 3050
 AR Path="/58525862" Ref="REL?"  Part="1" 
@@ -78,7 +47,7 @@ F 6 "N/A" H 6450 3050 60  0001 C CNN "Digikey-PN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Relay_JW1AFSN12F REL?
+L tl2c-symbols:Relay_JW1AFSN12F REL?
 U 1 1 5852586A
 P 6450 4050
 AR Path="/5852586A" Ref="REL?"  Part="1" 
@@ -94,7 +63,7 @@ F 6 "N/A" H 6450 4050 60  0001 C CNN "Digikey-PN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L D D404
+L Device:D D404
 U 1 1 58525871
 P 6425 2350
 F 0 "D404" H 6425 2450 50  0000 C CNN
@@ -108,7 +77,7 @@ F 6 "1N4148W-E3-18CT-ND " H 6425 2350 60  0001 C CNN "Digikey-PN"
 	-1   0    0    1   
 $EndComp
 $Comp
-L D D405
+L Device:D D405
 U 1 1 58525878
 P 6425 3400
 F 0 "D405" H 6425 3500 50  0000 C CNN
@@ -122,7 +91,7 @@ F 6 "1N4148W-E3-18CT-ND" H 6425 3400 60  0001 C CNN "Digikey-PN"
 	-1   0    0    1   
 $EndComp
 $Comp
-L D D406
+L Device:D D406
 U 1 1 5852587F
 P 6425 4400
 F 0 "D406" H 6425 4500 50  0000 C CNN
@@ -136,7 +105,7 @@ F 6 "1N4148W-E3-18CT-ND" H 6425 4400 60  0001 C CNN "Digikey-PN"
 	-1   0    0    1   
 $EndComp
 $Comp
-L R R401
+L Device:R R401
 U 1 1 58525889
 P 4750 2350
 F 0 "R401" V 4830 2350 50  0000 C CNN
@@ -147,7 +116,7 @@ F 3 "" H 4750 2350 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R402
+L Device:R R402
 U 1 1 58525890
 P 4750 3450
 F 0 "R402" V 4830 3450 50  0000 C CNN
@@ -158,7 +127,7 @@ F 3 "" H 4750 3450 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R403
+L Device:R R403
 U 1 1 58525897
 P 4750 4500
 F 0 "R403" V 4830 4500 50  0000 C CNN
@@ -169,7 +138,7 @@ F 3 "" H 4750 4500 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L IRLML2502 Q401
+L tl2c-symbols:IRLML2502 Q401
 U 1 1 5852589F
 P 5400 2300
 F 0 "Q401" H 5400 2151 40  0000 R CNN
@@ -183,7 +152,7 @@ F 6 "IRLML2502GTRPBFCT-ND" H 5400 2300 60  0001 C CNN "Digikey-PN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L IRLML2502 Q402
+L tl2c-symbols:IRLML2502 Q402
 U 1 1 585258A7
 P 5400 3400
 F 0 "Q402" H 5400 3251 40  0000 R CNN
@@ -197,7 +166,7 @@ F 6 "RLML2502GTRPBFCT-ND" H 5400 3400 60  0001 C CNN "Digikey-PN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L IRLML2502 Q403
+L tl2c-symbols:IRLML2502 Q403
 U 1 1 585258AF
 P 5400 4450
 F 0 "Q403" H 5400 4301 40  0000 R CNN
@@ -270,7 +239,7 @@ Relay_OG
 Text HLabel 6650 1550 0    60   Input ~ 0
 LED_DRIVER_U+
 $Comp
-L R R407
+L Device:R R407
 U 1 1 5852702F
 P 5750 1950
 F 0 "R407" V 5830 1950 50  0000 C CNN
@@ -284,7 +253,7 @@ Wire Wire Line
 	5900 1950 6050 1950
 Connection ~ 5950 1950
 $Comp
-L R R408
+L Device:R R408
 U 1 1 585271D4
 P 5750 3050
 F 0 "R408" V 5830 3050 50  0000 C CNN
@@ -300,7 +269,7 @@ Wire Wire Line
 	5900 3050 6050 3050
 Connection ~ 5950 3050
 $Comp
-L R R409
+L Device:R R409
 U 1 1 58527308
 P 5750 4050
 F 0 "R409" V 5830 4050 50  0000 C CNN
@@ -328,7 +297,7 @@ Wire Wire Line
 Text HLabel 3980 5780 0    60   Input ~ 0
 LED_DRIVER_GND
 $Comp
-L GNDA #PWR025
+L power:GNDA #PWR025
 U 1 1 5856DA15
 P 4480 5890
 F 0 "#PWR025" H 4480 5640 50  0001 C CNN
@@ -339,7 +308,7 @@ F 3 "" H 4480 5890 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GNDA #PWR026
+L power:GNDA #PWR026
 U 1 1 5856DA56
 P 5500 4800
 F 0 "#PWR026" H 5500 4550 50  0001 C CNN
@@ -350,7 +319,7 @@ F 3 "" H 5500 4800 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GNDA #PWR027
+L power:GNDA #PWR027
 U 1 1 5856DA97
 P 5500 3650
 F 0 "#PWR027" H 5500 3400 50  0001 C CNN
@@ -361,7 +330,7 @@ F 3 "" H 5500 3650 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GNDA #PWR028
+L power:GNDA #PWR028
 U 1 1 5856DAD8
 P 5500 2600
 F 0 "#PWR028" H 5500 2350 50  0001 C CNN
@@ -374,7 +343,7 @@ $EndComp
 Wire Wire Line
 	4200 2350 4600 2350
 $Comp
-L R R404
+L Device:R R404
 U 1 1 59B97532
 P 4400 2640
 F 0 "R404" V 4480 2640 50  0000 C CNN
@@ -385,7 +354,7 @@ F 3 "" H 4400 2640 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L GNDA #PWR029
+L power:GNDA #PWR029
 U 1 1 59B9770A
 P 4400 2910
 F 0 "#PWR029" H 4400 2660 50  0001 C CNN
@@ -401,7 +370,7 @@ Connection ~ 4400 2350
 Wire Wire Line
 	4400 2790 4400 2910
 $Comp
-L R R405
+L Device:R R405
 U 1 1 59B97CA3
 P 4400 3710
 F 0 "R405" V 4480 3710 50  0000 C CNN
@@ -412,7 +381,7 @@ F 3 "" H 4400 3710 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L GNDA #PWR030
+L power:GNDA #PWR030
 U 1 1 59B97CA9
 P 4400 3980
 F 0 "#PWR030" H 4400 3730 50  0001 C CNN
@@ -425,7 +394,7 @@ $EndComp
 Wire Wire Line
 	4400 3860 4400 3980
 $Comp
-L R R406
+L Device:R R406
 U 1 1 59B9818B
 P 4400 4790
 F 0 "R406" V 4480 4790 50  0000 C CNN
@@ -436,7 +405,7 @@ F 3 "" H 4400 4790 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L GNDA #PWR031
+L power:GNDA #PWR031
 U 1 1 59B98191
 P 4400 5060
 F 0 "#PWR031" H 4400 4810 50  0001 C CNN

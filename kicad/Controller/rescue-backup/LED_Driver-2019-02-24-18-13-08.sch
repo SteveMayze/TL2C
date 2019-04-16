@@ -1,6 +1,36 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:tl2c-symbols
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
 LIBS:tl2c-cache
-EELAYER 26 0
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -15,7 +45,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L tl2c-rescue:Relay_JW1AFSN12F REL?
+L Relay_JW1AFSN12F REL?
 U 1 1 5852585A
 P 6450 1950
 AR Path="/5852585A" Ref="REL?"  Part="1" 
@@ -31,7 +61,7 @@ F 6 "N/A" H 6450 1950 60  0001 C CNN "Digikey-PN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:Relay_JW1AFSN12F REL?
+L Relay_JW1AFSN12F REL?
 U 1 1 58525862
 P 6450 3050
 AR Path="/58525862" Ref="REL?"  Part="1" 
@@ -47,7 +77,7 @@ F 6 "N/A" H 6450 3050 60  0001 C CNN "Digikey-PN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:Relay_JW1AFSN12F REL?
+L Relay_JW1AFSN12F REL?
 U 1 1 5852586A
 P 6450 4050
 AR Path="/5852586A" Ref="REL?"  Part="1" 
@@ -63,7 +93,7 @@ F 6 "N/A" H 6450 4050 60  0001 C CNN "Digikey-PN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:D D404
+L D D404
 U 1 1 58525871
 P 6425 2350
 F 0 "D404" H 6425 2450 50  0000 C CNN
@@ -77,7 +107,7 @@ F 6 "1N4148W-E3-18CT-ND " H 6425 2350 60  0001 C CNN "Digikey-PN"
 	-1   0    0    1   
 $EndComp
 $Comp
-L tl2c-rescue:D D405
+L D D405
 U 1 1 58525878
 P 6425 3400
 F 0 "D405" H 6425 3500 50  0000 C CNN
@@ -91,7 +121,7 @@ F 6 "1N4148W-E3-18CT-ND" H 6425 3400 60  0001 C CNN "Digikey-PN"
 	-1   0    0    1   
 $EndComp
 $Comp
-L tl2c-rescue:D D406
+L D D406
 U 1 1 5852587F
 P 6425 4400
 F 0 "D406" H 6425 4500 50  0000 C CNN
@@ -105,7 +135,7 @@ F 6 "1N4148W-E3-18CT-ND" H 6425 4400 60  0001 C CNN "Digikey-PN"
 	-1   0    0    1   
 $EndComp
 $Comp
-L tl2c-rescue:R R401
+L R R401
 U 1 1 58525889
 P 4750 2350
 F 0 "R401" V 4830 2350 50  0000 C CNN
@@ -116,7 +146,7 @@ F 3 "" H 4750 2350 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L tl2c-rescue:R R402
+L R R402
 U 1 1 58525890
 P 4750 3450
 F 0 "R402" V 4830 3450 50  0000 C CNN
@@ -127,7 +157,7 @@ F 3 "" H 4750 3450 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L tl2c-rescue:R R403
+L R R403
 U 1 1 58525897
 P 4750 4500
 F 0 "R403" V 4830 4500 50  0000 C CNN
@@ -138,7 +168,7 @@ F 3 "" H 4750 4500 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L tl2c-rescue:IRLML2502 Q401
+L IRLML2502 Q401
 U 1 1 5852589F
 P 5400 2300
 F 0 "Q401" H 5400 2151 40  0000 R CNN
@@ -152,7 +182,7 @@ F 6 "IRLML2502GTRPBFCT-ND" H 5400 2300 60  0001 C CNN "Digikey-PN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:IRLML2502 Q402
+L IRLML2502 Q402
 U 1 1 585258A7
 P 5400 3400
 F 0 "Q402" H 5400 3251 40  0000 R CNN
@@ -166,7 +196,7 @@ F 6 "RLML2502GTRPBFCT-ND" H 5400 3400 60  0001 C CNN "Digikey-PN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:IRLML2502 Q403
+L IRLML2502 Q403
 U 1 1 585258AF
 P 5400 4450
 F 0 "Q403" H 5400 4301 40  0000 R CNN
@@ -180,7 +210,7 @@ F 6 "RLML2502GTRPBFCT-ND" H 5400 4450 60  0001 C CNN "Digikey-PN"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7000 1550 7000 1950
+	7000 1550 7000 4400
 Wire Wire Line
 	7000 4400 6575 4400
 Wire Wire Line
@@ -241,7 +271,7 @@ Relay_OG
 Text HLabel 6650 1550 0    60   Input ~ 0
 LED_DRIVER_U+
 $Comp
-L tl2c-rescue:R R407
+L R R407
 U 1 1 5852702F
 P 5750 1950
 F 0 "R407" V 5830 1950 50  0000 C CNN
@@ -252,10 +282,10 @@ F 3 "" H 5750 1950 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5900 1950 5950 1950
+	5900 1950 6050 1950
 Connection ~ 5950 1950
 $Comp
-L tl2c-rescue:R R408
+L R R408
 U 1 1 585271D4
 P 5750 3050
 F 0 "R408" V 5830 3050 50  0000 C CNN
@@ -268,10 +298,10 @@ $EndComp
 Wire Wire Line
 	5500 3050 5600 3050
 Wire Wire Line
-	5900 3050 5950 3050
+	5900 3050 6050 3050
 Connection ~ 5950 3050
 $Comp
-L tl2c-rescue:R R409
+L R R409
 U 1 1 58527308
 P 5750 4050
 F 0 "R409" V 5830 4050 50  0000 C CNN
@@ -284,7 +314,7 @@ $EndComp
 Wire Wire Line
 	5500 4050 5600 4050
 Wire Wire Line
-	5900 4050 5950 4050
+	5900 4050 6050 4050
 Connection ~ 5950 4050
 Wire Wire Line
 	6650 1550 7000 1550
@@ -299,7 +329,7 @@ Wire Wire Line
 Text HLabel 4300 4950 0    60   Input ~ 0
 LED_DRIVER_GND
 $Comp
-L tl2c-rescue:GNDA #PWR031
+L GNDA #PWR031
 U 1 1 5856DA15
 P 4800 5200
 F 0 "#PWR031" H 4800 4950 50  0001 C CNN
@@ -310,7 +340,7 @@ F 3 "" H 4800 5200 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:GNDA #PWR032
+L GNDA #PWR032
 U 1 1 5856DA56
 P 5500 4800
 F 0 "#PWR032" H 5500 4550 50  0001 C CNN
@@ -321,7 +351,7 @@ F 3 "" H 5500 4800 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:GNDA #PWR033
+L GNDA #PWR033
 U 1 1 5856DA97
 P 5500 3650
 F 0 "#PWR033" H 5500 3400 50  0001 C CNN
@@ -332,7 +362,7 @@ F 3 "" H 5500 3650 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:GNDA #PWR034
+L GNDA #PWR034
 U 1 1 5856DAD8
 P 5500 2600
 F 0 "#PWR034" H 5500 2350 50  0001 C CNN
@@ -344,20 +374,4 @@ F 3 "" H 5500 2600 50  0000 C CNN
 $EndComp
 Wire Wire Line
 	4200 2350 4600 2350
-Wire Wire Line
-	7000 3400 7000 4050
-Wire Wire Line
-	7000 2350 7000 3050
-Wire Wire Line
-	7000 1950 7000 2350
-Wire Wire Line
-	7000 3050 7000 3400
-Wire Wire Line
-	7000 4050 7000 4400
-Wire Wire Line
-	5950 1950 6050 1950
-Wire Wire Line
-	5950 3050 6050 3050
-Wire Wire Line
-	5950 4050 6050 4050
 $EndSCHEMATC

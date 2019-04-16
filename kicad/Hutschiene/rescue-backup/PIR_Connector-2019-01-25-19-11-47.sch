@@ -1,6 +1,37 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:tl2c-rescue
+LIBS:tl2c-symbols
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
 LIBS:tl2c-cache
-EELAYER 26 0
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -21,7 +52,7 @@ PIR_EG
 Text HLabel 2720 4310 0    60   Input ~ 0
 PIR_UG
 $Comp
-L tl2c-rescue:CONN_01X03 P501
+L CONN_01X03 P501
 U 1 1 596CE34C
 P 3350 1470
 F 0 "P501" H 3350 1670 50  0000 C CNN
@@ -32,7 +63,7 @@ F 3 "" H 3350 1470 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:CONN_01X03 P502
+L CONN_01X03 P502
 U 1 1 596CE37D
 P 3360 2870
 F 0 "P502" H 3360 3070 50  0000 C CNN
@@ -43,7 +74,7 @@ F 3 "" H 3360 2870 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:CONN_01X03 P503
+L CONN_01X03 P503
 U 1 1 596CE3AC
 P 3360 4210
 F 0 "P503" H 3360 4410 50  0000 C CNN
@@ -54,7 +85,7 @@ F 3 "" H 3360 4210 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GNDA #PWR032
+L GNDA #PWR032
 U 1 1 596CE74B
 P 2160 2110
 F 0 "#PWR032" H 2160 1860 50  0001 C CNN
@@ -65,7 +96,7 @@ F 3 "" H 2160 2110 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GNDA #PWR033
+L GNDA #PWR033
 U 1 1 596CE78C
 P 2210 3550
 F 0 "#PWR033" H 2210 3300 50  0001 C CNN
@@ -76,7 +107,7 @@ F 3 "" H 2210 3550 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GNDA #PWR034
+L GNDA #PWR034
 U 1 1 596CE7BF
 P 2200 4820
 F 0 "#PWR034" H 2200 4570 50  0001 C CNN
@@ -87,7 +118,7 @@ F 3 "" H 2200 4820 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C502
+L C C502
 U 1 1 596CF9A5
 P 1730 1660
 F 0 "C502" H 1755 1760 50  0000 L CNN
@@ -100,7 +131,7 @@ F 5 "Value" H 1730 1660 60  0001 C CNN "ConradPN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C501
+L C C501
 U 1 1 596CFB0E
 P 1710 3130
 F 0 "C501" H 1735 3230 50  0000 L CNN
@@ -114,7 +145,7 @@ F 6 "Value" H 1710 3130 60  0001 C CNN "Label"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C503
+L C C503
 U 1 1 596CFB51
 P 1760 4390
 F 0 "C503" H 1785 4490 50  0000 L CNN

@@ -1,6 +1,37 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:tl2c-rescue
+LIBS:tl2c-symbols
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
 LIBS:tl2c-cache
-EELAYER 26 0
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -15,7 +46,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L tl2c-symbols:ATTINY20-X IC101
+L ATTINY20-X IC101
 U 1 1 584C1FC2
 P 3560 6520
 F 0 "IC101" H 2610 7270 50  0000 C CNN
@@ -29,7 +60,7 @@ F 6 "ATTINY20-SSURCT-ND" H 3560 6520 60  0001 C CNN "Digikey-PN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C101
+L C C101
 U 1 1 584C320A
 P 2160 6170
 F 0 "C101" H 2185 6270 50  0000 L CNN
@@ -42,7 +73,7 @@ $EndComp
 Text Label 1910 5920 0    60   ~ 0
 Ub+
 $Comp
-L power:GND #PWR01
+L GND #PWR01
 U 1 1 584C3309
 P 3010 7520
 F 0 "#PWR01" H 3010 7270 50  0001 C CNN
@@ -57,7 +88,7 @@ TPIDATA
 Text Label 5000 1100 2    60   ~ 0
 Ub+
 $Comp
-L power:GND #PWR02
+L GND #PWR02
 U 1 1 584C39BE
 P 4850 1400
 F 0 "#PWR02" H 4850 1150 50  0001 C CNN
@@ -70,7 +101,7 @@ $EndComp
 Text Notes 3600 2150 0    40   ~ 0
 We have a 3V3 system \nand possibly a 5V programmer. \nInitial research suggests the AVRISP MkII\ncan drive ISP lines at the required voltage.\nhttps://forum.arduino.cc/index.php?topic=92544.0
 $Comp
-L Device:R R101
+L R R101
 U 1 1 584C40A0
 P 1465 3250
 F 0 "R101" V 1545 3250 50  0000 C CNN
@@ -81,7 +112,7 @@ F 3 "" H 1465 3250 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR03
+L GND #PWR03
 U 1 1 584C4458
 P 2160 6420
 F 0 "#PWR03" H 2160 6170 50  0001 C CNN
@@ -94,7 +125,7 @@ $EndComp
 Text Label 1465 2925 2    60   ~ 0
 Ub+
 $Comp
-L Device:R R103
+L R R103
 U 1 1 584C58EE
 P 5810 6920
 F 0 "R103" V 5890 6920 50  0000 C CNN
@@ -107,7 +138,7 @@ $EndComp
 Text Label 6260 6920 2    60   ~ 0
 SDA
 $Comp
-L Device:R R104
+L R R104
 U 1 1 584C6CF4
 P 6410 6520
 F 0 "R104" V 6490 6520 50  0000 C CNN
@@ -118,7 +149,7 @@ F 3 "" H 6410 6520 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R105
+L R R105
 U 1 1 584C6E58
 P 6410 7020
 F 0 "R105" V 6490 7020 50  0000 C CNN
@@ -129,7 +160,7 @@ F 3 "" H 6410 7020 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR04
+L GND #PWR04
 U 1 1 584C7124
 P 6760 7220
 F 0 "#PWR04" H 6760 6970 50  0001 C CNN
@@ -156,7 +187,7 @@ RLY_INT
 Text Label 5110 6620 2    60   ~ 0
 SCL
 $Comp
-L tl2c-symbols:Relay_JW1AFSN12F REL101
+L Relay_JW1AFSN12F REL101
 U 2 1 584C8F2D
 P 7640 1140
 F 0 "REL101" H 7640 1040 60  0000 C CNN
@@ -170,7 +201,7 @@ F 6 "Value" H 7640 1140 60  0001 C CNN "Digikey-PN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-symbols:Relay_JW1AFSN12F REL102
+L Relay_JW1AFSN12F REL102
 U 2 1 584C93FA
 P 7640 1540
 F 0 "REL102" H 7640 1440 60  0000 C CNN
@@ -184,7 +215,7 @@ F 6 "Value" H 7640 1540 60  0001 C CNN "Digikey-PN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-symbols:Relay_JW1AFSN12F REL103
+L Relay_JW1AFSN12F REL103
 U 2 1 584C945E
 P 7640 1990
 F 0 "REL103" H 7640 1890 60  0000 C CNN
@@ -208,7 +239,7 @@ LineOG
 Text Label 6290 1140 0    60   ~ 0
 Lin
 $Comp
-L power:GND #PWR05
+L GND #PWR05
 U 1 1 584CB28B
 P 2565 3650
 F 0 "#PWR05" H 2565 3400 50  0001 C CNN
@@ -235,7 +266,7 @@ F4 "U+In" I L 1510 1350 60
 F5 "5V" I L 1510 1850 60 
 $EndSheet
 $Comp
-L tl2c-rescue:CONN_01X02 P101
+L CONN_01X02 P101
 U 1 1 584D9CD6
 P 5955 2080
 F 0 "P101" H 5955 2230 50  0000 C CNN
@@ -253,7 +284,7 @@ U+
 Text Label 3500 1850 2    60   ~ 0
 Ub+
 $Comp
-L tl2c-symbols:TEST_1P TP101
+L TEST_1P TP101
 U 1 1 584E3051
 P 3030 2745
 F 0 "TP101" H 3030 3015 50  0000 C CNN
@@ -264,7 +295,7 @@ F 3 "" H 3230 2745 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR06
+L GND #PWR06
 U 1 1 584E33BE
 P 3030 2845
 F 0 "#PWR06" H 3030 2595 50  0001 C CNN
@@ -320,7 +351,7 @@ RelayEG
 Text Label 3245 3210 0    60   ~ 0
 RelayOG
 $Comp
-L tl2c-symbols:TL3315NF160Q SW101
+L TL3315NF160Q SW101
 U 1 1 58559EF5
 P 2115 3500
 F 0 "SW101" V 2315 3500 60  0000 C CNN
@@ -336,7 +367,7 @@ $EndComp
 NoConn ~ 1865 3400
 NoConn ~ 2365 3400
 $Comp
-L tl2c-rescue:LED-RESCUE-tl2c D101
+L LED-RESCUE-tl2c D101
 U 1 1 5856AA32
 P 3700 3910
 F 0 "D101" H 3700 4010 50  0000 C CNN
@@ -347,7 +378,7 @@ F 3 "" H 3700 3910 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R106
+L R R106
 U 1 1 5856AB2B
 P 3700 3460
 F 0 "R106" V 3780 3460 50  0000 C CNN
@@ -358,7 +389,7 @@ F 3 "" H 3700 3460 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR07
+L GND #PWR07
 U 1 1 5856AF1B
 P 3700 4300
 F 0 "#PWR07" H 3700 4050 50  0001 C CNN
@@ -369,7 +400,7 @@ F 3 "" H 3700 4300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:LED-RESCUE-tl2c D102
+L LED-RESCUE-tl2c D102
 U 1 1 5856B277
 P 4000 3910
 F 0 "D102" H 4000 4010 50  0000 C CNN
@@ -380,7 +411,7 @@ F 3 "" H 4000 3910 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R107
+L R R107
 U 1 1 5856B27D
 P 4000 3460
 F 0 "R107" V 4080 3460 50  0000 C CNN
@@ -391,7 +422,7 @@ F 3 "" H 4000 3460 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR08
+L GND #PWR08
 U 1 1 5856B284
 P 4000 4300
 F 0 "#PWR08" H 4000 4050 50  0001 C CNN
@@ -402,7 +433,7 @@ F 3 "" H 4000 4300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:LED-RESCUE-tl2c D103
+L LED-RESCUE-tl2c D103
 U 1 1 5856B503
 P 4300 3910
 F 0 "D103" H 4300 4010 50  0000 C CNN
@@ -413,7 +444,7 @@ F 3 "" H 4300 3910 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R108
+L R R108
 U 1 1 5856B509
 P 4300 3460
 F 0 "R108" V 4380 3460 50  0000 C CNN
@@ -424,7 +455,7 @@ F 3 "" H 4300 3460 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR09
+L GND #PWR09
 U 1 1 5856B510
 P 4300 4300
 F 0 "#PWR09" H 4300 4050 50  0001 C CNN
@@ -435,7 +466,7 @@ F 3 "" H 4300 4300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GNDA #PWR010
+L GNDA #PWR010
 U 1 1 5856E00B
 P 6765 3735
 F 0 "#PWR010" H 6765 3485 50  0001 C CNN
@@ -452,7 +483,7 @@ U+
 Text Label 6390 1590 0    60   ~ 0
 Neutral
 $Comp
-L Device:C C102
+L C C102
 U 1 1 58675769
 P 1765 3900
 F 0 "C102" H 1790 4000 50  0000 L CNN
@@ -465,7 +496,7 @@ $EndComp
 Text Label 3010 5595 0    60   ~ 0
 ~Reset
 $Comp
-L tl2c-rescue:CONN_02X03 P104
+L CONN_02X03 P104
 U 1 1 584C357B
 P 4500 1200
 F 0 "P104" H 4500 1400 50  0000 C CNN
@@ -479,7 +510,7 @@ F 6 "Value" H 4500 1200 60  0001 C CNN "Digikey-PN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR011
+L GND #PWR011
 U 1 1 5867873E
 P 1765 4150
 F 0 "#PWR011" H 1765 3900 50  0001 C CNN
@@ -494,7 +525,7 @@ Text Label 915  3600 0    60   ~ 0
 Text Label 3850 1300 0    60   ~ 0
 ~Reset
 $Comp
-L tl2c-rescue:F_Small F101
+L F_Small F101
 U 1 1 586AB129
 P 6590 1140
 F 0 "F101" H 6550 1200 50  0000 L CNN
@@ -518,7 +549,7 @@ TPICLK
 Text Label 5110 7020 2    60   ~ 0
 GPIO_PB2
 $Comp
-L tl2c-rescue:CONN_01X02 P109
+L CONN_01X02 P109
 U 1 1 589A46DF
 P 900 1900
 F 0 "P109" H 900 2050 50  0000 C CNN
@@ -532,7 +563,7 @@ F 6 "Value" H 900 1900 60  0001 C CNN "Digikey-PN"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR012
+L GND #PWR012
 U 1 1 589A5184
 P 1250 2100
 F 0 "#PWR012" H 1250 1850 50  0001 C CNN
@@ -549,7 +580,7 @@ TPICLK
 Text Notes 6000 6820 0    30   ~ 0
 GPIO_PA6 -\nRelay Interrupt
 $Comp
-L tl2c-rescue:CONN_01X02 P108
+L CONN_01X02 P108
 U 1 1 596A4CB7
 P 9390 1190
 F 0 "P108" H 9560 1225 50  0000 C CNN
@@ -563,7 +594,7 @@ F 6 "Value" H 9390 1190 60  0001 C CNN "Digikey-PN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:CONN_01X02 P110
+L CONN_01X02 P110
 U 1 1 596A6057
 P 9390 1390
 F 0 "P110" H 9555 1430 50  0000 C CNN
@@ -577,7 +608,7 @@ F 6 "Value" H 9390 1390 60  0001 C CNN "Digikey-PN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:CONN_01X02 P111
+L CONN_01X02 P111
 U 1 1 596A6134
 P 9390 1590
 F 0 "P111" H 9545 1635 50  0000 C CNN
@@ -591,7 +622,7 @@ F 6 "Value" H 9390 1590 60  0001 C CNN "Digikey-PN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:CONN_01X08 P102
+L CONN_01X08 P102
 U 1 1 596B85DC
 P 715 5260
 F 0 "P102" H 715 5710 50  0000 C CNN
@@ -602,7 +633,7 @@ F 3 "" H 715 5260 50  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR013
+L GND #PWR013
 U 1 1 596B9253
 P 1615 5810
 F 0 "#PWR013" H 1615 5560 50  0001 C CNN
@@ -623,7 +654,7 @@ RLY_INT
 Text Notes 665  4710 0    40   ~ 0
 RJ45 - Connector as a \ngeneral  purpose  connector \nto the Raspberry Pi
 $Comp
-L tl2c-rescue:CONN_01X02 P106
+L CONN_01X02 P106
 U 1 1 596BD80E
 P 6090 1190
 F 0 "P106" H 6090 1340 50  0000 C CNN
@@ -683,7 +714,7 @@ DRV_PIR_EG
 Text Label 9640 3020 2    60   ~ 0
 DRV_PIR_UG
 $Comp
-L power:GNDA #PWR014
+L GNDA #PWR014
 U 1 1 596D914D
 P 7770 3810
 F 0 "#PWR014" H 7770 3560 50  0001 C CNN
@@ -694,7 +725,7 @@ F 3 "" H 7770 3810 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:CONN_01X10 P103
+L CONN_01X10 P103
 U 1 1 596DB0DA
 P 5375 3260
 F 0 "P103" H 5375 3810 50  0000 C CNN
@@ -705,7 +736,7 @@ F 3 "" H 5375 3260 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR015
+L GND #PWR015
 U 1 1 596DB6E6
 P 4775 3715
 F 0 "#PWR015" H 4775 3465 50  0001 C CNN
@@ -716,7 +747,7 @@ F 3 "" H 4775 3715 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:CONN_01X10 P105
+L CONN_01X10 P105
 U 1 1 596DC417
 P 5900 3260
 F 0 "P105" H 5900 3810 50  0000 C CNN
@@ -728,7 +759,7 @@ F 3 "" H 5900 3260 50  0000 C CNN
 $EndComp
 NoConn ~ 6100 3410
 $Comp
-L power:GNDA #PWR016
+L GNDA #PWR016
 U 1 1 596F996D
 P 6290 2245
 F 0 "#PWR016" H 6290 1995 50  0001 C CNN
@@ -747,7 +778,7 @@ PWR_IN
 Text Label 6155 2030 0    60   ~ 0
 DRV_PWR_IN
 $Comp
-L tl2c-rescue:CONN_01X02 P107
+L CONN_01X02 P107
 U 1 1 59A79123
 P 5380 4120
 F 0 "P107" H 5380 4270 50  0000 C CNN
@@ -758,7 +789,7 @@ F 3 "" H 5380 4120 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:CONN_01X02 P112
+L CONN_01X02 P112
 U 1 1 59A792BA
 P 5920 4120
 F 0 "P112" H 5920 4270 50  0000 C CNN
@@ -771,7 +802,7 @@ $EndComp
 Text Label 6190 4070 0    60   ~ 0
 DRV_PWR_IN
 Wire Wire Line
-	1910 5920 2160 5920
+	1910 5920 2410 5920
 Wire Wire Line
 	2160 5920 2160 6020
 Connection ~ 2160 5920
@@ -794,7 +825,7 @@ Wire Wire Line
 Wire Wire Line
 	3010 7370 3010 7520
 Wire Wire Line
-	4710 6920 5310 6920
+	4710 6920 5660 6920
 Wire Wire Line
 	4710 6620 5110 6620
 Wire Wire Line
@@ -804,19 +835,19 @@ Wire Wire Line
 Wire Wire Line
 	6560 6520 6760 6520
 Wire Wire Line
-	6760 6520 6760 7020
+	6760 6520 6760 7220
 Wire Wire Line
 	8040 1540 8765 1540
 Wire Wire Line
 	8040 1990 8815 1990
 Wire Wire Line
-	6690 1140 7090 1140
+	6690 1140 7240 1140
 Wire Wire Line
 	7240 1540 7090 1540
 Wire Wire Line
 	7090 1990 7240 1990
 Wire Wire Line
-	7090 1140 7090 1540
+	7090 1140 7090 1990
 Connection ~ 7090 1540
 Wire Wire Line
 	8040 1140 9190 1140
@@ -869,7 +900,7 @@ Wire Wire Line
 Wire Wire Line
 	4710 6120 5360 6120
 Wire Wire Line
-	915  3600 1465 3600
+	915  3600 1865 3600
 Wire Wire Line
 	3010 5670 3010 5595
 Wire Wire Line
@@ -916,7 +947,7 @@ Wire Wire Line
 Wire Wire Line
 	1615 5510 915  5510
 Wire Wire Line
-	1615 4910 1615 5110
+	1615 4910 1615 5810
 Connection ~ 1615 5110
 Connection ~ 1615 5310
 Connection ~ 1615 5510
@@ -939,7 +970,7 @@ Wire Wire Line
 Wire Wire Line
 	8560 5350 9260 5350
 Wire Wire Line
-	7230 2810 7620 2810
+	7230 2810 8050 2810
 Wire Notes Line
 	5620 720  10950 720 
 Wire Wire Line
@@ -965,9 +996,9 @@ Wire Wire Line
 Wire Wire Line
 	6765 3610 6100 3610
 Wire Wire Line
-	3250 2910 4000 2910
+	3250 2910 5175 2910
 Wire Wire Line
-	3255 2810 3700 2810
+	3255 2810 5175 2810
 Wire Wire Line
 	7230 2810 7230 3010
 Wire Wire Line
@@ -978,7 +1009,7 @@ Wire Wire Line
 Wire Wire Line
 	6290 2130 6290 2245
 Wire Wire Line
-	3245 3210 4300 3210
+	3245 3210 5175 3210
 Wire Wire Line
 	4300 3310 4300 3210
 Connection ~ 4300 3210
@@ -1001,7 +1032,7 @@ Wire Wire Line
 Wire Wire Line
 	6120 4070 6190 4070
 $Comp
-L power:GNDA #PWR017
+L GNDA #PWR017
 U 1 1 59A89BF1
 P 6285 4260
 F 0 "#PWR017" H 6285 4010 50  0001 C CNN
@@ -1016,7 +1047,7 @@ Wire Wire Line
 Wire Wire Line
 	6285 4170 6120 4170
 $Comp
-L power:GND #PWR018
+L GND #PWR018
 U 1 1 59A8A3F7
 P 4920 4285
 F 0 "#PWR018" H 4920 4035 50  0001 C CNN
@@ -1030,32 +1061,4 @@ Wire Wire Line
 	4920 4170 4920 4285
 NoConn ~ 6100 3110
 NoConn ~ 5175 3110
-Wire Wire Line
-	2160 5920 2410 5920
-Wire Wire Line
-	7090 1540 7090 1990
-Wire Wire Line
-	1765 3600 1865 3600
-Wire Wire Line
-	5310 6920 5660 6920
-Wire Wire Line
-	1465 3600 1765 3600
-Wire Wire Line
-	7090 1140 7240 1140
-Wire Wire Line
-	6760 7020 6760 7220
-Wire Wire Line
-	1615 5110 1615 5310
-Wire Wire Line
-	1615 5310 1615 5510
-Wire Wire Line
-	1615 5510 1615 5810
-Wire Wire Line
-	7620 2810 8050 2810
-Wire Wire Line
-	4300 3210 5175 3210
-Wire Wire Line
-	4000 2910 5175 2910
-Wire Wire Line
-	3700 2810 5175 2810
 $EndSCHEMATC

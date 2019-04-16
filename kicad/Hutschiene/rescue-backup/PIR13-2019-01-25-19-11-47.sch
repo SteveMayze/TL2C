@@ -1,6 +1,37 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:tl2c-rescue
+LIBS:tl2c-symbols
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
 LIBS:tl2c-cache
-EELAYER 26 0
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -17,7 +48,7 @@ $EndDescr
 Text HLabel 2570 1910 2    60   Input ~ 0
 U+
 $Comp
-L Device:R R307
+L R R307
 U 1 1 58520DB2
 P 2220 2160
 F 0 "R307" V 2300 2160 50  0000 C CNN
@@ -28,7 +59,7 @@ F 3 "" H 2220 2160 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L tl2c-symbols:IRLML2502 Q301
+L IRLML2502 Q301
 U 1 1 58520DBC
 P 1820 2460
 F 0 "Q301" H 1820 2311 40  0000 R CNN
@@ -42,7 +73,7 @@ F 6 "IRLML2502GTRPBFCT-ND" H 1820 2460 60  0001 C CNN "Digikey-PN"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:R R301
+L R R301
 U 1 1 58520DC6
 P 1720 2960
 F 0 "R301" V 1800 2960 50  0000 C CNN
@@ -57,7 +88,7 @@ PIR_UG
 Text HLabel 1320 1910 0    60   Input ~ 0
 Ub+
 $Comp
-L power:GND #PWR022
+L GND #PWR022
 U 1 1 585215A4
 P 1720 3160
 F 0 "#PWR022" H 1720 2910 50  0001 C CNN
@@ -68,7 +99,7 @@ F 3 "" H 1720 3160 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R308
+L R R308
 U 1 1 58521B00
 P 2220 4060
 F 0 "R308" V 2300 4060 50  0000 C CNN
@@ -79,7 +110,7 @@ F 3 "" H 2220 4060 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L tl2c-symbols:IRLML2502 Q302
+L IRLML2502 Q302
 U 1 1 58521B09
 P 1820 4360
 F 0 "Q302" H 1820 4211 40  0000 R CNN
@@ -95,7 +126,7 @@ $EndComp
 Text Label 1720 3860 0    60   ~ 0
 Ub+
 $Comp
-L Device:R R302
+L R R302
 U 1 1 58521B12
 P 1720 4860
 F 0 "R302" V 1800 4860 50  0000 C CNN
@@ -110,7 +141,7 @@ U+
 Text Label 2970 4410 2    60   ~ 0
 PIR_EG
 $Comp
-L power:GND #PWR023
+L GND #PWR023
 U 1 1 58521B24
 P 1720 5060
 F 0 "#PWR023" H 1720 4810 50  0001 C CNN
@@ -121,7 +152,7 @@ F 3 "" H 1720 5060 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R309
+L R R309
 U 1 1 58521C51
 P 2220 5960
 F 0 "R309" V 2300 5960 50  0000 C CNN
@@ -132,7 +163,7 @@ F 3 "" H 2220 5960 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L tl2c-symbols:IRLML2502 Q303
+L IRLML2502 Q303
 U 1 1 58521C5A
 P 1820 6260
 F 0 "Q303" H 1820 6111 40  0000 R CNN
@@ -148,7 +179,7 @@ $EndComp
 Text Label 1720 5760 0    60   ~ 0
 Ub+
 $Comp
-L Device:R R303
+L R R303
 U 1 1 58521C63
 P 1720 6760
 F 0 "R303" V 1800 6760 50  0000 C CNN
@@ -163,7 +194,7 @@ U+
 Text Label 2970 6310 2    60   ~ 0
 PIR_OG
 $Comp
-L power:GND #PWR024
+L GND #PWR024
 U 1 1 58521C75
 P 1720 6960
 F 0 "#PWR024" H 1720 6710 50  0001 C CNN

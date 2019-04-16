@@ -1,6 +1,36 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:tl2c-symbols
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
 LIBS:tl2c-cache
-EELAYER 26 0
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -15,7 +45,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L tl2c-rescue:R R202
+L R R202
 U 1 1 584DB059
 P 3200 4250
 F 0 "R202" V 3280 4250 50  0000 C CNN
@@ -28,7 +58,7 @@ $EndComp
 Text Label 2300 3950 0    60   ~ 0
 U+
 $Comp
-L tl2c-rescue:GND #PWR016
+L GND #PWR016
 U 1 1 584DB061
 P 3900 4850
 F 0 "#PWR016" H 3900 4600 50  0001 C CNN
@@ -39,7 +69,7 @@ F 3 "" H 3900 4850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:C C202
+L C C202
 U 1 1 584DB067
 P 2600 4450
 F 0 "C202" H 2625 4550 50  0000 L CNN
@@ -53,7 +83,7 @@ F 6 "Value" H 2600 4450 60  0001 C CNN "Digikey-PN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:C C204
+L C C204
 U 1 1 584DB06E
 P 4650 4450
 F 0 "C204" H 4675 4550 50  0000 L CNN
@@ -67,7 +97,7 @@ F 6 "Value" H 4650 4450 60  0001 C CNN "Digikey-PN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:LED D202
+L LED D202
 U 1 1 584DB076
 P 5250 4900
 F 0 "D202" H 5250 5000 50  0000 C CNN
@@ -78,7 +108,7 @@ F 3 "" H 5250 4900 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L tl2c-rescue:R R204
+L R R204
 U 1 1 584DB07D
 P 5250 4400
 F 0 "R204" V 5330 4400 50  0000 C CNN
@@ -89,7 +119,7 @@ F 3 "" H 5250 4400 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:GND #PWR017
+L GND #PWR017
 U 1 1 584DB084
 P 5250 5300
 F 0 "#PWR017" H 5250 5050 50  0001 C CNN
@@ -100,7 +130,7 @@ F 3 "" H 5250 5300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:TPS70933 U202
+L TPS70933 U202
 U 1 1 584DB0C1
 P 3900 4100
 F 0 "U202" H 4150 3750 60  0000 C CNN
@@ -114,7 +144,7 @@ F 6 "296-35483-1-ND" H 3900 4100 60  0001 C CNN "Digikey-PN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:LF120ABDT-TR U201
+L LF120ABDT-TR U201
 U 1 1 584DB84E
 P 3900 1550
 F 0 "U201" H 4150 1200 60  0000 C CNN
@@ -169,7 +199,7 @@ Wire Wire Line
 Wire Wire Line
 	2800 1400 3350 1400
 $Comp
-L tl2c-rescue:C C201
+L C C201
 U 1 1 584DCFF9
 P 3050 1850
 F 0 "C201" H 3075 1950 50  0000 L CNN
@@ -180,7 +210,7 @@ F 3 "" H 3050 1850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:C C203
+L C C203
 U 1 1 584DD0BF
 P 4600 1850
 F 0 "C203" H 4625 1950 50  0000 L CNN
@@ -194,7 +224,7 @@ F 6 "N/A" H 4600 1850 60  0001 C CNN "Digikey-PN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:GND #PWR018
+L GND #PWR018
 U 1 1 584DD17A
 P 3900 2650
 F 0 "#PWR018" H 3900 2400 50  0001 C CNN
@@ -227,7 +257,7 @@ Wire Wire Line
 	4600 1700 4600 1400
 Connection ~ 4600 1400
 $Comp
-L tl2c-rescue:LED D201
+L LED D201
 U 1 1 584DD7AB
 P 5250 2300
 F 0 "D201" H 5250 2400 50  0000 C CNN
@@ -241,7 +271,7 @@ Wire Wire Line
 	5250 1400 5250 1650
 Connection ~ 5250 1400
 $Comp
-L tl2c-rescue:R R203
+L R R203
 U 1 1 584DD8C0
 P 5250 1800
 F 0 "R203" V 5330 1800 50  0000 C CNN
@@ -252,7 +282,7 @@ F 3 "" H 5250 1800 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:GND #PWR019
+L GND #PWR019
 U 1 1 584DD971
 P 5250 2650
 F 0 "#PWR019" H 5250 2400 50  0001 C CNN
@@ -270,7 +300,7 @@ Connection ~ 5600 1400
 Text Label 6000 1400 0    60   ~ 0
 U+
 $Comp
-L tl2c-rescue:TEST_1P TP202
+L TEST_1P TP202
 U 1 1 584E1FA9
 P 5600 1200
 F 0 "TP202" H 5600 1470 50  0000 C CNN
@@ -284,7 +314,7 @@ F 6 "Value" H 5600 1200 60  0001 C CNN "Digikey-PN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:TEST_1P TP201
+L TEST_1P TP201
 U 1 1 584E2106
 P 5400 3900
 F 0 "TP201" H 5400 4170 50  0000 C CNN
@@ -303,7 +333,7 @@ Text HLabel 6075 3400 0    60   Input ~ 0
 Text Notes 5765 4440 0    60   ~ 0
 Double check the output of the 3.3V\nand watch out for the voltage drop \non the Schottky.
 $Comp
-L tl2c-rescue:CONN_01X03 P201
+L CONN_01X03 P201
 U 1 1 58DCB84B
 P 6475 3850
 F 0 "P201" H 6475 4050 50  0000 C CNN
@@ -318,7 +348,7 @@ Wire Wire Line
 Wire Wire Line
 	4450 3950 6275 3950
 $Comp
-L tl2c-rescue:LED D203
+L LED D203
 U 1 1 58DCC141
 P 6900 3400
 F 0 "D203" H 6900 3500 50  0000 C CNN
@@ -329,7 +359,7 @@ F 3 "" H 6900 3400 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L tl2c-rescue:GND #PWR020
+L GND #PWR020
 U 1 1 58DCC147
 P 7250 3575
 F 0 "#PWR020" H 7250 3325 50  0001 C CNN
@@ -340,7 +370,7 @@ F 3 "" H 7250 3575 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tl2c-rescue:R R201
+L R R201
 U 1 1 58DCC526
 P 6450 3400
 F 0 "R201" V 6530 3400 50  0000 C CNN
