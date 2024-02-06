@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 0)
+  (lib (name "Rpi_Adapter-rescue")(type "Legacy")(uri "${LOCAL_PCBS}/TL2C/kicad/Rpi_Adapter/Rpi_Adapter-rescue.lib")(options "")(descr ""))
+  (lib (name "Rpi_Adapter_Symbols")(type "Legacy")(uri "${LOCAL_PCBS}/TL2C/kicad/Rpi_Adapter/Rpi_Adapter_Symbols.lib")(options "")(descr ""))
+)
