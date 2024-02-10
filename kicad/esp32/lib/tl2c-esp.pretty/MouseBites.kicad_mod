@@ -1,0 +1,14 @@
+(module MouseBites (layer F.Cu) (tedit 5AEF24FD)
+  (fp_text reference REF** (at 0 1 90) (layer F.Fab) hide
+    (effects (font (size 0.508 0.508) (thickness 0.0254)))
+  )
+  (fp_text value MouseBites (at 0 -2.25 90) (layer F.Fab) hide
+    (effects (font (size 0.508 0.508) (thickness 0.0254)))
+  )
+  (pad "" np_thru_hole circle (at -1.016 -1.016) (size 0.508 0.508) (drill 0.508) (layers *.Cu))
+  (pad 2 np_thru_hole circle (at 1.016 -1.016) (size 0.508 0.508) (drill 0.508) (layers *.Cu))
+  (pad 3 np_thru_hole circle (at -1.016 0) (size 0.508 0.508) (drill 0.508) (layers *.Cu))
+  (pad 4 np_thru_hole circle (at 1.016 0) (size 0.508 0.508) (drill 0.508) (layers *.Cu))
+  (pad 5 np_thru_hole circle (at -1.016 1.016) (size 0.508 0.508) (drill 0.508) (layers *.Cu))
+  (pad 6 np_thru_hole circle (at 1.016 1.016) (size 0.508 0.508) (drill 0.508) (layers *.Cu))
+)
