@@ -19,7 +19,7 @@
       "footprints": true,
       "graphics": true,
       "keepouts": true,
-      "lockedItems": false,
+      "lockedItems": true,
       "otherItems": true,
       "pads": true,
       "text": true,
@@ -61,8 +61,14 @@
       36,
       40
     ],
-    "visible_layers": "fbfffff_ffffffff",
-    "zone_display_mode": 1
+    "visible_layers": "fbfffff_fffffffe",
+    "zone_display_mode": 0
+  },
+  "git": {
+    "repo_password": "",
+    "repo_type": "",
+    "repo_username": "",
+    "ssh_key": ""
   },
   "meta": {
     "filename": "esp32.kicad_prl",
