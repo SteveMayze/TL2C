@@ -3,7 +3,12 @@
 	(generator "eeschema")
 	(generator_version "8.0")
 	(uuid "7d31f47f-dcbd-4784-8487-88dd789532e9")
-	(paper "A4")
+	(paper "A3")
+	(title_block
+		(title "TL2C-ESP32-1 TL2C Adapter for ESP32")
+		(date "2024-02-08")
+		(rev "1.01")
+	)
 	(lib_symbols
 		(symbol "Device:C"
 			(pin_numbers hide)

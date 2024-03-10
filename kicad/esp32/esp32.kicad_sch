@@ -7,7 +7,7 @@
 	(title_block
 		(title "TL2C-ESP32-1 TL2C Adapter for ESP32")
 		(date "2024-02-08")
-		(rev "1.0")
+		(rev "1.01")
 	)
 	(lib_symbols
 		(symbol "74xx:74LS14"
@@ -4130,7 +4130,7 @@
 	)
 	(rectangle
 		(start 264.16 29.21)
-		(end 389.89 72.39)
+		(end 405.13 72.39)
 		(stroke
 			(width 0)
 			(type default)
@@ -6103,6 +6103,130 @@
 		)
 	)
 	(symbol
+		(lib_id "sjm-mechanical:logo")
+		(at 351.79 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "61c92a24-49f5-4b75-8515-d77fd6b3f686")
+		(property "Reference" "Lg104"
+			(at 351.79 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "Non-TCP"
+			(at 351.79 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "sjm-mechanical:Non_TCP"
+			(at 351.79 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 351.79 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 351.79 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "esp32"
+				(path "/aecfa952-fe40-40ec-8fcf-aedb29e7f637"
+					(reference "Lg104")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "sjm-mechanical:logo")
+		(at 290.83 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "61f5683e-c391-4807-a792-adbe12870fb8")
+		(property "Reference" "Lg106"
+			(at 290.83 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "SM Logo"
+			(at 290.83 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "sjm-mechanical:MyBasic_rounded_50_1"
+			(at 290.83 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 290.83 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 290.83 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "esp32"
+				(path "/aecfa952-fe40-40ec-8fcf-aedb29e7f637"
+					(reference "Lg106")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "74xx:74LS14")
 		(at 121.92 226.06 0)
 		(unit 7)
@@ -7078,6 +7202,68 @@
 	)
 	(symbol
 		(lib_id "sjm-mechanical:logo")
+		(at 363.22 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8c8bb3f6-7ddf-450a-8e1a-05d04d6f7ee9")
+		(property "Reference" "Lg103"
+			(at 363.22 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "SM Logo"
+			(at 363.22 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "sjm-mechanical:MyBasic_rounded_50_1_USER5"
+			(at 363.22 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 363.22 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 363.22 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "esp32"
+				(path "/aecfa952-fe40-40ec-8fcf-aedb29e7f637"
+					(reference "Lg103")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "sjm-mechanical:logo")
 		(at 279.4 38.1 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -7577,6 +7763,68 @@
 		)
 	)
 	(symbol
+		(lib_id "sjm-mechanical:logo")
+		(at 386.08 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c8483173-3e06-45bc-9371-1e0836446f08")
+		(property "Reference" "Lg107"
+			(at 386.08 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "SM Logo"
+			(at 386.08 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "sjm-mechanical:MyBasic_rounded_50_1"
+			(at 386.08 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 386.08 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 386.08 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "esp32"
+				(path "/aecfa952-fe40-40ec-8fcf-aedb29e7f637"
+					(reference "Lg107")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "74xx:74LS14")
 		(at 69.85 187.96 0)
 		(unit 3)
@@ -7676,6 +7924,68 @@
 				(path "/aecfa952-fe40-40ec-8fcf-aedb29e7f637"
 					(reference "U101")
 					(unit 3)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "sjm-mechanical:logo")
+		(at 351.79 48.26 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d3ce3f14-195e-411c-ada1-802b967b716f")
+		(property "Reference" "Lg105"
+			(at 351.79 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "Non-TCP"
+			(at 351.79 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "sjm-mechanical:Non_TCP"
+			(at 351.79 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 351.79 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 351.79 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "esp32"
+				(path "/aecfa952-fe40-40ec-8fcf-aedb29e7f637"
+					(reference "Lg105")
+					(unit 1)
 				)
 			)
 		)
