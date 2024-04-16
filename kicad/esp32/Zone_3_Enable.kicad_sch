@@ -1640,7 +1640,7 @@
 		(dnp no)
 		(uuid "368dfa9d-9662-441b-aabe-35f4e4b30d28")
 		(property "Reference" "R401"
-			(at 85.09 45.72 0)
+			(at 82.55 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1648,7 +1648,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "51κΩ"
+		(property "Value" "47κΩ"
 			(at 82.55 48.26 0)
 			(effects
 				(font
@@ -1936,7 +1936,7 @@
 				)
 			)
 		)
-		(property "Value" "21kΩ"
+		(property "Value" "470Ω"
 			(at 99.06 59.4939 90)
 			(effects
 				(font
