@@ -1648,7 +1648,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "47κΩ"
+		(property "Value" "4.7κΩ"
 			(at 82.55 48.26 0)
 			(effects
 				(font
