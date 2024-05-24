@@ -1570,7 +1570,7 @@
 		(fields_autoplaced yes)
 		(uuid "27ad5b4b-9ac8-4881-ae20-827cf81282a2")
 		(property "Reference" "C401"
-			(at 112.141 68.6379 0)
+			(at 112.141 68.6378 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1578,7 +1578,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1μF"
+		(property "Value" "0.1μF"
 			(at 112.141 71.0621 0)
 			(effects
 				(font
