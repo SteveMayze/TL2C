@@ -1648,7 +1648,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "4.7κΩ"
+		(property "Value" "10κΩ"
 			(at 82.55 48.26 0)
 			(effects
 				(font
@@ -1929,15 +1929,15 @@
 		(fields_autoplaced yes)
 		(uuid "800421c6-0ef6-4593-abde-9afb958792c7")
 		(property "Reference" "R402"
-			(at 99.06 57.0697 90)
+			(at 99.06 57.0695 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "470Ω"
-			(at 99.06 59.4939 90)
+		(property "Value" "10κΩ"
+			(at 99.06 59.4938 90)
 			(effects
 				(font
 					(size 1.27 1.27)

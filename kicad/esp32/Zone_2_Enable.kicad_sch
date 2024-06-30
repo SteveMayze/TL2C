@@ -1505,15 +1505,15 @@
 		(fields_autoplaced yes)
 		(uuid "183479a6-2da0-452a-81db-fc762dc65d57")
 		(property "Reference" "R302"
-			(at 99.06 57.0697 90)
+			(at 99.06 57.0695 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "470Ω"
-			(at 99.06 59.4939 90)
+		(property "Value" "10κΩ"
+			(at 99.06 59.4938 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1736,7 +1736,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "4.7κΩ"
+		(property "Value" "10κΩ"
 			(at 82.55 48.26 0)
 			(effects
 				(font
