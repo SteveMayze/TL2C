@@ -1,0 +1,5 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "tl2c-rescue") (type "Legacy") (uri "${MY_PCBS}/Reference/TL2C/kicad/Hutschiene/tl2c-rescue.lib") (options "") (descr ""))
+	(lib (name "tl2c-symbols") (type "Legacy") (uri "${MY_PCBS}/Reference/TL2C/kicad/Hutschiene/lib/tl2c-symbols.lib") (options "") (descr ""))
+)

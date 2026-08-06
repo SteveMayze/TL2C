@@ -1,0 +1,2051 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "1a796435-6dcb-4a9a-9771-b0408aafb0e7")
+	(paper "A4")
+	(title_block
+		(title "TL2C - Timed LED Lighting Controller")
+		(date "2017-07-16")
+		(rev "2L.2")
+	)
+	(lib_symbols
+		(symbol "tl2c-rescue:GND"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Field42" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "tl2c-rescue:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 0.762 0.762)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 0.762 0.762)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Field42" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "R_* Resistor_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "tl2c-symbols:IRLML2502"
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "Q"
+				(at 0 -3.7846 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+					(justify right)
+				)
+			)
+			(property "Value" "IRLML2502"
+				(at 0 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+					(justify right)
+				)
+			)
+			(property "Footprint" "Micro3"
+				(at -3.302 2.5908 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 0.7366 0.7366)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Micro* SOT*23"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "IRLML2502_0_1"
+				(polyline
+					(pts
+						(xy 0 1.524) (xy 0 -1.524) (xy 0 -1.524)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 1.651) (xy 0.635 1.016)
+					)
+					(stroke
+						(width 0.508)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 0.381) (xy 0.635 -0.381)
+					)
+					(stroke
+						(width 0.508)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 -1.016) (xy 0.635 -1.651)
+					)
+					(stroke
+						(width 0.508)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 1.27) (xy 2.54 1.27) (xy 2.54 2.54) (xy 2.54 2.54)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0) (xy 1.27 0) (xy 2.54 0) (xy 2.54 -1.27) (xy 2.54 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.27) (xy 2.54 -1.27) (xy 2.54 -2.54) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.889 0) (xy 1.905 0.381) (xy 1.905 -0.381) (xy 0.889 0) (xy 1.016 0) (xy 1.016 0)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 1.27 0)
+					(radius 2.8194)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy 3.302 1.27) (xy 3.302 -1.27) (xy 2.54 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 1.27)
+					(radius 0.127)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 -1.27)
+					(radius 0.127)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.048 0.381) (xy 2.921 0.254)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.048 0.381) (xy 3.556 0.381)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 0.381) (xy 3.048 -0.254) (xy 3.556 -0.254) (xy 3.302 0.381)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.556 0.381) (xy 3.683 0.508)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "IRLML2502_1_1"
+				(pin input line
+					(at -5.08 -1.27 0)
+					(length 5.08)
+					(name "G"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(junction
+		(at 56.388 63.754)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4b0579c9-0611-4b6d-b6a9-9dfc1f8e53cc")
+	)
+	(junction
+		(at 56.388 112.014)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "64da4d08-d036-42d1-91b0-3a89a2f89ff1")
+	)
+	(junction
+		(at 43.688 166.624)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7712efca-029f-413d-bf0c-c34e552b7da9")
+	)
+	(junction
+		(at 43.688 118.364)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7f8143fb-f9fc-48d5-a92e-dee1cf1803f0")
+	)
+	(junction
+		(at 43.688 70.104)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "abc1b299-e60c-49ea-b3a9-b62e9451f0c6")
+	)
+	(junction
+		(at 56.388 160.274)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d393f8b6-a7e5-4929-8bf4-128e06f90046")
+	)
+	(wire
+		(pts
+			(xy 43.688 166.624) (xy 38.608 166.624)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "00a288c1-be8d-4619-be82-6b4b9f99399f")
+	)
+	(wire
+		(pts
+			(xy 51.308 63.754) (xy 75.438 63.754)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0166cf09-bdeb-4c83-bb02-a1dae4243499")
+	)
+	(wire
+		(pts
+			(xy 56.388 160.274) (xy 56.388 155.194)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "02db9499-56a9-440b-93c3-38a4800a0dde")
+	)
+	(wire
+		(pts
+			(xy 56.388 112.014) (xy 56.388 106.934)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "04335a7d-82f6-46d7-aa6f-7c2119bc9a88")
+	)
+	(wire
+		(pts
+			(xy 43.688 70.104) (xy 38.608 70.104)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "16eb76c2-d7b5-49c0-a387-1f850ab38c44")
+	)
+	(wire
+		(pts
+			(xy 65.278 48.514) (xy 56.388 48.514)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1bc3fb4d-fd3c-4bc7-bba4-884de2550f53")
+	)
+	(wire
+		(pts
+			(xy 43.688 164.084) (xy 43.688 167.894)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2cb8c11c-8b33-4af6-a58a-7f5311746c90")
+	)
+	(wire
+		(pts
+			(xy 56.388 147.574) (xy 56.388 146.304)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2df4cac4-78ae-47fa-9123-ef1ed6196252")
+	)
+	(wire
+		(pts
+			(xy 43.688 48.514) (xy 43.688 57.404)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "369c4c24-38dc-43e4-a1e4-5a6bb8af4e78")
+	)
+	(wire
+		(pts
+			(xy 43.688 146.304) (xy 43.688 153.924)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63a4bfad-f983-413a-a31c-d8436e335d96")
+	)
+	(wire
+		(pts
+			(xy 43.688 127.254) (xy 43.688 128.524)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6fda5154-bed5-40cf-b544-3be82bd05da6")
+	)
+	(wire
+		(pts
+			(xy 43.688 98.044) (xy 43.688 105.664)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "83c63067-519c-4dfe-a4c1-ddd6adb25931")
+	)
+	(wire
+		(pts
+			(xy 43.688 118.364) (xy 38.608 118.364)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "83ff6eae-6901-4dbe-a9e6-9898941c34ee")
+	)
+	(wire
+		(pts
+			(xy 51.308 112.014) (xy 75.438 112.014)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8447867a-40e4-4d51-b78c-a81842e94690")
+	)
+	(wire
+		(pts
+			(xy 56.388 63.754) (xy 56.388 58.674)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "930bfae9-69d3-40c1-93bd-37795a8822a5")
+	)
+	(wire
+		(pts
+			(xy 43.688 175.514) (xy 43.688 176.784)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9ffe517d-3c0d-4f17-b4a6-061e68f44ba1")
+	)
+	(wire
+		(pts
+			(xy 43.688 115.824) (xy 43.688 119.634)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b47cf22c-21fc-45b0-a620-3804762e76b4")
+	)
+	(wire
+		(pts
+			(xy 43.688 78.994) (xy 43.688 80.264)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc759d72-a550-4272-b9b5-15e7f3053571")
+	)
+	(wire
+		(pts
+			(xy 43.688 67.564) (xy 43.688 71.374)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ceda8e61-a115-4a8c-9a7f-0d5f7b64ebfb")
+	)
+	(wire
+		(pts
+			(xy 33.528 48.514) (xy 43.688 48.514)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d9f76157-f266-4909-ba00-5a02ee91aeff")
+	)
+	(wire
+		(pts
+			(xy 56.388 48.514) (xy 56.388 51.054)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e9683419-ec04-48c1-9a2a-3f7bb9626ef1")
+	)
+	(wire
+		(pts
+			(xy 56.388 99.314) (xy 56.388 98.044)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7aaa57f-c882-4f08-b1a2-b44e15092830")
+	)
+	(wire
+		(pts
+			(xy 51.308 160.274) (xy 75.438 160.274)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f99328d3-6d06-4dad-a3fc-803b2a079e1a")
+	)
+	(label "PIR_OG"
+		(at 75.438 160.274 180)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify right bottom)
+		)
+		(uuid "0e439495-da0b-4eab-abd2-b6b05fe9a714")
+	)
+	(label "U+"
+		(at 57.658 48.514 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "4274349a-aeff-4419-b6d2-926b495e07cb")
+	)
+	(label "PIR_EG"
+		(at 75.438 112.014 180)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify right bottom)
+		)
+		(uuid "58e1c1e2-078b-4f5e-9291-623c560ca532")
+	)
+	(label "U+"
+		(at 56.388 146.304 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "622441eb-4791-4d76-8e33-796a196372bb")
+	)
+	(label "PIR_UG"
+		(at 75.438 63.754 180)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify right bottom)
+		)
+		(uuid "65d39935-1533-4db8-be8d-fb1c41d65361")
+	)
+	(label "Ub+"
+		(at 43.688 146.304 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "a563636f-e087-4769-bca4-d01e2cd7a843")
+	)
+	(label "Ub+"
+		(at 43.688 98.044 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "a99e9fe6-3b10-4e99-90c4-0c4eb3455858")
+	)
+	(label "U+"
+		(at 56.388 98.044 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "d81faa4a-3870-4a92-8169-06270a765422")
+	)
+	(hierarchical_label "SIG_OG"
+		(shape input)
+		(at 38.608 166.624 180)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify right)
+		)
+		(uuid "40ab00f1-45f7-41e2-be7a-942c269da565")
+	)
+	(hierarchical_label "PIR_EG"
+		(shape input)
+		(at 75.438 112.014 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left)
+		)
+		(uuid "85387105-a2a7-40cf-ad8e-9233260a64df")
+	)
+	(hierarchical_label "SIG_EG"
+		(shape input)
+		(at 38.608 118.364 180)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify right)
+		)
+		(uuid "929d5f7d-ceb5-456b-b565-28e3b632b709")
+	)
+	(hierarchical_label "SIG_UG"
+		(shape input)
+		(at 38.608 70.104 180)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify right)
+		)
+		(uuid "bebc278c-5649-4570-a8ff-5c021d72b26c")
+	)
+	(hierarchical_label "PIR_OG"
+		(shape input)
+		(at 75.438 160.274 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left)
+		)
+		(uuid "d174ff93-aa42-45e3-92fa-3bb379060b31")
+	)
+	(hierarchical_label "Ub+"
+		(shape input)
+		(at 33.528 48.514 180)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify right)
+		)
+		(uuid "df12058d-bbd5-40bb-903a-a01253716995")
+	)
+	(hierarchical_label "PIR_UG"
+		(shape input)
+		(at 75.438 63.754 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left)
+		)
+		(uuid "e985fbc6-8437-41f6-8f57-51f01608297d")
+	)
+	(hierarchical_label "U+"
+		(shape input)
+		(at 65.278 48.514 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left)
+		)
+		(uuid "ef437799-fc2d-42e0-804e-f60000af2a5e")
+	)
+	(symbol
+		(lib_id "tl2c-rescue:R")
+		(at 56.388 54.864 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000058520db2")
+		(property "Reference" "R307"
+			(at 54.356 54.864 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10kΩ"
+			(at 56.388 54.864 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistors_SMD:R_0805"
+			(at 58.166 54.864 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 56.388 54.864 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 56.388 54.864 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "0051b72d-b383-4ada-a0e7-44b2df1be97d")
+		)
+		(pin "1"
+			(uuid "7f9df7ea-aa89-4788-8ae9-291ae590d6f0")
+		)
+		(instances
+			(project "tl2c"
+				(path "/22e7987e-aec2-4755-8f8d-65bb901716c6/00000000-0000-0000-0000-000058520450"
+					(reference "R307")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tl2c-symbols:IRLML2502")
+		(at 46.228 62.484 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000058520dbc")
+		(property "Reference" "Q301"
+			(at 46.228 66.2686 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "IRLML2502"
+			(at 46.228 58.674 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TO_SOT_Packages_SMD:SOT-23"
+			(at 49.53 59.8932 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 46.228 62.484 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 46.228 62.484 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFP" "IRLML2502GTRPBF"
+			(at 46.228 62.484 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Conrad-PN" "162827 - 62 "
+			(at 46.228 62.484 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Digikey-PN" "IRLML2502GTRPBFCT-ND"
+			(at 46.228 62.484 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "101dc271-3537-4dc8-b34c-336b625031bf")
+		)
+		(pin "3"
+			(uuid "a5097895-90ca-4e2d-bb7f-3f779a7b421a")
+		)
+		(pin "1"
+			(uuid "953f61f9-6c74-406e-958f-d56e68e5ed96")
+		)
+		(instances
+			(project "tl2c"
+				(path "/22e7987e-aec2-4755-8f8d-65bb901716c6/00000000-0000-0000-0000-000058520450"
+					(reference "Q301")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tl2c-rescue:R")
+		(at 43.688 75.184 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000058520dc6")
+		(property "Reference" "R301"
+			(at 41.656 75.184 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1kΩ"
+			(at 43.688 75.184 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistors_SMD:R_0805"
+			(at 45.466 75.184 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 43.688 75.184 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 43.688 75.184 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "e7a200a3-b359-45d6-ba19-1f9216383f36")
+		)
+		(pin "1"
+			(uuid "4dc1b982-905e-4136-9a65-526b0d6406e2")
+		)
+		(instances
+			(project "tl2c"
+				(path "/22e7987e-aec2-4755-8f8d-65bb901716c6/00000000-0000-0000-0000-000058520450"
+					(reference "R301")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tl2c-rescue:GND")
+		(at 43.688 80.264 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-0000585215a4")
+		(property "Reference" "#PWR022"
+			(at 43.688 86.614 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 43.688 84.074 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 43.688 80.264 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 43.688 80.264 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 43.688 80.264 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b3368318-2f60-49ef-9909-5fda2bc541c2")
+		)
+		(instances
+			(project "tl2c"
+				(path "/22e7987e-aec2-4755-8f8d-65bb901716c6/00000000-0000-0000-0000-000058520450"
+					(reference "#PWR022")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tl2c-rescue:R")
+		(at 56.388 103.124 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000058521b00")
+		(property "Reference" "R308"
+			(at 54.356 103.124 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10kΩ"
+			(at 56.388 103.124 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistors_SMD:R_0805"
+			(at 58.166 103.124 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 56.388 103.124 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 56.388 103.124 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "a4686fa7-01f6-49f5-8650-a762f783a2bb")
+		)
+		(pin "1"
+			(uuid "406e2f14-f328-4163-bedd-93ef715f3151")
+		)
+		(instances
+			(project "tl2c"
+				(path "/22e7987e-aec2-4755-8f8d-65bb901716c6/00000000-0000-0000-0000-000058520450"
+					(reference "R308")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tl2c-symbols:IRLML2502")
+		(at 46.228 110.744 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000058521b09")
+		(property "Reference" "Q302"
+			(at 46.228 114.5286 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "IRLML2502"
+			(at 46.228 106.934 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TO_SOT_Packages_SMD:SOT-23"
+			(at 49.53 108.1532 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 46.228 110.744 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 46.228 110.744 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFP" "IRLML2502GTRPBF"
+			(at 46.228 110.744 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Conrad-PN" "162827 - 62 "
+			(at 46.228 110.744 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Digikey-PN" "IRLML2502GTRPBFCT-ND"
+			(at 46.228 110.744 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "5fafe79a-d07f-41b1-b5fe-895d62c87a25")
+		)
+		(pin "1"
+			(uuid "bd908ef5-20ee-4c5a-aa29-869fc6f55b94")
+		)
+		(pin "2"
+			(uuid "bb2f82b6-1c8e-4138-915d-66d1c6dd84d5")
+		)
+		(instances
+			(project "tl2c"
+				(path "/22e7987e-aec2-4755-8f8d-65bb901716c6/00000000-0000-0000-0000-000058520450"
+					(reference "Q302")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tl2c-rescue:R")
+		(at 43.688 123.444 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000058521b12")
+		(property "Reference" "R302"
+			(at 41.656 123.444 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1kΩ"
+			(at 43.688 123.444 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistors_SMD:R_0805"
+			(at 45.466 123.444 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 43.688 123.444 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 43.688 123.444 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ae594a99-f7f1-442d-b9cc-779b5d46b6bd")
+		)
+		(pin "2"
+			(uuid "3d25aa8e-8dc7-40fc-8d01-25864f8c10df")
+		)
+		(instances
+			(project "tl2c"
+				(path "/22e7987e-aec2-4755-8f8d-65bb901716c6/00000000-0000-0000-0000-000058520450"
+					(reference "R302")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tl2c-rescue:GND")
+		(at 43.688 128.524 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000058521b24")
+		(property "Reference" "#PWR023"
+			(at 43.688 134.874 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 43.688 132.334 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 43.688 128.524 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 43.688 128.524 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 43.688 128.524 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "49993edc-7d3d-412f-a623-5c411d5c3d11")
+		)
+		(instances
+			(project "tl2c"
+				(path "/22e7987e-aec2-4755-8f8d-65bb901716c6/00000000-0000-0000-0000-000058520450"
+					(reference "#PWR023")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tl2c-rescue:R")
+		(at 56.388 151.384 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000058521c51")
+		(property "Reference" "R309"
+			(at 54.356 151.384 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10kΩ"
+			(at 56.388 151.384 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistors_SMD:R_0805"
+			(at 58.166 151.384 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 56.388 151.384 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 56.388 151.384 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "5f6af4ed-419c-4e51-aadc-6d7e405cb26e")
+		)
+		(pin "1"
+			(uuid "e2c3a4bd-9152-4cba-abcc-f8e4d66c492d")
+		)
+		(instances
+			(project "tl2c"
+				(path "/22e7987e-aec2-4755-8f8d-65bb901716c6/00000000-0000-0000-0000-000058520450"
+					(reference "R309")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tl2c-symbols:IRLML2502")
+		(at 46.228 159.004 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000058521c5a")
+		(property "Reference" "Q303"
+			(at 46.228 162.7886 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "IRLML2502"
+			(at 46.228 155.194 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TO_SOT_Packages_SMD:SOT-23"
+			(at 49.53 156.4132 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.7366 0.7366)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 46.228 159.004 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 46.228 159.004 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFP" "IRLML2502GTRPBF"
+			(at 46.228 159.004 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Conrad-PN" "162827 - 62 "
+			(at 46.228 159.004 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Digikey-PN" "IRLML2502GTRPBFCT-ND"
+			(at 46.228 159.004 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "58f90f78-140f-4d77-8aaf-3071900b7159")
+		)
+		(pin "3"
+			(uuid "be54a010-07ab-47cd-a752-7c075cff857d")
+		)
+		(pin "1"
+			(uuid "4d3a4c18-3fe3-47ba-8a5d-7f04107ec342")
+		)
+		(instances
+			(project "tl2c"
+				(path "/22e7987e-aec2-4755-8f8d-65bb901716c6/00000000-0000-0000-0000-000058520450"
+					(reference "Q303")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tl2c-rescue:R")
+		(at 43.688 171.704 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000058521c63")
+		(property "Reference" "R303"
+			(at 41.656 171.704 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1kΩ"
+			(at 43.688 171.704 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistors_SMD:R_0805"
+			(at 45.466 171.704 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 43.688 171.704 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 43.688 171.704 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8f5665b2-6611-4d3b-b335-ce098a460031")
+		)
+		(pin "2"
+			(uuid "6a1f335f-ff84-493b-9224-b0b6f32fe3f2")
+		)
+		(instances
+			(project "tl2c"
+				(path "/22e7987e-aec2-4755-8f8d-65bb901716c6/00000000-0000-0000-0000-000058520450"
+					(reference "R303")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tl2c-rescue:GND")
+		(at 43.688 176.784 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000058521c75")
+		(property "Reference" "#PWR024"
+			(at 43.688 183.134 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 43.688 180.594 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 43.688 176.784 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 43.688 176.784 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 43.688 176.784 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2daef1eb-aa85-4978-87fa-10106a8a0c1a")
+		)
+		(instances
+			(project "tl2c"
+				(path "/22e7987e-aec2-4755-8f8d-65bb901716c6/00000000-0000-0000-0000-000058520450"
+					(reference "#PWR024")
+					(unit 1)
+				)
+			)
+		)
+	)
+)

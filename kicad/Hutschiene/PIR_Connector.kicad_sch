@@ -1,0 +1,1561 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "76dd452d-93d5-408d-8834-6c847bb3a3af")
+	(paper "A4")
+	(title_block
+		(date "2017-07-16")
+	)
+	(lib_symbols
+		(symbol "tl2c-rescue:C"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 0.762 0.762)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Field42" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "C? C_????_* C_???? SMD*_c Capacitor*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "tl2c-rescue:CONN_01X03"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "P"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "CONN_01X03"
+				(at 2.54 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Field42" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Pin_Header_Straight_1X03 Pin_Header_Angled_1X03 Socket_Strip_Straight_1X03 Socket_Strip_Angled_1X03"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "CONN_01X03_0_1"
+				(rectangle
+					(start -1.27 3.81)
+					(end 1.27 -3.81)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 2.667)
+					(end 0.254 2.413)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0.254 -0.127)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0.254 -2.667)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "CONN_01X03_1_1"
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "P1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "P2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "P3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "tl2c-rescue:GNDA"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GNDA"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Field42" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GNDA_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GNDA_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GNDA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(junction
+		(at 43.942 34.798)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "19e5a1f2-3046-4a2e-8299-5b9ddd414168")
+	)
+	(junction
+		(at 54.864 48.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3e80bec5-b7da-4af7-87f3-3cb6d8bafd9b")
+	)
+	(junction
+		(at 55.88 119.888)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4625f717-edd4-48d6-bef0-4fa9919f7050")
+	)
+	(junction
+		(at 43.434 70.358)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4fb1d803-ccbd-458f-ae50-54caeb11edcb")
+	)
+	(junction
+		(at 34.544 70.358)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6e086c8b-5a86-4fb8-a0db-40e38f98d7fe")
+	)
+	(junction
+		(at 44.704 104.394)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "829f4caf-73bc-479f-a730-4605c6bd814e")
+	)
+	(junction
+		(at 34.544 34.798)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9fabc749-625f-4aa8-9dfa-a539591684cf")
+	)
+	(junction
+		(at 56.134 84.074)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d0f1d602-7195-4cc7-b46f-8d1fcfef2686")
+	)
+	(wire
+		(pts
+			(xy 43.434 70.358) (xy 43.434 75.692)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "01c39b37-d07b-47e8-8676-2b1d649a50c3")
+	)
+	(wire
+		(pts
+			(xy 55.88 106.934) (xy 55.88 122.428)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2775e569-0cce-4705-ba2d-bed8535427ed")
+	)
+	(wire
+		(pts
+			(xy 80.01 39.878) (xy 68.834 39.878)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2e6286d7-9dfe-4031-9e4b-d2c4eb90c0ae")
+	)
+	(wire
+		(pts
+			(xy 54.864 37.338) (xy 54.864 53.594)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3bbb8305-804d-49a2-98f2-2e6dd8f59d77")
+	)
+	(wire
+		(pts
+			(xy 43.942 45.974) (xy 43.942 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "48efca64-be42-4dc1-bb2e-9660d0180763")
+	)
+	(wire
+		(pts
+			(xy 34.544 34.798) (xy 34.544 104.394)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "52d2eba8-27c9-44aa-93a7-ca4f5e6a21bc")
+	)
+	(wire
+		(pts
+			(xy 44.704 119.888) (xy 55.88 119.888)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "70353ac0-862b-441d-8145-005123699844")
+	)
+	(wire
+		(pts
+			(xy 44.704 104.394) (xy 44.704 107.696)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "724636e4-1782-475e-a820-8726d0af6e67")
+	)
+	(wire
+		(pts
+			(xy 43.434 83.312) (xy 43.434 84.074)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7295800e-5558-405b-b163-37a42f9c0bcf")
+	)
+	(wire
+		(pts
+			(xy 80.264 109.474) (xy 69.088 109.474)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8462d2e8-dc4a-426b-be30-301d761cb7a0")
+	)
+	(wire
+		(pts
+			(xy 56.134 72.898) (xy 80.264 72.898)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c3c7ee3-fc00-44f8-9d05-bcbdc75e813c")
+	)
+	(wire
+		(pts
+			(xy 30.226 34.798) (xy 80.01 34.798)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9694d9c2-c51f-4db9-a09a-72c319ae2df5")
+	)
+	(wire
+		(pts
+			(xy 43.942 48.26) (xy 54.864 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "98795bfe-e1a6-469d-8f26-61c58ce8b450")
+	)
+	(wire
+		(pts
+			(xy 55.88 106.934) (xy 80.264 106.934)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a2316df9-84c5-4be7-b63e-210370618a93")
+	)
+	(wire
+		(pts
+			(xy 43.942 38.354) (xy 43.942 34.798)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a54e9b46-aa6b-4d19-8688-56fda15a8ec8")
+	)
+	(wire
+		(pts
+			(xy 44.704 115.316) (xy 44.704 119.888)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a57b25fc-7ac4-4288-91f9-d0cb683f5eca")
+	)
+	(wire
+		(pts
+			(xy 34.544 104.394) (xy 80.264 104.394)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b6cae884-9e6e-4337-8cfc-922b7b11707b")
+	)
+	(wire
+		(pts
+			(xy 80.264 75.438) (xy 69.088 75.438)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bc7ecbfe-2b95-400c-a140-7c4ecaa5f25a")
+	)
+	(wire
+		(pts
+			(xy 34.544 70.358) (xy 80.264 70.358)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bd31db58-2f4b-4a86-92fb-3b1e70a0ed1c")
+	)
+	(wire
+		(pts
+			(xy 54.864 37.338) (xy 80.01 37.338)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bfe3fc6d-129a-4a0a-8515-f7c491a7400f")
+	)
+	(wire
+		(pts
+			(xy 43.434 84.074) (xy 56.134 84.074)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d2e71119-d1c1-4ea6-8aac-c4e09f697aeb")
+	)
+	(wire
+		(pts
+			(xy 56.134 72.898) (xy 56.134 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df62b5ba-afdb-406d-b4e9-ba3b7cafdddc")
+	)
+	(hierarchical_label "U+"
+		(shape input)
+		(at 30.226 34.798 180)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify right)
+		)
+		(uuid "29842727-d6b2-4345-bf53-31c3c93954b5")
+	)
+	(hierarchical_label "PIR_OG"
+		(shape input)
+		(at 68.834 39.878 180)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify right)
+		)
+		(uuid "89798b20-c92c-4a0e-88af-1fed722d2592")
+	)
+	(hierarchical_label "PIR_EG"
+		(shape input)
+		(at 69.088 75.438 180)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify right)
+		)
+		(uuid "9341ff19-21fe-49aa-9e16-a8b9f4404f86")
+	)
+	(hierarchical_label "PIR_UG"
+		(shape input)
+		(at 69.088 109.474 180)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify right)
+		)
+		(uuid "a986e669-b55f-4ae6-92a9-f687c5565154")
+	)
+	(symbol
+		(lib_id "tl2c-rescue:CONN_01X03")
+		(at 85.09 37.338 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-0000596ce34c")
+		(property "Reference" "P501"
+			(at 85.09 32.258 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "CONN_PIR_OG"
+			(at 87.63 37.338 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "tl2c-footprint:PCB_Screw_Terminal_Block_5.8mm_x_3"
+			(at 85.09 37.338 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 85.09 37.338 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 85.09 37.338 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c8425060-3f81-4a0e-a7de-461475322c4b")
+		)
+		(pin "2"
+			(uuid "f309d264-2b12-4c4b-9a02-815f957973c5")
+		)
+		(pin "3"
+			(uuid "f3b48482-118a-419a-b8b3-5fa4ce2f820d")
+		)
+		(instances
+			(project "tl2c"
+				(path "/22e7987e-aec2-4755-8f8d-65bb901716c6/00000000-0000-0000-0000-0000596cc2b1"
+					(reference "P501")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tl2c-rescue:CONN_01X03")
+		(at 85.344 72.898 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-0000596ce37d")
+		(property "Reference" "P502"
+			(at 85.344 67.818 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "CONN_PIR_EG"
+			(at 87.884 72.898 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "tl2c-footprint:PCB_Screw_Terminal_Block_5.8mm_x_3"
+			(at 85.344 72.898 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 85.344 72.898 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 85.344 72.898 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "e50223de-cb3d-4f9c-b3fa-e7c67595d897")
+		)
+		(pin "3"
+			(uuid "f030d00e-b5a2-4340-b0d1-688584c15a75")
+		)
+		(pin "1"
+			(uuid "0064bc26-9431-45fc-9918-a08c39104cbd")
+		)
+		(instances
+			(project "tl2c"
+				(path "/22e7987e-aec2-4755-8f8d-65bb901716c6/00000000-0000-0000-0000-0000596cc2b1"
+					(reference "P502")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tl2c-rescue:CONN_01X03")
+		(at 85.344 106.934 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-0000596ce3ac")
+		(property "Reference" "P503"
+			(at 85.344 101.854 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "CONN_PIR_UG"
+			(at 87.884 106.934 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "tl2c-footprint:PCB_Screw_Terminal_Block_5.8mm_x_3"
+			(at 85.344 106.934 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 85.344 106.934 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 85.344 106.934 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "4d4d3f55-fd13-4c3e-8284-a12e77d03ab5")
+		)
+		(pin "3"
+			(uuid "182e6a37-b9f3-4e3b-849e-400ddf459d57")
+		)
+		(pin "1"
+			(uuid "d904bdaf-5848-4a75-95a8-03bbab911f3d")
+		)
+		(instances
+			(project "tl2c"
+				(path "/22e7987e-aec2-4755-8f8d-65bb901716c6/00000000-0000-0000-0000-0000596cc2b1"
+					(reference "P503")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tl2c-rescue:GNDA")
+		(at 54.864 53.594 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-0000596ce74b")
+		(property "Reference" "#PWR032"
+			(at 54.864 59.944 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GNDA"
+			(at 54.864 57.404 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 54.864 53.594 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 54.864 53.594 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 54.864 53.594 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b7ed3fea-1095-4f2b-b775-5386e359d325")
+		)
+		(instances
+			(project "tl2c"
+				(path "/22e7987e-aec2-4755-8f8d-65bb901716c6/00000000-0000-0000-0000-0000596cc2b1"
+					(reference "#PWR032")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tl2c-rescue:GNDA")
+		(at 56.134 90.17 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-0000596ce78c")
+		(property "Reference" "#PWR033"
+			(at 56.134 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GNDA"
+			(at 56.134 93.98 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 56.134 90.17 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 56.134 90.17 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 56.134 90.17 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1a593bd4-7003-4bf5-a702-aa8e2796ac15")
+		)
+		(instances
+			(project "tl2c"
+				(path "/22e7987e-aec2-4755-8f8d-65bb901716c6/00000000-0000-0000-0000-0000596cc2b1"
+					(reference "#PWR033")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tl2c-rescue:GNDA")
+		(at 55.88 122.428 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-0000596ce7bf")
+		(property "Reference" "#PWR034"
+			(at 55.88 128.778 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GNDA"
+			(at 55.88 126.238 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 55.88 122.428 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 55.88 122.428 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 55.88 122.428 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1df60597-7142-452f-9ca3-b16f055890f6")
+		)
+		(instances
+			(project "tl2c"
+				(path "/22e7987e-aec2-4755-8f8d-65bb901716c6/00000000-0000-0000-0000-0000596cc2b1"
+					(reference "#PWR034")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tl2c-rescue:C")
+		(at 43.942 42.164 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-0000596cf9a5")
+		(property "Reference" "C502"
+			(at 44.577 39.624 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF 50V"
+			(at 44.577 44.704 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitors_SMD:C_0805_HandSoldering"
+			(at 44.9072 45.974 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 43.942 42.164 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 43.942 42.164 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "Value"
+			(at 43.942 42.164 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "ConradPN" "Value"
+			(at 43.942 42.164 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d9a0f50f-ba40-4d22-b1f8-91ef43ac741d")
+		)
+		(pin "2"
+			(uuid "49117ab8-b8f5-4691-883a-969131f7c867")
+		)
+		(instances
+			(project "tl2c"
+				(path "/22e7987e-aec2-4755-8f8d-65bb901716c6/00000000-0000-0000-0000-0000596cc2b1"
+					(reference "C502")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tl2c-rescue:C")
+		(at 43.434 79.502 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-0000596cfb0e")
+		(property "Reference" "C501"
+			(at 44.069 76.962 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF 50V"
+			(at 44.069 82.042 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitors_SMD:C_0805_HandSoldering"
+			(at 44.3992 83.312 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 43.434 79.502 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 43.434 79.502 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "Value"
+			(at 43.434 79.502 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "ConradPN" "Value"
+			(at 43.434 79.502 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Label" "Value"
+			(at 43.434 79.502 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dd7ceb40-f4c1-46c9-bc70-4e862377f964")
+		)
+		(pin "2"
+			(uuid "b9fae68b-7b6d-4d65-bc39-219c84ec6275")
+		)
+		(instances
+			(project "tl2c"
+				(path "/22e7987e-aec2-4755-8f8d-65bb901716c6/00000000-0000-0000-0000-0000596cc2b1"
+					(reference "C501")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "tl2c-rescue:C")
+		(at 44.704 111.506 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-0000596cfb51")
+		(property "Reference" "C503"
+			(at 45.339 108.966 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF 50V"
+			(at 45.339 114.046 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitors_SMD:C_0805_HandSoldering"
+			(at 45.6692 115.316 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 44.704 111.506 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 44.704 111.506 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "Value"
+			(at 44.704 111.506 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "ConradPN" "Value"
+			(at 44.704 111.506 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Label" "Value"
+			(at 44.704 111.506 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "cd24b51d-596d-4edc-bf69-f15ee2493245")
+		)
+		(pin "2"
+			(uuid "c85b98b1-4654-4c7e-ac3f-89e03ad97ac7")
+		)
+		(instances
+			(project "tl2c"
+				(path "/22e7987e-aec2-4755-8f8d-65bb901716c6/00000000-0000-0000-0000-0000596cc2b1"
+					(reference "C503")
+					(unit 1)
+				)
+			)
+		)
+	)
+)
