@@ -1,4 +1,4 @@
-# For PCBs designed using KiCad: http://www.kicad-pcb.org/
+GGFor PCBs designed using KiCad: http://www.kicad-pcb.org/
 
 # Temporary files
 *.000
@@ -25,3 +25,8 @@ _autosave-*
 Debug
 .vs
 Release
+
+
+bom/
+
+*backups/
