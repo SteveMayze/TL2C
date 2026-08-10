@@ -3069,10 +3069,6 @@
 		)
 		(instances
 			(project "tl2c"
-				(path "/22e7987e-aec2-4755-8f8d-65bb901716c6"
-					(reference "REL?")
-					(unit 1)
-				)
 				(path "/22e7987e-aec2-4755-8f8d-65bb901716c6/00000000-0000-0000-0000-0000585253a2"
 					(reference "REL101")
 					(unit 1)
@@ -3190,10 +3186,6 @@
 		)
 		(instances
 			(project "tl2c"
-				(path "/22e7987e-aec2-4755-8f8d-65bb901716c6"
-					(reference "REL?")
-					(unit 1)
-				)
 				(path "/22e7987e-aec2-4755-8f8d-65bb901716c6/00000000-0000-0000-0000-0000585253a2"
 					(reference "REL102")
 					(unit 1)
@@ -3311,10 +3303,6 @@
 		)
 		(instances
 			(project "tl2c"
-				(path "/22e7987e-aec2-4755-8f8d-65bb901716c6"
-					(reference "REL?")
-					(unit 1)
-				)
 				(path "/22e7987e-aec2-4755-8f8d-65bb901716c6/00000000-0000-0000-0000-0000585253a2"
 					(reference "REL103")
 					(unit 1)
