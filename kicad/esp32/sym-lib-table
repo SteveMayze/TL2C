@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "tl2c-esp")(type "KiCad")(uri "${LOCAL_PCBS}/TL2C/kicad/esp32/lib/tl2c-esp.kicad_sym")(options "")(descr ""))
+)
